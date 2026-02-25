@@ -1,0 +1,3 @@
+src/Util/Log/LogOutput.c:53:6:outputLog	24	static
+src/Util/Log/LogOutput.c:61:5:outputLogf	16	static
+src/Util/Log/LogOutput.c:87:12:internalFormattedOutput	24	static

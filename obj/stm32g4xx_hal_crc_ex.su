@@ -1,0 +1,3 @@
+lib/HAL/Src/stm32g4xx_hal_crc_ex.c:89:19:HAL_CRCEx_Polynomial_Set	32	static
+lib/HAL/Src/stm32g4xx_hal_crc_ex.c:159:19:HAL_CRCEx_Input_Data_Reverse	16	static
+lib/HAL/Src/stm32g4xx_hal_crc_ex.c:185:19:HAL_CRCEx_Output_Data_Reverse	16	static

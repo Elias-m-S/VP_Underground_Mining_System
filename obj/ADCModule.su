@@ -1,0 +1,7 @@
+src/HAL/ADCModule.c:58:9:adcInitialize	56	static
+src/HAL/ADCModule.c:171:6:HAL_ADC_MspInit	128	static
+src/HAL/ADCModule.c:227:9:adcReadChannelRaw	24	static
+src/HAL/ADCModule.c:257:9:adcReadChannel	24	static
+src/HAL/ADCModule.c:273:13:adcInitializeDMA	16	static
+src/HAL/ADCModule.c:288:6:DMA1_Channel1_IRQHandler	8	static
+src/HAL/ADCModule.c:296:6:ADC1_2_IRQHandler	8	static

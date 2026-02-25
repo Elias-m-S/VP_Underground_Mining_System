@@ -1,0 +1,4286 @@
+
+;; Function HAL_CORDIC_Init (HAL_CORDIC_Init, funcdef_no=361, decl_uid=7757, cgraph_uid=365, symbol_order=364)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 56.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":203:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 117)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":205:6 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 117)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":205:6 -1
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 13)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":205:6 -1
+     (nil)
+ -> 13)
+(note 9 8 10 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 4 (set (reg:SI 115 [ _2 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":208:12 -1
+     (nil))
+(jump_insn 11 10 12 4 (set (pc)
+        (label_ref 53)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":208:12 -1
+     (nil)
+ -> 53)
+(barrier 12 11 13)
+(code_label 13 12 14 5 2 (nil) [1 uses])
+(note 14 13 15 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 17 5 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":233:14 -1
+     (nil))
+(insn 17 15 18 5 (set (reg:QI 120)
+        (mem/v:QI (plus:SI (reg/f:SI 118)
+                (const_int 33 [0x21])) [0 hcordic_5(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":233:14 -1
+     (nil))
+(insn 18 17 19 5 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:QI 120))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":233:14 -1
+     (nil))
+(insn 19 18 20 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":233:6 -1
+     (nil))
+(jump_insn 20 19 21 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":233:6 -1
+     (nil)
+ -> 28)
+(note 21 20 22 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 6 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":236:19 -1
+     (nil))
+(insn 23 22 24 6 (set (reg:SI 122)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":236:19 -1
+     (nil))
+(insn 24 23 25 6 (set (reg:QI 123)
+        (subreg:QI (reg:SI 122) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":236:19 -1
+     (nil))
+(insn 25 24 26 6 (set (mem:QI (plus:SI (reg/f:SI 121)
+                (const_int 32 [0x20])) [0 hcordic_5(D)->Lock+0 S1 A32])
+        (reg:QI 123)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":236:19 -1
+     (nil))
+(insn 26 25 27 6 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":239:5 -1
+     (nil))
+(call_insn 27 26 28 6 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_CORDIC_MspInit") [flags 0x3]  <function_decl 0x7fd654fade00 HAL_CORDIC_MspInit>) [0 HAL_CORDIC_MspInit S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":239:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(code_label 28 27 29 7 4 (nil) [1 uses])
+(note 29 28 30 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 7 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":244:22 -1
+     (nil))
+(insn 31 30 32 7 (set (reg:SI 125)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":244:22 -1
+     (nil))
+(insn 32 31 33 7 (set (mem/v:SI (plus:SI (reg/f:SI 124)
+                (const_int 36 [0x24])) [4 hcordic_5(D)->ErrorCode+0 S4 A32])
+        (reg:SI 125)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":244:22 -1
+     (nil))
+(insn 33 32 34 7 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":247:20 -1
+     (nil))
+(insn 34 33 35 7 (set (reg:SI 127)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":247:20 -1
+     (nil))
+(insn 35 34 36 7 (set (mem/f:SI (plus:SI (reg/f:SI 126)
+                (const_int 4 [0x4])) [3 hcordic_5(D)->pInBuff+0 S4 A32])
+        (reg:SI 127)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":247:20 -1
+     (nil))
+(insn 36 35 37 7 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":248:21 -1
+     (nil))
+(insn 37 36 38 7 (set (reg:SI 129)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":248:21 -1
+     (nil))
+(insn 38 37 39 7 (set (mem/f:SI (plus:SI (reg/f:SI 128)
+                (const_int 8 [0x8])) [3 hcordic_5(D)->pOutBuff+0 S4 A32])
+        (reg:SI 129)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":248:21 -1
+     (nil))
+(insn 39 38 40 7 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":251:26 -1
+     (nil))
+(insn 40 39 41 7 (set (reg:SI 131)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":251:26 -1
+     (nil))
+(insn 41 40 42 7 (set (mem:SI (plus:SI (reg/f:SI 130)
+                (const_int 12 [0xc])) [4 hcordic_5(D)->NbCalcToOrder+0 S4 A32])
+        (reg:SI 131)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":251:26 -1
+     (nil))
+(insn 42 41 43 7 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":252:24 -1
+     (nil))
+(insn 43 42 44 7 (set (reg:SI 133)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":252:24 -1
+     (nil))
+(insn 44 43 45 7 (set (mem:SI (plus:SI (reg/f:SI 132)
+                (const_int 16 [0x10])) [4 hcordic_5(D)->NbCalcToGet+0 S4 A32])
+        (reg:SI 133)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":252:24 -1
+     (nil))
+(insn 45 44 46 7 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":255:25 -1
+     (nil))
+(insn 46 45 47 7 (set (reg:SI 135)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":255:25 -1
+     (nil))
+(insn 47 46 48 7 (set (mem:SI (plus:SI (reg/f:SI 134)
+                (const_int 20 [0x14])) [4 hcordic_5(D)->DMADirection+0 S4 A32])
+        (reg:SI 135)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":255:25 -1
+     (nil))
+(insn 48 47 49 7 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":258:18 -1
+     (nil))
+(insn 49 48 50 7 (set (reg:SI 137)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":258:18 -1
+     (nil))
+(insn 50 49 51 7 (set (reg:QI 138)
+        (subreg:QI (reg:SI 137) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":258:18 -1
+     (nil))
+(insn 51 50 52 7 (set (mem/v:QI (plus:SI (reg/f:SI 136)
+                (const_int 33 [0x21])) [0 hcordic_5(D)->State+0 S1 A8])
+        (reg:QI 138)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":258:18 -1
+     (nil))
+(insn 52 51 53 7 (set (reg:SI 115 [ _2 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":261:10 -1
+     (nil))
+(code_label 53 52 54 8 3 (nil) [1 uses])
+(note 54 53 55 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 59 8 (set (reg:SI 116 [ <retval> ])
+        (reg:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":262:1 -1
+     (nil))
+(insn 59 55 60 8 (set (reg/i:SI 0 r0)
+        (reg:SI 116 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":262:1 -1
+     (nil))
+(insn 60 59 0 8 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":262:1 -1
+     (nil))
+
+;; Function HAL_CORDIC_DeInit (HAL_CORDIC_DeInit, funcdef_no=362, decl_uid=7759, cgraph_uid=366, symbol_order=365)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 51.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":270:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":272:6 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 116)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":272:6 -1
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 13)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":272:6 -1
+     (nil)
+ -> 13)
+(note 9 8 10 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 4 (set (reg:SI 114 [ _1 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":275:12 -1
+     (nil))
+(jump_insn 11 10 12 4 (set (pc)
+        (label_ref 48)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":275:12 -1
+     (nil)
+ -> 48)
+(barrier 12 11 13)
+(code_label 13 12 14 5 6 (nil) [1 uses])
+(note 14 13 15 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 5 (set (reg/f:SI 117)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":282:18 -1
+     (nil))
+(insn 16 15 17 5 (set (reg:SI 118)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":282:18 -1
+     (nil))
+(insn 17 16 18 5 (set (reg:QI 119)
+        (subreg:QI (reg:SI 118) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":282:18 -1
+     (nil))
+(insn 18 17 19 5 (set (mem/v:QI (plus:SI (reg/f:SI 117)
+                (const_int 33 [0x21])) [0 hcordic_3(D)->State+0 S1 A8])
+        (reg:QI 119)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":282:18 -1
+     (nil))
+(insn 19 18 20 5 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":294:3 -1
+     (nil))
+(call_insn 20 19 21 5 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_CORDIC_MspDeInit") [flags 0x3]  <function_decl 0x7fd654fadf00 HAL_CORDIC_MspDeInit>) [0 HAL_CORDIC_MspDeInit S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":294:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 21 20 22 5 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":298:22 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:SI 121)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":298:22 -1
+     (nil))
+(insn 23 22 24 5 (set (mem/v:SI (plus:SI (reg/f:SI 120)
+                (const_int 36 [0x24])) [4 hcordic_3(D)->ErrorCode+0 S4 A32])
+        (reg:SI 121)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":298:22 -1
+     (nil))
+(insn 24 23 25 5 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":301:20 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:SI 123)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":301:20 -1
+     (nil))
+(insn 26 25 27 5 (set (mem/f:SI (plus:SI (reg/f:SI 122)
+                (const_int 4 [0x4])) [3 hcordic_3(D)->pInBuff+0 S4 A32])
+        (reg:SI 123)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":301:20 -1
+     (nil))
+(insn 27 26 28 5 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":302:21 -1
+     (nil))
+(insn 28 27 29 5 (set (reg:SI 125)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":302:21 -1
+     (nil))
+(insn 29 28 30 5 (set (mem/f:SI (plus:SI (reg/f:SI 124)
+                (const_int 8 [0x8])) [3 hcordic_3(D)->pOutBuff+0 S4 A32])
+        (reg:SI 125)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":302:21 -1
+     (nil))
+(insn 30 29 31 5 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":305:26 -1
+     (nil))
+(insn 31 30 32 5 (set (reg:SI 127)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":305:26 -1
+     (nil))
+(insn 32 31 33 5 (set (mem:SI (plus:SI (reg/f:SI 126)
+                (const_int 12 [0xc])) [4 hcordic_3(D)->NbCalcToOrder+0 S4 A32])
+        (reg:SI 127)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":305:26 -1
+     (nil))
+(insn 33 32 34 5 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":306:24 -1
+     (nil))
+(insn 34 33 35 5 (set (reg:SI 129)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":306:24 -1
+     (nil))
+(insn 35 34 36 5 (set (mem:SI (plus:SI (reg/f:SI 128)
+                (const_int 16 [0x10])) [4 hcordic_3(D)->NbCalcToGet+0 S4 A32])
+        (reg:SI 129)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":306:24 -1
+     (nil))
+(insn 36 35 37 5 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":309:25 -1
+     (nil))
+(insn 37 36 38 5 (set (reg:SI 131)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":309:25 -1
+     (nil))
+(insn 38 37 39 5 (set (mem:SI (plus:SI (reg/f:SI 130)
+                (const_int 20 [0x14])) [4 hcordic_3(D)->DMADirection+0 S4 A32])
+        (reg:SI 131)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":309:25 -1
+     (nil))
+(insn 39 38 40 5 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":312:18 -1
+     (nil))
+(insn 40 39 41 5 (set (reg:SI 133)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":312:18 -1
+     (nil))
+(insn 41 40 42 5 (set (reg:QI 134)
+        (subreg:QI (reg:SI 133) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":312:18 -1
+     (nil))
+(insn 42 41 43 5 (set (mem/v:QI (plus:SI (reg/f:SI 132)
+                (const_int 33 [0x21])) [0 hcordic_3(D)->State+0 S1 A8])
+        (reg:QI 134)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":312:18 -1
+     (nil))
+(insn 43 42 44 5 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":315:17 -1
+     (nil))
+(insn 44 43 45 5 (set (reg:SI 136)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":315:17 -1
+     (nil))
+(insn 45 44 46 5 (set (reg:QI 137)
+        (subreg:QI (reg:SI 136) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":315:17 -1
+     (nil))
+(insn 46 45 47 5 (set (mem:QI (plus:SI (reg/f:SI 135)
+                (const_int 32 [0x20])) [0 hcordic_3(D)->Lock+0 S1 A32])
+        (reg:QI 137)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":315:17 -1
+     (nil))
+(insn 47 46 48 5 (set (reg:SI 114 [ _1 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":318:10 -1
+     (nil))
+(code_label 48 47 49 6 7 (nil) [1 uses])
+(note 49 48 50 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 54 6 (set (reg:SI 115 [ <retval> ])
+        (reg:SI 114 [ _1 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":319:1 -1
+     (nil))
+(insn 54 50 55 6 (set (reg/i:SI 0 r0)
+        (reg:SI 115 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":319:1 -1
+     (nil))
+(insn 55 54 0 6 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":319:1 -1
+     (nil))
+
+;; Function HAL_CORDIC_MspInit (HAL_CORDIC_MspInit, funcdef_no=363, decl_uid=7761, cgraph_uid=367, symbol_order=366)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":327:1 -1
+     (nil))
+(note 3 2 0 2 NOTE_INSN_FUNCTION_BEG)
+
+;; Function HAL_CORDIC_MspDeInit (HAL_CORDIC_MspDeInit, funcdef_no=364, decl_uid=7763, cgraph_uid=368, symbol_order=367)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":342:1 -1
+     (nil))
+(note 3 2 0 2 NOTE_INSN_FUNCTION_BEG)
+
+;; Function HAL_CORDIC_Configure (HAL_CORDIC_Configure, funcdef_no=365, decl_uid=7766, cgraph_uid=369, symbol_order=368)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+Removing jump 64.
+Merging block 8 into block 6...
+Merged blocks 6 and 8.
+Merged 6 and 8 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":560:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [22 sConfig+0 S4 A32])
+        (reg:SI 1 r1 [ sConfig ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":560:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 137)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":561:21 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:QI 138)
+        (subreg:QI (reg:SI 137) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":561:21 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [0 status+0 S1 A8])
+        (reg:QI 138)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":561:21 -1
+     (nil))
+(insn 10 9 12 2 (set (reg/f:SI 139)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":573:14 -1
+     (nil))
+(insn 12 10 13 2 (set (reg:QI 141)
+        (mem/v:QI (plus:SI (reg/f:SI 139)
+                (const_int 33 [0x21])) [0 hcordic_26(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":573:14 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:QI 141))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":573:14 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":573:6 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 48)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":573:6 -1
+     (nil)
+ -> 48)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg/f:SI 142)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 18 17 19 4 (set (reg/f:SI 115 [ _2 ])
+        (mem/f:SI (reg/f:SI 142) [2 hcordic_26(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:SI 116 [ _3 ])
+        (mem/v:SI (reg/f:SI 115 [ _2 ]) [4 _2->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:SI 117 [ _4 ])
+        (const_int -7866368 [0xffffffffff87f800])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:SI 117 [ _4 ])
+        (and:SI (reg:SI 116 [ _3 ])
+            (reg:SI 117 [ _4 ]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (expr_list:REG_EQUAL (and:SI (reg:SI 116 [ _3 ])
+            (const_int -7866368 [0xffffffffff87f800]))
+        (nil)))
+(insn 22 21 23 4 (set (reg/f:SI 143)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [22 sConfig+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:SI 118 [ _5 ])
+        (mem:SI (reg/f:SI 143) [4 sConfig_29(D)->Function+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 24 23 25 4 (set (reg/f:SI 144)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [22 sConfig+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 25 24 26 4 (set (reg:SI 119 [ _6 ])
+        (mem:SI (plus:SI (reg/f:SI 144)
+                (const_int 24 [0x18])) [4 sConfig_29(D)->Precision+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:SI 120 [ _7 ])
+        (ior:SI (reg:SI 118 [ _5 ])
+            (reg:SI 119 [ _6 ]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 27 26 28 4 (set (reg/f:SI 145)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [22 sConfig+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:SI 121 [ _8 ])
+        (mem:SI (plus:SI (reg/f:SI 145)
+                (const_int 4 [0x4])) [4 sConfig_29(D)->Scale+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:SI 122 [ _9 ])
+        (ior:SI (reg:SI 120 [ _7 ])
+            (reg:SI 121 [ _8 ]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 30 29 31 4 (set (reg/f:SI 146)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [22 sConfig+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:SI 123 [ _10 ])
+        (mem:SI (plus:SI (reg/f:SI 146)
+                (const_int 16 [0x10])) [4 sConfig_29(D)->NbWrite+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:SI 124 [ _11 ])
+        (ior:SI (reg:SI 122 [ _9 ])
+            (reg:SI 123 [ _10 ]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 33 32 34 4 (set (reg/f:SI 147)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [22 sConfig+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 34 33 35 4 (set (reg:SI 125 [ _12 ])
+        (mem:SI (plus:SI (reg/f:SI 147)
+                (const_int 20 [0x14])) [4 sConfig_29(D)->NbRead+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 35 34 36 4 (set (reg:SI 126 [ _13 ])
+        (ior:SI (reg:SI 124 [ _11 ])
+            (reg:SI 125 [ _12 ]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 36 35 37 4 (set (reg/f:SI 148)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [22 sConfig+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 37 36 38 4 (set (reg:SI 127 [ _14 ])
+        (mem:SI (plus:SI (reg/f:SI 148)
+                (const_int 8 [0x8])) [4 sConfig_29(D)->InSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 38 37 39 4 (set (reg:SI 128 [ _15 ])
+        (ior:SI (reg:SI 126 [ _13 ])
+            (reg:SI 127 [ _14 ]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 39 38 40 4 (set (reg/f:SI 149)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [22 sConfig+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 40 39 41 4 (set (reg:SI 129 [ _16 ])
+        (mem:SI (plus:SI (reg/f:SI 149)
+                (const_int 12 [0xc])) [4 sConfig_29(D)->OutSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 41 40 42 4 (set (reg:SI 130 [ _17 ])
+        (ior:SI (reg:SI 128 [ _15 ])
+            (reg:SI 129 [ _16 ]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 42 41 43 4 (set (reg/f:SI 150)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 43 42 44 4 (set (reg/f:SI 131 [ _18 ])
+        (mem/f:SI (reg/f:SI 150) [2 hcordic_26(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 44 43 45 4 (set (reg:SI 132 [ _19 ])
+        (ior:SI (reg:SI 117 [ _4 ])
+            (reg:SI 130 [ _17 ]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(insn 45 44 46 4 (set (mem/v:SI (reg/f:SI 131 [ _18 ]) [4 _18->CSR+0 S4 A32])
+        (reg:SI 132 [ _19 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":576:5 -1
+     (nil))
+(jump_insn 46 45 47 4 (set (pc)
+        (label_ref 58)) -1
+     (nil)
+ -> 58)
+(barrier 47 46 48)
+(code_label 48 47 49 5 11 (nil) [1 uses])
+(note 49 48 50 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 5 (set (reg/f:SI 151)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":585:12 -1
+     (nil))
+(insn 51 50 52 5 (set (reg:SI 133 [ _20 ])
+        (mem/v:SI (plus:SI (reg/f:SI 151)
+                (const_int 36 [0x24])) [4 hcordic_26(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":585:12 -1
+     (nil))
+(insn 52 51 53 5 (set (reg:SI 134 [ _21 ])
+        (ior:SI (reg:SI 133 [ _20 ])
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":585:24 -1
+     (nil))
+(insn 53 52 54 5 (set (reg/f:SI 152)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":585:24 -1
+     (nil))
+(insn 54 53 55 5 (set (mem/v:SI (plus:SI (reg/f:SI 152)
+                (const_int 36 [0x24])) [4 hcordic_26(D)->ErrorCode+0 S4 A32])
+        (reg:SI 134 [ _21 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":585:24 -1
+     (nil))
+(insn 55 54 56 5 (set (reg:SI 153)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":588:12 -1
+     (nil))
+(insn 56 55 57 5 (set (reg:QI 154)
+        (subreg:QI (reg:SI 153) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":588:12 -1
+     (nil))
+(insn 57 56 58 5 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [0 status+0 S1 A8])
+        (reg:QI 154)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":588:12 -1
+     (nil))
+(code_label 58 57 59 6 12 (nil) [1 uses])
+(note 59 58 60 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 63 6 (set (reg:SI 135 [ _31 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -1 [0xffffffffffffffff])) [0 status+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":592:10 -1
+     (nil))
+(insn 63 60 67 6 (set (reg:SI 136 [ <retval> ])
+        (reg:SI 135 [ _31 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":592:10 discrim 1 -1
+     (nil))
+(insn 67 63 68 6 (set (reg/i:SI 0 r0)
+        (reg:SI 136 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":593:1 -1
+     (nil))
+(insn 68 67 0 6 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":593:1 -1
+     (nil))
+
+;; Function HAL_CORDIC_Calculate (HAL_CORDIC_Calculate, funcdef_no=366, decl_uid=7772, cgraph_uid=370, symbol_order=369)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 32 from 18 to 19.
+Redirecting jump 87 from 18 to 19.
+Redirecting jump 124 from 18 to 19.
+Merging block 18 into block 17...
+Merged blocks 17 and 18.
+Merged 17 and 18 without moving.
+Removing jump 139.
+Merging block 20 into block 19...
+Merged blocks 19 and 20.
+Merged 19 and 20 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":608:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pInBuff+0 S4 A32])
+        (reg:SI 1 r1 [ pInBuff ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":608:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 pOutBuff+0 S4 A32])
+        (reg:SI 2 r2 [ pOutBuff ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":608:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])
+        (reg:SI 3 r3 [ NbCalc ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":608:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":611:12 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [3 p_tmp_in_buff+0 S4 A32])
+        (reg/f:SI 126)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":611:12 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 127)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 pOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":612:12 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [3 p_tmp_out_buff+0 S4 A64])
+        (reg/f:SI 127)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":612:12 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":615:6 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 128)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":615:6 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":615:6 -1
+     (nil)
+ -> 24)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg:SI 129)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 pOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":615:25 discrim 1 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 129)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":615:25 discrim 1 -1
+     (nil))
+(jump_insn 19 18 20 4 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":615:25 discrim 1 -1
+     (nil)
+ -> 24)
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (set (reg:SI 130)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":615:47 discrim 2 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 130)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":615:47 discrim 2 -1
+     (nil))
+(jump_insn 23 22 24 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 34)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":615:47 discrim 2 -1
+     (nil)
+ -> 34)
+(code_label 24 23 25 6 17 (nil) [2 uses])
+(note 25 24 26 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 6 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":618:12 -1
+     (nil))
+(insn 27 26 28 6 (set (reg:SI 114 [ _1 ])
+        (mem/v:SI (plus:SI (reg/f:SI 131)
+                (const_int 36 [0x24])) [4 hcordic_23(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":618:12 -1
+     (nil))
+(insn 28 27 29 6 (set (reg:SI 115 [ _2 ])
+        (ior:SI (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":618:24 -1
+     (nil))
+(insn 29 28 30 6 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":618:24 -1
+     (nil))
+(insn 30 29 31 6 (set (mem/v:SI (plus:SI (reg/f:SI 132)
+                (const_int 36 [0x24])) [4 hcordic_23(D)->ErrorCode+0 S4 A32])
+        (reg:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":618:24 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 124 [ _12 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":621:12 -1
+     (nil))
+(jump_insn 32 31 33 6 (set (pc)
+        (label_ref:SI 136)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":621:12 288 {*arm_jump}
+     (nil)
+ -> 136)
+(barrier 33 32 34)
+(code_label 34 33 35 7 18 (nil) [1 uses])
+(note 35 34 36 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 38 7 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":625:14 -1
+     (nil))
+(insn 38 36 39 7 (set (reg:QI 135)
+        (mem/v:QI (plus:SI (reg/f:SI 133)
+                (const_int 33 [0x21])) [0 hcordic_23(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":625:14 -1
+     (nil))
+(insn 39 38 40 7 (set (reg:SI 116 [ _3 ])
+        (zero_extend:SI (reg:QI 135))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":625:14 -1
+     (nil))
+(insn 40 39 41 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 116 [ _3 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":625:6 -1
+     (nil))
+(jump_insn 41 40 42 7 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 126)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":625:6 -1
+     (nil)
+ -> 126)
+(note 42 41 43 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 8 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":628:24 -1
+     (nil))
+(insn 44 43 45 8 (set (reg:SI 137)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":628:24 -1
+     (nil))
+(insn 45 44 46 8 (set (mem/v:SI (plus:SI (reg/f:SI 136)
+                (const_int 36 [0x24])) [4 hcordic_23(D)->ErrorCode+0 S4 A32])
+        (reg:SI 137)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":628:24 -1
+     (nil))
+(insn 46 45 47 8 (set (reg/f:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":631:20 -1
+     (nil))
+(insn 47 46 48 8 (set (reg:SI 139)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":631:20 -1
+     (nil))
+(insn 48 47 49 8 (set (reg:QI 140)
+        (subreg:QI (reg:SI 139) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":631:20 -1
+     (nil))
+(insn 49 48 50 8 (set (mem/v:QI (plus:SI (reg/f:SI 138)
+                (const_int 33 [0x21])) [0 hcordic_23(D)->State+0 S1 A8])
+        (reg:QI 140)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":631:20 -1
+     (nil))
+(call_insn 50 49 51 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_GetTick") [flags 0x41]  <function_decl 0x7fd654bd8f00 HAL_GetTick>) [0 HAL_GetTick S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":634:17 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 51 50 52 8 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 tickstart+0 S4 A64])
+        (reg:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":634:17 -1
+     (nil))
+(insn 52 51 53 8 (set (reg:SI 141)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -12 [0xfffffffffffffff4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":637:5 -1
+     (nil))
+(insn 53 52 54 8 (set (reg:SI 1 r1)
+        (reg:SI 141)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":637:5 -1
+     (nil))
+(insn 54 53 55 8 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":637:5 -1
+     (nil))
+(call_insn 55 54 56 8 (parallel [
+            (call (mem:SI (symbol_ref:SI ("CORDIC_WriteInDataIncrementPtr") [flags 0x3]  <function_decl 0x7fd654be1b00 CORDIC_WriteInDataIncrementPtr>) [0 CORDIC_WriteInDataIncrementPtr S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":637:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 56 55 57 8 (set (reg:SI 143)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":641:16 -1
+     (nil))
+(insn 57 56 58 8 (set (reg:SI 142 [ index_31 ])
+        (plus:SI (reg:SI 143)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":641:16 -1
+     (nil))
+(insn 58 57 59 8 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 index+0 S4 A32])
+        (reg:SI 142 [ index_31 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":641:16 -1
+     (nil))
+(jump_insn 59 58 60 8 (set (pc)
+        (label_ref 108)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":641:5 -1
+     (nil)
+ -> 108)
+(barrier 60 59 110)
+(code_label 110 60 61 9 24 (nil) [1 uses])
+(note 61 110 62 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 9 (set (reg:SI 144)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -12 [0xfffffffffffffff4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":644:7 -1
+     (nil))
+(insn 63 62 64 9 (set (reg:SI 1 r1)
+        (reg:SI 144)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":644:7 -1
+     (nil))
+(insn 64 63 65 9 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":644:7 -1
+     (nil))
+(call_insn 65 64 95 9 (parallel [
+            (call (mem:SI (symbol_ref:SI ("CORDIC_WriteInDataIncrementPtr") [flags 0x3]  <function_decl 0x7fd654be1b00 CORDIC_WriteInDataIncrementPtr>) [0 CORDIC_WriteInDataIncrementPtr S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":644:7 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(code_label 95 65 66 10 23 (nil) [1 uses])
+(note 66 95 67 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 68 10 (set (reg:SI 145)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 Timeout+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":650:12 -1
+     (nil))
+(insn 68 67 69 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 145)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":650:12 -1
+     (nil))
+(jump_insn 69 68 70 10 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 89)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":650:12 -1
+     (nil)
+ -> 89)
+(note 70 69 71 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(call_insn 71 70 72 11 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_GetTick") [flags 0x41]  <function_decl 0x7fd654bd8f00 HAL_GetTick>) [0 HAL_GetTick S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":652:16 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 72 71 73 11 (set (reg:SI 117 [ _4 ])
+        (reg:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":652:16 -1
+     (nil))
+(insn 73 72 74 11 (set (reg:SI 146)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 tickstart+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":652:30 discrim 1 -1
+     (nil))
+(insn 74 73 75 11 (set (reg:SI 118 [ _5 ])
+        (minus:SI (reg:SI 117 [ _4 ])
+            (reg:SI 146))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":652:30 discrim 1 -1
+     (nil))
+(insn 75 74 76 11 (set (reg:SI 147)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 Timeout+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":652:14 discrim 1 -1
+     (nil))
+(insn 76 75 77 11 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 147)
+            (reg:SI 118 [ _5 ]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":652:14 discrim 1 -1
+     (nil))
+(jump_insn 77 76 78 11 (set (pc)
+        (if_then_else (geu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 89)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":652:14 discrim 1 -1
+     (nil)
+ -> 89)
+(note 78 77 79 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 79 78 80 12 (set (reg/f:SI 148)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":655:32 -1
+     (nil))
+(insn 80 79 81 12 (set (reg:SI 149)
+        (const_int 4 [0x4])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":655:32 -1
+     (nil))
+(insn 81 80 82 12 (set (mem/v:SI (plus:SI (reg/f:SI 148)
+                (const_int 36 [0x24])) [4 hcordic_23(D)->ErrorCode+0 S4 A32])
+        (reg:SI 149)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":655:32 -1
+     (nil))
+(insn 82 81 83 12 (set (reg/f:SI 150)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":658:28 -1
+     (nil))
+(insn 83 82 84 12 (set (reg:SI 151)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":658:28 -1
+     (nil))
+(insn 84 83 85 12 (set (reg:QI 152)
+        (subreg:QI (reg:SI 151) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":658:28 -1
+     (nil))
+(insn 85 84 86 12 (set (mem/v:QI (plus:SI (reg/f:SI 150)
+                (const_int 33 [0x21])) [0 hcordic_23(D)->State+0 S1 A8])
+        (reg:QI 152)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":658:28 -1
+     (nil))
+(insn 86 85 87 12 (set (reg:SI 124 [ _12 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":661:20 -1
+     (nil))
+(jump_insn 87 86 88 12 (set (pc)
+        (label_ref:SI 136)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":661:20 288 {*arm_jump}
+     (nil)
+ -> 136)
+(barrier 88 87 89)
+(code_label 89 88 90 13 22 (nil) [2 uses])
+(note 90 89 91 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 91 90 92 13 (set (reg/f:SI 153)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":664:16 -1
+     (nil))
+(insn 92 91 93 13 (set (reg/f:SI 119 [ _6 ])
+        (mem/f:SI (reg/f:SI 153) [2 hcordic_23(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":664:16 -1
+     (nil))
+(insn 93 92 94 13 (set (reg:SI 120 [ _7 ])
+        (mem/v:SI (reg/f:SI 119 [ _6 ]) [4 _6->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":664:16 -1
+     (nil))
+(insn 94 93 98 13 (set (reg:SI 121 [ _8 ])
+        (reg:SI 120 [ _7 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":664:16 -1
+     (nil))
+(insn 98 94 99 13 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 121 [ _8 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":664:16 -1
+     (nil))
+(jump_insn 99 98 100 13 (set (pc)
+        (if_then_else (ge (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 95)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":664:16 -1
+     (nil)
+ -> 95)
+(note 100 99 101 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 101 100 102 14 (set (reg:SI 154)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -16 [0xfffffffffffffff0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":667:7 -1
+     (nil))
+(insn 102 101 103 14 (set (reg:SI 1 r1)
+        (reg:SI 154)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":667:7 -1
+     (nil))
+(insn 103 102 104 14 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":667:7 -1
+     (nil))
+(call_insn 104 103 105 14 (parallel [
+            (call (mem:SI (symbol_ref:SI ("CORDIC_ReadOutDataIncrementPtr") [flags 0x3]  <function_decl 0x7fd654be1c00 CORDIC_ReadOutDataIncrementPtr>) [0 CORDIC_ReadOutDataIncrementPtr S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":667:7 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 105 104 106 14 (set (reg:SI 156)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 index+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":641:50 discrim 2 -1
+     (nil))
+(insn 106 105 107 14 (set (reg:SI 155 [ index_42 ])
+        (plus:SI (reg:SI 156)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":641:50 discrim 2 -1
+     (nil))
+(insn 107 106 108 14 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 index+0 S4 A32])
+        (reg:SI 155 [ index_42 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":641:50 discrim 2 -1
+     (nil))
+(code_label 108 107 109 15 21 (nil) [1 uses])
+(note 109 108 111 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 111 109 112 15 (set (reg:SI 157)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 index+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":641:39 discrim 1 -1
+     (nil))
+(insn 112 111 113 15 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 157)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":641:39 discrim 1 -1
+     (nil))
+(jump_insn 113 112 114 15 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 110)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":641:39 discrim 1 -1
+     (nil)
+ -> 110)
+(note 114 113 115 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 115 114 116 16 (set (reg:SI 158)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -16 [0xfffffffffffffff0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":671:5 -1
+     (nil))
+(insn 116 115 117 16 (set (reg:SI 1 r1)
+        (reg:SI 158)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":671:5 -1
+     (nil))
+(insn 117 116 118 16 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":671:5 -1
+     (nil))
+(call_insn 118 117 119 16 (parallel [
+            (call (mem:SI (symbol_ref:SI ("CORDIC_ReadOutDataIncrementPtr") [flags 0x3]  <function_decl 0x7fd654be1c00 CORDIC_ReadOutDataIncrementPtr>) [0 CORDIC_ReadOutDataIncrementPtr S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":671:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 119 118 120 16 (set (reg/f:SI 159)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":674:20 -1
+     (nil))
+(insn 120 119 121 16 (set (reg:SI 160)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":674:20 -1
+     (nil))
+(insn 121 120 122 16 (set (reg:QI 161)
+        (subreg:QI (reg:SI 160) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":674:20 -1
+     (nil))
+(insn 122 121 123 16 (set (mem/v:QI (plus:SI (reg/f:SI 159)
+                (const_int 33 [0x21])) [0 hcordic_23(D)->State+0 S1 A8])
+        (reg:QI 161)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":674:20 -1
+     (nil))
+(insn 123 122 124 16 (set (reg:SI 124 [ _12 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":677:12 -1
+     (nil))
+(jump_insn 124 123 125 16 (set (pc)
+        (label_ref:SI 136)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":677:12 288 {*arm_jump}
+     (nil)
+ -> 136)
+(barrier 125 124 126)
+(code_label 126 125 127 17 20 (nil) [1 uses])
+(note 127 126 128 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 128 127 129 17 (set (reg/f:SI 162)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":682:12 -1
+     (nil))
+(insn 129 128 130 17 (set (reg:SI 122 [ _9 ])
+        (mem/v:SI (plus:SI (reg/f:SI 162)
+                (const_int 36 [0x24])) [4 hcordic_23(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":682:12 -1
+     (nil))
+(insn 130 129 131 17 (set (reg:SI 123 [ _10 ])
+        (ior:SI (reg:SI 122 [ _9 ])
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":682:24 -1
+     (nil))
+(insn 131 130 132 17 (set (reg/f:SI 163)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":682:24 -1
+     (nil))
+(insn 132 131 133 17 (set (mem/v:SI (plus:SI (reg/f:SI 163)
+                (const_int 36 [0x24])) [4 hcordic_23(D)->ErrorCode+0 S4 A32])
+        (reg:SI 123 [ _10 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":682:24 -1
+     (nil))
+(insn 133 132 136 17 (set (reg:SI 124 [ _12 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":685:12 -1
+     (nil))
+(code_label 136 133 137 19 25 (nil) [3 uses])
+(note 137 136 138 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 138 137 142 19 (set (reg:SI 125 [ <retval> ])
+        (reg:SI 124 [ _12 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":687:1 -1
+     (nil))
+(insn 142 138 143 19 (set (reg/i:SI 0 r0)
+        (reg:SI 125 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":687:1 -1
+     (nil))
+(insn 143 142 0 19 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":687:1 -1
+     (nil))
+
+;; Function HAL_CORDIC_CalculateZO (HAL_CORDIC_CalculateZO, funcdef_no=367, decl_uid=7778, cgraph_uid=371, symbol_order=370)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 32 from 16 to 17.
+Redirecting jump 90 from 16 to 17.
+Redirecting jump 113 from 16 to 17.
+Merging block 16 into block 15...
+Merged blocks 15 and 16.
+Merged 15 and 16 without moving.
+Removing jump 128.
+Merging block 18 into block 17...
+Merged blocks 17 and 18.
+Merged 17 and 18 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":702:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pInBuff+0 S4 A32])
+        (reg:SI 1 r1 [ pInBuff ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":702:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 pOutBuff+0 S4 A32])
+        (reg:SI 2 r2 [ pOutBuff ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":702:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])
+        (reg:SI 3 r3 [ NbCalc ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":702:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 123)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":705:12 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [3 p_tmp_in_buff+0 S4 A32])
+        (reg/f:SI 123)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":705:12 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 pOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":706:12 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [3 p_tmp_out_buff+0 S4 A64])
+        (reg/f:SI 124)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":706:12 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 125)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":709:6 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 125)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":709:6 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":709:6 -1
+     (nil)
+ -> 24)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 pOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":709:25 discrim 1 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 126)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":709:25 discrim 1 -1
+     (nil))
+(jump_insn 19 18 20 4 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":709:25 discrim 1 -1
+     (nil)
+ -> 24)
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (set (reg:SI 127)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":709:47 discrim 2 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 127)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":709:47 discrim 2 -1
+     (nil))
+(jump_insn 23 22 24 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 34)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":709:47 discrim 2 -1
+     (nil)
+ -> 34)
+(code_label 24 23 25 6 27 (nil) [2 uses])
+(note 25 24 26 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 6 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":712:12 -1
+     (nil))
+(insn 27 26 28 6 (set (reg:SI 114 [ _1 ])
+        (mem/v:SI (plus:SI (reg/f:SI 128)
+                (const_int 36 [0x24])) [4 hcordic_19(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":712:12 -1
+     (nil))
+(insn 28 27 29 6 (set (reg:SI 115 [ _2 ])
+        (ior:SI (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":712:24 -1
+     (nil))
+(insn 29 28 30 6 (set (reg/f:SI 129)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":712:24 -1
+     (nil))
+(insn 30 29 31 6 (set (mem/v:SI (plus:SI (reg/f:SI 129)
+                (const_int 36 [0x24])) [4 hcordic_19(D)->ErrorCode+0 S4 A32])
+        (reg:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":712:24 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 121 [ _9 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":715:12 -1
+     (nil))
+(jump_insn 32 31 33 6 (set (pc)
+        (label_ref:SI 125)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":715:12 288 {*arm_jump}
+     (nil)
+ -> 125)
+(barrier 33 32 34)
+(code_label 34 33 35 7 28 (nil) [1 uses])
+(note 35 34 36 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 38 7 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":719:14 -1
+     (nil))
+(insn 38 36 39 7 (set (reg:QI 132)
+        (mem/v:QI (plus:SI (reg/f:SI 130)
+                (const_int 33 [0x21])) [0 hcordic_19(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":719:14 -1
+     (nil))
+(insn 39 38 40 7 (set (reg:SI 116 [ _3 ])
+        (zero_extend:SI (reg:QI 132))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":719:14 -1
+     (nil))
+(insn 40 39 41 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 116 [ _3 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":719:6 -1
+     (nil))
+(jump_insn 41 40 42 7 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 115)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":719:6 -1
+     (nil)
+ -> 115)
+(note 42 41 43 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 8 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":722:24 -1
+     (nil))
+(insn 44 43 45 8 (set (reg:SI 134)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":722:24 -1
+     (nil))
+(insn 45 44 46 8 (set (mem/v:SI (plus:SI (reg/f:SI 133)
+                (const_int 36 [0x24])) [4 hcordic_19(D)->ErrorCode+0 S4 A32])
+        (reg:SI 134)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":722:24 -1
+     (nil))
+(insn 46 45 47 8 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":725:20 -1
+     (nil))
+(insn 47 46 48 8 (set (reg:SI 136)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":725:20 -1
+     (nil))
+(insn 48 47 49 8 (set (reg:QI 137)
+        (subreg:QI (reg:SI 136) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":725:20 -1
+     (nil))
+(insn 49 48 50 8 (set (mem/v:QI (plus:SI (reg/f:SI 135)
+                (const_int 33 [0x21])) [0 hcordic_19(D)->State+0 S1 A8])
+        (reg:QI 137)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":725:20 -1
+     (nil))
+(call_insn 50 49 51 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_GetTick") [flags 0x41]  <function_decl 0x7fd654bd8f00 HAL_GetTick>) [0 HAL_GetTick S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":728:17 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 51 50 52 8 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 tickstart+0 S4 A64])
+        (reg:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":728:17 -1
+     (nil))
+(insn 52 51 53 8 (set (reg:SI 138)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -12 [0xfffffffffffffff4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":731:5 -1
+     (nil))
+(insn 53 52 54 8 (set (reg:SI 1 r1)
+        (reg:SI 138)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":731:5 -1
+     (nil))
+(insn 54 53 55 8 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":731:5 -1
+     (nil))
+(call_insn 55 54 56 8 (parallel [
+            (call (mem:SI (symbol_ref:SI ("CORDIC_WriteInDataIncrementPtr") [flags 0x3]  <function_decl 0x7fd654be1b00 CORDIC_WriteInDataIncrementPtr>) [0 CORDIC_WriteInDataIncrementPtr S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":731:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 56 55 57 8 (set (reg:SI 140)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":735:16 -1
+     (nil))
+(insn 57 56 58 8 (set (reg:SI 139 [ index_27 ])
+        (plus:SI (reg:SI 140)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":735:16 -1
+     (nil))
+(insn 58 57 59 8 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 index+0 S4 A32])
+        (reg:SI 139 [ index_27 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":735:16 -1
+     (nil))
+(jump_insn 59 58 60 8 (set (pc)
+        (label_ref 97)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":735:5 -1
+     (nil)
+ -> 97)
+(barrier 60 59 99)
+(code_label 99 60 61 9 33 (nil) [1 uses])
+(note 61 99 62 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 9 (set (reg:SI 141)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -12 [0xfffffffffffffff4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":738:7 -1
+     (nil))
+(insn 63 62 64 9 (set (reg:SI 1 r1)
+        (reg:SI 141)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":738:7 -1
+     (nil))
+(insn 64 63 65 9 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":738:7 -1
+     (nil))
+(call_insn 65 64 66 9 (parallel [
+            (call (mem:SI (symbol_ref:SI ("CORDIC_WriteInDataIncrementPtr") [flags 0x3]  <function_decl 0x7fd654be1b00 CORDIC_WriteInDataIncrementPtr>) [0 CORDIC_WriteInDataIncrementPtr S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":738:7 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 66 65 67 9 (set (reg:SI 142)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -16 [0xfffffffffffffff0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":743:7 -1
+     (nil))
+(insn 67 66 68 9 (set (reg:SI 1 r1)
+        (reg:SI 142)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":743:7 -1
+     (nil))
+(insn 68 67 69 9 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":743:7 -1
+     (nil))
+(call_insn 69 68 70 9 (parallel [
+            (call (mem:SI (symbol_ref:SI ("CORDIC_ReadOutDataIncrementPtr") [flags 0x3]  <function_decl 0x7fd654be1c00 CORDIC_ReadOutDataIncrementPtr>) [0 CORDIC_ReadOutDataIncrementPtr S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":743:7 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 70 69 71 9 (set (reg:SI 143)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 Timeout+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":746:10 -1
+     (nil))
+(insn 71 70 72 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 143)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":746:10 -1
+     (nil))
+(jump_insn 72 71 73 9 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 92)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":746:10 -1
+     (nil)
+ -> 92)
+(note 73 72 74 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(call_insn 74 73 75 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_GetTick") [flags 0x41]  <function_decl 0x7fd654bd8f00 HAL_GetTick>) [0 HAL_GetTick S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":748:14 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 75 74 76 10 (set (reg:SI 117 [ _4 ])
+        (reg:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":748:14 -1
+     (nil))
+(insn 76 75 77 10 (set (reg:SI 144)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 tickstart+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":748:28 discrim 1 -1
+     (nil))
+(insn 77 76 78 10 (set (reg:SI 118 [ _5 ])
+        (minus:SI (reg:SI 117 [ _4 ])
+            (reg:SI 144))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":748:28 discrim 1 -1
+     (nil))
+(insn 78 77 79 10 (set (reg:SI 145)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 Timeout+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":748:12 discrim 1 -1
+     (nil))
+(insn 79 78 80 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 145)
+            (reg:SI 118 [ _5 ]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":748:12 discrim 1 -1
+     (nil))
+(jump_insn 80 79 81 10 (set (pc)
+        (if_then_else (geu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 92)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":748:12 discrim 1 -1
+     (nil)
+ -> 92)
+(note 81 80 82 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 11 (set (reg/f:SI 146)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":751:30 -1
+     (nil))
+(insn 83 82 84 11 (set (reg:SI 147)
+        (const_int 4 [0x4])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":751:30 -1
+     (nil))
+(insn 84 83 85 11 (set (mem/v:SI (plus:SI (reg/f:SI 146)
+                (const_int 36 [0x24])) [4 hcordic_19(D)->ErrorCode+0 S4 A32])
+        (reg:SI 147)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":751:30 -1
+     (nil))
+(insn 85 84 86 11 (set (reg/f:SI 148)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":754:26 -1
+     (nil))
+(insn 86 85 87 11 (set (reg:SI 149)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":754:26 -1
+     (nil))
+(insn 87 86 88 11 (set (reg:QI 150)
+        (subreg:QI (reg:SI 149) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":754:26 -1
+     (nil))
+(insn 88 87 89 11 (set (mem/v:QI (plus:SI (reg/f:SI 148)
+                (const_int 33 [0x21])) [0 hcordic_19(D)->State+0 S1 A8])
+        (reg:QI 150)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":754:26 -1
+     (nil))
+(insn 89 88 90 11 (set (reg:SI 121 [ _9 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":757:18 -1
+     (nil))
+(jump_insn 90 89 91 11 (set (pc)
+        (label_ref:SI 125)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":757:18 288 {*arm_jump}
+     (nil)
+ -> 125)
+(barrier 91 90 92)
+(code_label 92 91 93 12 32 (nil) [2 uses])
+(note 93 92 94 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 94 93 95 12 (set (reg:SI 152)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 index+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":735:50 discrim 2 -1
+     (nil))
+(insn 95 94 96 12 (set (reg:SI 151 [ index_38 ])
+        (plus:SI (reg:SI 152)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":735:50 discrim 2 -1
+     (nil))
+(insn 96 95 97 12 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 index+0 S4 A32])
+        (reg:SI 151 [ index_38 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":735:50 discrim 2 -1
+     (nil))
+(code_label 97 96 98 13 31 (nil) [1 uses])
+(note 98 97 100 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 100 98 101 13 (set (reg:SI 153)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 index+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":735:39 discrim 1 -1
+     (nil))
+(insn 101 100 102 13 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 153)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":735:39 discrim 1 -1
+     (nil))
+(jump_insn 102 101 103 13 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 99)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":735:39 discrim 1 -1
+     (nil)
+ -> 99)
+(note 103 102 104 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 104 103 105 14 (set (reg:SI 154)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -16 [0xfffffffffffffff0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":765:5 -1
+     (nil))
+(insn 105 104 106 14 (set (reg:SI 1 r1)
+        (reg:SI 154)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":765:5 -1
+     (nil))
+(insn 106 105 107 14 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":765:5 -1
+     (nil))
+(call_insn 107 106 108 14 (parallel [
+            (call (mem:SI (symbol_ref:SI ("CORDIC_ReadOutDataIncrementPtr") [flags 0x3]  <function_decl 0x7fd654be1c00 CORDIC_ReadOutDataIncrementPtr>) [0 CORDIC_ReadOutDataIncrementPtr S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":765:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 108 107 109 14 (set (reg/f:SI 155)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":768:20 -1
+     (nil))
+(insn 109 108 110 14 (set (reg:SI 156)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":768:20 -1
+     (nil))
+(insn 110 109 111 14 (set (reg:QI 157)
+        (subreg:QI (reg:SI 156) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":768:20 -1
+     (nil))
+(insn 111 110 112 14 (set (mem/v:QI (plus:SI (reg/f:SI 155)
+                (const_int 33 [0x21])) [0 hcordic_19(D)->State+0 S1 A8])
+        (reg:QI 157)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":768:20 -1
+     (nil))
+(insn 112 111 113 14 (set (reg:SI 121 [ _9 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":771:12 -1
+     (nil))
+(jump_insn 113 112 114 14 (set (pc)
+        (label_ref:SI 125)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":771:12 288 {*arm_jump}
+     (nil)
+ -> 125)
+(barrier 114 113 115)
+(code_label 115 114 116 15 30 (nil) [1 uses])
+(note 116 115 117 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 117 116 118 15 (set (reg/f:SI 158)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":776:12 -1
+     (nil))
+(insn 118 117 119 15 (set (reg:SI 119 [ _6 ])
+        (mem/v:SI (plus:SI (reg/f:SI 158)
+                (const_int 36 [0x24])) [4 hcordic_19(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":776:12 -1
+     (nil))
+(insn 119 118 120 15 (set (reg:SI 120 [ _7 ])
+        (ior:SI (reg:SI 119 [ _6 ])
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":776:24 -1
+     (nil))
+(insn 120 119 121 15 (set (reg/f:SI 159)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":776:24 -1
+     (nil))
+(insn 121 120 122 15 (set (mem/v:SI (plus:SI (reg/f:SI 159)
+                (const_int 36 [0x24])) [4 hcordic_19(D)->ErrorCode+0 S4 A32])
+        (reg:SI 120 [ _7 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":776:24 -1
+     (nil))
+(insn 122 121 125 15 (set (reg:SI 121 [ _9 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":779:12 -1
+     (nil))
+(code_label 125 122 126 17 34 (nil) [3 uses])
+(note 126 125 127 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 127 126 131 17 (set (reg:SI 122 [ <retval> ])
+        (reg:SI 121 [ _9 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":781:1 -1
+     (nil))
+(insn 131 127 132 17 (set (reg/i:SI 0 r0)
+        (reg:SI 122 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":781:1 -1
+     (nil))
+(insn 132 131 0 17 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":781:1 -1
+     (nil))
+
+;; Function HAL_CORDIC_Calculate_IT (HAL_CORDIC_Calculate_IT, funcdef_no=368, decl_uid=7783, cgraph_uid=372, symbol_order=371)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 130.
+Merging block 16 into block 15...
+Merged blocks 15 and 16.
+Merged 15 and 16 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":795:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [3 pInBuff+0 S4 A32])
+        (reg:SI 1 r1 [ pInBuff ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":795:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 pOutBuff+0 S4 A32])
+        (reg:SI 2 r2 [ pOutBuff ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":795:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [4 NbCalc+0 S4 A32])
+        (reg:SI 3 r3 [ NbCalc ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":795:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [3 pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":796:12 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])
+        (reg/f:SI 138)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":796:12 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 139)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [3 pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":799:6 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 139)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":799:6 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 22)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":799:6 -1
+     (nil)
+ -> 22)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg:SI 140)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 pOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":799:25 discrim 1 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 140)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":799:25 discrim 1 -1
+     (nil))
+(jump_insn 17 16 18 4 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 22)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":799:25 discrim 1 -1
+     (nil)
+ -> 22)
+(note 18 17 19 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 5 (set (reg:SI 141)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":799:47 discrim 2 -1
+     (nil))
+(insn 20 19 21 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 141)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":799:47 discrim 2 -1
+     (nil))
+(jump_insn 21 20 22 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 32)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":799:47 discrim 2 -1
+     (nil)
+ -> 32)
+(code_label 22 21 23 6 36 (nil) [2 uses])
+(note 23 22 24 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 6 (set (reg/f:SI 142)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":802:12 -1
+     (nil))
+(insn 25 24 26 6 (set (reg:SI 114 [ _1 ])
+        (mem/v:SI (plus:SI (reg/f:SI 142)
+                (const_int 36 [0x24])) [4 hcordic_32(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":802:12 -1
+     (nil))
+(insn 26 25 27 6 (set (reg:SI 115 [ _2 ])
+        (ior:SI (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":802:24 -1
+     (nil))
+(insn 27 26 28 6 (set (reg/f:SI 143)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":802:24 -1
+     (nil))
+(insn 28 27 29 6 (set (mem/v:SI (plus:SI (reg/f:SI 143)
+                (const_int 36 [0x24])) [4 hcordic_32(D)->ErrorCode+0 S4 A32])
+        (reg:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":802:24 -1
+     (nil))
+(insn 29 28 30 6 (set (reg:SI 136 [ _24 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":805:12 -1
+     (nil))
+(jump_insn 30 29 31 6 (set (pc)
+        (label_ref 127)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":805:12 -1
+     (nil)
+ -> 127)
+(barrier 31 30 32)
+(code_label 32 31 33 7 37 (nil) [1 uses])
+(note 33 32 34 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 36 7 (set (reg/f:SI 144)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":809:14 -1
+     (nil))
+(insn 36 34 37 7 (set (reg:QI 146)
+        (mem/v:QI (plus:SI (reg/f:SI 144)
+                (const_int 33 [0x21])) [0 hcordic_32(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":809:14 -1
+     (nil))
+(insn 37 36 38 7 (set (reg:SI 116 [ _3 ])
+        (zero_extend:SI (reg:QI 146))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":809:14 -1
+     (nil))
+(insn 38 37 39 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 116 [ _3 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":809:6 -1
+     (nil))
+(jump_insn 39 38 40 7 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 119)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":809:6 -1
+     (nil)
+ -> 119)
+(note 40 39 41 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 8 (set (reg/f:SI 147)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":812:24 -1
+     (nil))
+(insn 42 41 43 8 (set (reg:SI 148)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":812:24 -1
+     (nil))
+(insn 43 42 44 8 (set (mem/v:SI (plus:SI (reg/f:SI 147)
+                (const_int 36 [0x24])) [4 hcordic_32(D)->ErrorCode+0 S4 A32])
+        (reg:SI 148)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":812:24 -1
+     (nil))
+(insn 44 43 45 8 (set (reg/f:SI 149)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":815:20 -1
+     (nil))
+(insn 45 44 46 8 (set (reg:SI 150)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":815:20 -1
+     (nil))
+(insn 46 45 47 8 (set (reg:QI 151)
+        (subreg:QI (reg:SI 150) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":815:20 -1
+     (nil))
+(insn 47 46 48 8 (set (mem/v:QI (plus:SI (reg/f:SI 149)
+                (const_int 33 [0x21])) [0 hcordic_32(D)->State+0 S1 A8])
+        (reg:QI 151)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":815:20 -1
+     (nil))
+(insn 48 47 49 8 (set (reg/f:SI 152)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":819:9 -1
+     (nil))
+(insn 49 48 50 8 (set (reg/f:SI 117 [ _4 ])
+        (mem/f:SI (reg/f:SI 152) [2 hcordic_32(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":819:9 -1
+     (nil))
+(insn 50 49 51 8 (set (reg:SI 118 [ _5 ])
+        (mem/v:SI (reg/f:SI 117 [ _4 ]) [4 _4->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":819:9 -1
+     (nil))
+(insn 51 50 52 8 (set (reg:SI 119 [ _6 ])
+        (and:SI (reg:SI 118 [ _5 ])
+            (const_int 1048576 [0x100000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":819:9 -1
+     (nil))
+(insn 52 51 53 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ _6 ])
+            (const_int 1048576 [0x100000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":819:8 -1
+     (nil))
+(jump_insn 53 52 54 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":819:8 -1
+     (nil)
+ -> 63)
+(note 54 53 55 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 9 (set (reg:SI 154)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":822:18 -1
+     (nil))
+(insn 56 55 57 9 (set (reg:SI 153 [ tmp_pInBuff_38 ])
+        (plus:SI (reg:SI 154)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":822:18 -1
+     (nil))
+(insn 57 56 58 9 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])
+        (reg:SI 153 [ tmp_pInBuff_38 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":822:18 -1
+     (nil))
+(insn 58 57 59 9 (set (reg:SI 156)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":823:18 -1
+     (nil))
+(insn 59 58 60 9 (set (reg:SI 155 [ tmp_pInBuff_39 ])
+        (plus:SI (reg:SI 156)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":823:18 -1
+     (nil))
+(insn 60 59 61 9 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])
+        (reg:SI 155 [ tmp_pInBuff_39 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":823:18 -1
+     (nil))
+(jump_insn 61 60 62 9 (set (pc)
+        (label_ref 68)) -1
+     (nil)
+ -> 68)
+(barrier 62 61 63)
+(code_label 63 62 64 10 40 (nil) [1 uses])
+(note 64 63 65 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 10 (set (reg:SI 158)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":828:18 -1
+     (nil))
+(insn 66 65 67 10 (set (reg:SI 157 [ tmp_pInBuff_37 ])
+        (plus:SI (reg:SI 158)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":828:18 -1
+     (nil))
+(insn 67 66 68 10 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])
+        (reg:SI 157 [ tmp_pInBuff_37 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":828:18 -1
+     (nil))
+(code_label 68 67 69 11 41 (nil) [1 uses])
+(note 69 68 70 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 70 69 71 11 (set (reg/f:SI 159)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":830:22 -1
+     (nil))
+(insn 71 70 72 11 (set (reg/f:SI 160)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":830:22 -1
+     (nil))
+(insn 72 71 73 11 (set (mem/f:SI (plus:SI (reg/f:SI 159)
+                (const_int 4 [0x4])) [3 hcordic_32(D)->pInBuff+0 S4 A32])
+        (reg/f:SI 160)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":830:22 -1
+     (nil))
+(insn 73 72 74 11 (set (reg/f:SI 161)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":831:23 -1
+     (nil))
+(insn 74 73 75 11 (set (reg/f:SI 162)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 pOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":831:23 -1
+     (nil))
+(insn 75 74 76 11 (set (mem/f:SI (plus:SI (reg/f:SI 161)
+                (const_int 8 [0x8])) [3 hcordic_32(D)->pOutBuff+0 S4 A32])
+        (reg/f:SI 162)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":831:23 -1
+     (nil))
+(insn 76 75 77 11 (set (reg:SI 163)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":832:37 -1
+     (nil))
+(insn 77 76 78 11 (set (reg:SI 120 [ _7 ])
+        (plus:SI (reg:SI 163)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":832:37 -1
+     (nil))
+(insn 78 77 79 11 (set (reg/f:SI 164)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":832:28 -1
+     (nil))
+(insn 79 78 80 11 (set (mem:SI (plus:SI (reg/f:SI 164)
+                (const_int 12 [0xc])) [4 hcordic_32(D)->NbCalcToOrder+0 S4 A32])
+        (reg:SI 120 [ _7 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":832:28 -1
+     (nil))
+(insn 80 79 81 11 (set (reg/f:SI 165)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":833:26 -1
+     (nil))
+(insn 81 80 82 11 (set (reg:SI 166)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":833:26 -1
+     (nil))
+(insn 82 81 83 11 (set (mem:SI (plus:SI (reg/f:SI 165)
+                (const_int 16 [0x10])) [4 hcordic_32(D)->NbCalcToGet+0 S4 A32])
+        (reg:SI 166)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":833:26 -1
+     (nil))
+(insn 83 82 84 11 (set (reg/f:SI 167)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":836:5 -1
+     (nil))
+(insn 84 83 85 11 (set (reg/f:SI 121 [ _8 ])
+        (mem/f:SI (reg/f:SI 167) [2 hcordic_32(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":836:5 -1
+     (nil))
+(insn 85 84 86 11 (set (reg:SI 122 [ _9 ])
+        (mem/v:SI (reg/f:SI 121 [ _8 ]) [4 _8->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":836:5 -1
+     (nil))
+(insn 86 85 87 11 (set (reg/f:SI 168)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":836:5 -1
+     (nil))
+(insn 87 86 88 11 (set (reg/f:SI 123 [ _10 ])
+        (mem/f:SI (reg/f:SI 168) [2 hcordic_32(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":836:5 -1
+     (nil))
+(insn 88 87 89 11 (set (reg:SI 124 [ _11 ])
+        (ior:SI (reg:SI 122 [ _9 ])
+            (const_int 65536 [0x10000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":836:5 -1
+     (nil))
+(insn 89 88 90 11 (set (mem/v:SI (reg/f:SI 123 [ _10 ]) [4 _10->CSR+0 S4 A32])
+        (reg:SI 124 [ _11 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":836:5 -1
+     (nil))
+(insn 90 89 91 11 (set (reg/f:SI 169)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [3 pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":839:17 -1
+     (nil))
+(insn 91 90 92 11 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])
+        (reg/f:SI 169)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":839:17 -1
+     (nil))
+(insn 92 91 93 11 (set (reg/f:SI 170)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":843:5 -1
+     (nil))
+(insn 93 92 94 11 (set (reg:SI 125 [ _12 ])
+        (mem:SI (reg/f:SI 170) [4 *tmp_pInBuff_45+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":843:5 -1
+     (nil))
+(insn 94 93 95 11 (set (reg/f:SI 171)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":843:5 -1
+     (nil))
+(insn 95 94 96 11 (set (reg/f:SI 126 [ _13 ])
+        (mem/f:SI (reg/f:SI 171) [2 hcordic_32(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":843:5 -1
+     (nil))
+(insn 96 95 97 11 (set (reg:SI 127 [ _14 ])
+        (reg:SI 125 [ _12 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":843:5 -1
+     (nil))
+(insn 97 96 98 11 (set (mem/v:SI (plus:SI (reg/f:SI 126 [ _13 ])
+                (const_int 4 [0x4])) [4 _13->WDATA+0 S4 A32])
+        (reg:SI 127 [ _14 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":843:5 -1
+     (nil))
+(insn 98 97 99 11 (set (reg/f:SI 172)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":846:9 -1
+     (nil))
+(insn 99 98 100 11 (set (reg/f:SI 128 [ _15 ])
+        (mem/f:SI (reg/f:SI 172) [2 hcordic_32(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":846:9 -1
+     (nil))
+(insn 100 99 101 11 (set (reg:SI 129 [ _16 ])
+        (mem/v:SI (reg/f:SI 128 [ _15 ]) [4 _15->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":846:9 -1
+     (nil))
+(insn 101 100 102 11 (set (reg:SI 130 [ _17 ])
+        (and:SI (reg:SI 129 [ _16 ])
+            (const_int 1048576 [0x100000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":846:9 -1
+     (nil))
+(insn 102 101 103 11 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 130 [ _17 ])
+            (const_int 1048576 [0x100000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":846:8 -1
+     (nil))
+(jump_insn 103 102 104 11 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 114)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":846:8 -1
+     (nil)
+ -> 114)
+(note 104 103 105 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 105 104 106 12 (set (reg:SI 174)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":849:18 -1
+     (nil))
+(insn 106 105 107 12 (set (reg:SI 173 [ tmp_pInBuff_47 ])
+        (plus:SI (reg:SI 174)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":849:18 -1
+     (nil))
+(insn 107 106 108 12 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])
+        (reg:SI 173 [ tmp_pInBuff_47 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":849:18 -1
+     (nil))
+(insn 108 107 109 12 (set (reg/f:SI 175)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 tmp_pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":852:7 -1
+     (nil))
+(insn 109 108 110 12 (set (reg:SI 131 [ _18 ])
+        (mem:SI (reg/f:SI 175) [4 *tmp_pInBuff_47+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":852:7 -1
+     (nil))
+(insn 110 109 111 12 (set (reg/f:SI 176)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":852:7 -1
+     (nil))
+(insn 111 110 112 12 (set (reg/f:SI 132 [ _19 ])
+        (mem/f:SI (reg/f:SI 176) [2 hcordic_32(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":852:7 -1
+     (nil))
+(insn 112 111 113 12 (set (reg:SI 133 [ _20 ])
+        (reg:SI 131 [ _18 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":852:7 -1
+     (nil))
+(insn 113 112 114 12 (set (mem/v:SI (plus:SI (reg/f:SI 132 [ _19 ])
+                (const_int 4 [0x4])) [4 _19->WDATA+0 S4 A32])
+        (reg:SI 133 [ _20 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":852:7 -1
+     (nil))
+(code_label 114 113 115 13 42 (nil) [1 uses])
+(note 115 114 116 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 116 115 117 13 (set (reg:SI 136 [ _24 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":856:12 -1
+     (nil))
+(jump_insn 117 116 118 13 (set (pc)
+        (label_ref 127)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":856:12 -1
+     (nil)
+ -> 127)
+(barrier 118 117 119)
+(code_label 119 118 120 14 39 (nil) [1 uses])
+(note 120 119 121 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 121 120 122 14 (set (reg/f:SI 177)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":861:12 -1
+     (nil))
+(insn 122 121 123 14 (set (reg:SI 134 [ _21 ])
+        (mem/v:SI (plus:SI (reg/f:SI 177)
+                (const_int 36 [0x24])) [4 hcordic_32(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":861:12 -1
+     (nil))
+(insn 123 122 124 14 (set (reg:SI 135 [ _22 ])
+        (ior:SI (reg:SI 134 [ _21 ])
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":861:24 -1
+     (nil))
+(insn 124 123 125 14 (set (reg/f:SI 178)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":861:24 -1
+     (nil))
+(insn 125 124 126 14 (set (mem/v:SI (plus:SI (reg/f:SI 178)
+                (const_int 36 [0x24])) [4 hcordic_32(D)->ErrorCode+0 S4 A32])
+        (reg:SI 135 [ _22 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":861:24 -1
+     (nil))
+(insn 126 125 127 14 (set (reg:SI 136 [ _24 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":864:12 -1
+     (nil))
+(code_label 127 126 128 15 38 (nil) [2 uses])
+(note 128 127 129 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 129 128 133 15 (set (reg:SI 137 [ <retval> ])
+        (reg:SI 136 [ _24 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":866:1 -1
+     (nil))
+(insn 133 129 134 15 (set (reg/i:SI 0 r0)
+        (reg:SI 137 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":866:1 -1
+     (nil))
+(insn 134 133 0 15 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":866:1 -1
+     (nil))
+
+;; Function HAL_CORDIC_Calculate_DMA (HAL_CORDIC_Calculate_DMA, funcdef_no=369, decl_uid=7789, cgraph_uid=373, symbol_order=372)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+;; Generating RTL for gimple basic block 26
+
+;; Generating RTL for gimple basic block 27
+
+;; Generating RTL for gimple basic block 28
+
+;; Generating RTL for gimple basic block 29
+
+;; Generating RTL for gimple basic block 30
+
+;; Generating RTL for gimple basic block 31
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 244.
+Merging block 33 into block 32...
+Merged blocks 32 and 33.
+Merged 32 and 33 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":887:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pInBuff+0 S4 A32])
+        (reg:SI 1 r1 [ pInBuff ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":887:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 pOutBuff+0 S4 A32])
+        (reg:SI 2 r2 [ pOutBuff ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":887:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])
+        (reg:SI 3 r3 [ NbCalc ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":887:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:SI 157)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":897:6 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 157)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":897:6 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":897:6 -1
+     (nil)
+ -> 21)
+(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 14 4 (set (reg/f:SI 158)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":900:12 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:SI 114 [ _1 ])
+        (mem/v:SI (plus:SI (reg/f:SI 158)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":900:12 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:SI 115 [ _2 ])
+        (ior:SI (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":900:24 -1
+     (nil))
+(insn 16 15 17 4 (set (reg/f:SI 159)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":900:24 -1
+     (nil))
+(insn 17 16 18 4 (set (mem/v:SI (plus:SI (reg/f:SI 159)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])
+        (reg:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":900:24 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:SI 155 [ _44 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":903:12 -1
+     (nil))
+(jump_insn 19 18 20 4 (set (pc)
+        (label_ref 241)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":903:12 -1
+     (nil)
+ -> 241)
+(barrier 20 19 21)
+(code_label 21 20 22 5 44 (nil) [1 uses])
+(note 22 21 23 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 5 (set (reg:SI 160)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 DMADirection+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":907:6 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 160)
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":907:6 -1
+     (nil))
+(jump_insn 25 24 26 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 30)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":907:6 -1
+     (nil)
+ -> 30)
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 6 (set (reg:SI 161)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 DMADirection+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":907:44 discrim 1 -1
+     (nil))
+(insn 28 27 29 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 161)
+            (const_int 3 [0x3]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":907:44 discrim 1 -1
+     (nil))
+(jump_insn 29 28 30 6 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":907:44 discrim 1 -1
+     (nil)
+ -> 44)
+(code_label 30 29 31 7 46 (nil) [1 uses])
+(note 31 30 32 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 33 7 (set (reg:SI 162)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 pOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":910:8 -1
+     (nil))
+(insn 33 32 34 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 162)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":910:8 -1
+     (nil))
+(jump_insn 34 33 35 7 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":910:8 -1
+     (nil)
+ -> 44)
+(note 35 34 36 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 37 8 (set (reg/f:SI 163)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":913:14 -1
+     (nil))
+(insn 37 36 38 8 (set (reg:SI 116 [ _3 ])
+        (mem/v:SI (plus:SI (reg/f:SI 163)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":913:14 -1
+     (nil))
+(insn 38 37 39 8 (set (reg:SI 117 [ _4 ])
+        (ior:SI (reg:SI 116 [ _3 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":913:26 -1
+     (nil))
+(insn 39 38 40 8 (set (reg/f:SI 164)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":913:26 -1
+     (nil))
+(insn 40 39 41 8 (set (mem/v:SI (plus:SI (reg/f:SI 164)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":913:26 -1
+     (nil))
+(insn 41 40 42 8 (set (reg:SI 155 [ _44 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":916:14 -1
+     (nil))
+(jump_insn 42 41 43 8 (set (pc)
+        (label_ref 241)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":916:14 -1
+     (nil)
+ -> 241)
+(barrier 43 42 44)
+(code_label 44 43 45 9 47 (nil) [2 uses])
+(note 45 44 46 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 9 (set (reg:SI 165)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 DMADirection+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":921:6 -1
+     (nil))
+(insn 47 46 48 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 165)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":921:6 -1
+     (nil))
+(jump_insn 48 47 49 9 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 53)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":921:6 -1
+     (nil)
+ -> 53)
+(note 49 48 50 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 10 (set (reg:SI 166)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 DMADirection+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":921:43 discrim 1 -1
+     (nil))
+(insn 51 50 52 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 166)
+            (const_int 3 [0x3]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":921:43 discrim 1 -1
+     (nil))
+(jump_insn 52 51 53 10 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 67)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":921:43 discrim 1 -1
+     (nil)
+ -> 67)
+(code_label 53 52 54 11 48 (nil) [1 uses])
+(note 54 53 55 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 11 (set (reg:SI 167)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":924:8 -1
+     (nil))
+(insn 56 55 57 11 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 167)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":924:8 -1
+     (nil))
+(jump_insn 57 56 58 11 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 67)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":924:8 -1
+     (nil)
+ -> 67)
+(note 58 57 59 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 12 (set (reg/f:SI 168)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":927:14 -1
+     (nil))
+(insn 60 59 61 12 (set (reg:SI 118 [ _5 ])
+        (mem/v:SI (plus:SI (reg/f:SI 168)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":927:14 -1
+     (nil))
+(insn 61 60 62 12 (set (reg:SI 119 [ _6 ])
+        (ior:SI (reg:SI 118 [ _5 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":927:26 -1
+     (nil))
+(insn 62 61 63 12 (set (reg/f:SI 169)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":927:26 -1
+     (nil))
+(insn 63 62 64 12 (set (mem/v:SI (plus:SI (reg/f:SI 169)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])
+        (reg:SI 119 [ _6 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":927:26 -1
+     (nil))
+(insn 64 63 65 12 (set (reg:SI 155 [ _44 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":930:14 -1
+     (nil))
+(jump_insn 65 64 66 12 (set (pc)
+        (label_ref 241)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":930:14 -1
+     (nil)
+ -> 241)
+(barrier 66 65 67)
+(code_label 67 66 68 13 49 (nil) [2 uses])
+(note 68 67 69 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 71 13 (set (reg/f:SI 170)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":934:14 -1
+     (nil))
+(insn 71 69 72 13 (set (reg:QI 172)
+        (mem/v:QI (plus:SI (reg/f:SI 170)
+                (const_int 33 [0x21])) [0 hcordic_52(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":934:14 -1
+     (nil))
+(insn 72 71 73 13 (set (reg:SI 120 [ _7 ])
+        (zero_extend:SI (reg:QI 172))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":934:14 -1
+     (nil))
+(insn 73 72 74 13 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 120 [ _7 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":934:6 -1
+     (nil))
+(jump_insn 74 73 75 13 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 233)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":934:6 -1
+     (nil)
+ -> 233)
+(note 75 74 76 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 76 75 77 14 (set (reg/f:SI 173)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":937:24 -1
+     (nil))
+(insn 77 76 78 14 (set (reg:SI 174)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":937:24 -1
+     (nil))
+(insn 78 77 79 14 (set (mem/v:SI (plus:SI (reg/f:SI 173)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])
+        (reg:SI 174)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":937:24 -1
+     (nil))
+(insn 79 78 80 14 (set (reg/f:SI 175)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":940:20 -1
+     (nil))
+(insn 80 79 81 14 (set (reg:SI 176)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":940:20 -1
+     (nil))
+(insn 81 80 82 14 (set (reg:QI 177)
+        (subreg:QI (reg:SI 176) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":940:20 -1
+     (nil))
+(insn 82 81 83 14 (set (mem/v:QI (plus:SI (reg/f:SI 175)
+                (const_int 33 [0x21])) [0 hcordic_52(D)->State+0 S1 A8])
+        (reg:QI 177)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":940:20 -1
+     (nil))
+(insn 83 82 84 14 (set (reg/f:SI 178)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":943:27 -1
+     (nil))
+(insn 84 83 85 14 (set (reg:SI 179)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 DMADirection+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":943:27 -1
+     (nil))
+(insn 85 84 86 14 (set (mem:SI (plus:SI (reg/f:SI 178)
+                (const_int 20 [0x14])) [4 hcordic_52(D)->DMADirection+0 S4 A32])
+        (reg:SI 179)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":943:27 -1
+     (nil))
+(insn 86 85 87 14 (set (reg:SI 180)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 DMADirection+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":946:8 -1
+     (nil))
+(insn 87 86 88 14 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 180)
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":946:8 -1
+     (nil))
+(jump_insn 88 87 89 14 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 93)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":946:8 -1
+     (nil)
+ -> 93)
+(note 89 88 90 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 15 (set (reg:SI 181)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 DMADirection+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":946:46 discrim 1 -1
+     (nil))
+(insn 91 90 92 15 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 181)
+            (const_int 3 [0x3]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":946:46 discrim 1 -1
+     (nil))
+(jump_insn 92 91 93 15 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 156)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":946:46 discrim 1 -1
+     (nil)
+ -> 156)
+(code_label 93 92 94 16 51 (nil) [1 uses])
+(note 94 93 95 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 95 94 96 16 (set (reg/f:SI 182)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":949:14 -1
+     (nil))
+(insn 96 95 97 16 (set (reg/f:SI 121 [ _8 ])
+        (mem/f:SI (plus:SI (reg/f:SI 182)
+                (const_int 28 [0x1c])) [5 hcordic_52(D)->hdmaOut+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":949:14 -1
+     (nil))
+(insn 97 96 98 16 (set (reg/f:SI 183)
+        (symbol_ref:SI ("CORDIC_DMAOutCplt") [flags 0x3]  <function_decl 0x7fd654be1e00 CORDIC_DMAOutCplt>)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":949:42 -1
+     (nil))
+(insn 98 97 99 16 (set (mem/f:SI (plus:SI (reg/f:SI 121 [ _8 ])
+                (const_int 44 [0x2c])) [8 _8->XferCpltCallback+0 S4 A32])
+        (reg/f:SI 183)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":949:42 -1
+     (nil))
+(insn 99 98 100 16 (set (reg/f:SI 184)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":951:14 -1
+     (nil))
+(insn 100 99 101 16 (set (reg/f:SI 122 [ _9 ])
+        (mem/f:SI (plus:SI (reg/f:SI 184)
+                (const_int 28 [0x1c])) [5 hcordic_52(D)->hdmaOut+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":951:14 -1
+     (nil))
+(insn 101 100 102 16 (set (reg/f:SI 185)
+        (symbol_ref:SI ("CORDIC_DMAError") [flags 0x3]  <function_decl 0x7fd654be1f00 CORDIC_DMAError>)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":951:43 -1
+     (nil))
+(insn 102 101 103 16 (set (mem/f:SI (plus:SI (reg/f:SI 122 [ _9 ])
+                (const_int 52 [0x34])) [8 _9->XferErrorCallback+0 S4 A32])
+        (reg/f:SI 185)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":951:43 -1
+     (nil))
+(insn 103 102 104 16 (set (reg/f:SI 186)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":955:11 -1
+     (nil))
+(insn 104 103 105 16 (set (reg/f:SI 123 [ _10 ])
+        (mem/f:SI (reg/f:SI 186) [2 hcordic_52(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":955:11 -1
+     (nil))
+(insn 105 104 106 16 (set (reg:SI 124 [ _11 ])
+        (mem/v:SI (reg/f:SI 123 [ _10 ]) [4 _10->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":955:11 -1
+     (nil))
+(insn 106 105 107 16 (set (reg:SI 125 [ _12 ])
+        (and:SI (reg:SI 124 [ _11 ])
+            (const_int 524288 [0x80000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":955:11 -1
+     (nil))
+(insn 107 106 108 16 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 125 [ _12 ])
+            (const_int 524288 [0x80000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":955:10 -1
+     (nil))
+(jump_insn 108 107 109 16 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 115)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":955:10 -1
+     (nil)
+ -> 115)
+(note 109 108 110 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 110 109 111 17 (set (reg:SI 188)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":957:21 -1
+     (nil))
+(insn 111 110 112 17 (set (reg:SI 187 [ sizeoutbuff_66 ])
+        (ashift:SI (reg:SI 188)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":957:21 -1
+     (nil))
+(insn 112 111 113 17 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 sizeoutbuff+0 S4 A64])
+        (reg:SI 187 [ sizeoutbuff_66 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":957:21 -1
+     (nil))
+(jump_insn 113 112 114 17 (set (pc)
+        (label_ref 119)) -1
+     (nil)
+ -> 119)
+(barrier 114 113 115)
+(code_label 115 114 116 18 53 (nil) [1 uses])
+(note 116 115 117 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 117 116 118 18 (set (reg:SI 189)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":961:21 -1
+     (nil))
+(insn 118 117 119 18 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 sizeoutbuff+0 S4 A64])
+        (reg:SI 189)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":961:21 -1
+     (nil))
+(code_label 119 118 120 19 54 (nil) [1 uses])
+(note 120 119 121 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 121 120 122 19 (set (reg/f:SI 190)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 pOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":964:18 -1
+     (nil))
+(insn 122 121 123 19 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [4 outputaddr+0 S4 A32])
+        (reg/f:SI 190)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":964:18 -1
+     (nil))
+(insn 123 122 124 19 (set (reg/f:SI 191)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:11 -1
+     (nil))
+(insn 124 123 125 19 (set (reg/f:SI 126 [ _13 ])
+        (mem/f:SI (plus:SI (reg/f:SI 191)
+                (const_int 28 [0x1c])) [5 hcordic_52(D)->hdmaOut+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:11 -1
+     (nil))
+(insn 125 124 126 19 (set (reg/f:SI 192)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:64 -1
+     (nil))
+(insn 126 125 127 19 (set (reg/f:SI 127 [ _14 ])
+        (mem/f:SI (reg/f:SI 192) [2 hcordic_52(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:64 -1
+     (nil))
+(insn 127 126 128 19 (set (reg/f:SI 128 [ _15 ])
+        (plus:SI (reg/f:SI 127 [ _14 ])
+            (const_int 8 [0x8]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:56 -1
+     (nil))
+(insn 128 127 129 19 (set (reg:SI 129 [ _16 ])
+        (reg/f:SI 128 [ _15 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:11 -1
+     (nil))
+(insn 129 128 130 19 (set (reg:SI 3 r3)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 sizeoutbuff+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:11 -1
+     (nil))
+(insn 130 129 131 19 (set (reg:SI 2 r2)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [4 outputaddr+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:11 -1
+     (nil))
+(insn 131 130 132 19 (set (reg:SI 1 r1)
+        (reg:SI 129 [ _16 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:11 -1
+     (nil))
+(insn 132 131 133 19 (set (reg:SI 0 r0)
+        (reg/f:SI 126 [ _13 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:11 -1
+     (nil))
+(call_insn 133 132 134 19 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_DMA_Start_IT") [flags 0x41]  <function_decl 0x7fd654e2f000 HAL_DMA_Start_IT>) [0 HAL_DMA_Start_IT S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:11 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 134 133 135 19 (set (reg:SI 193)
+        (reg:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:11 -1
+     (nil))
+(insn 135 134 136 19 (set (reg:SI 130 [ _17 ])
+        (reg:SI 193)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:11 -1
+     (nil))
+(insn 136 135 137 19 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 130 [ _17 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:10 discrim 1 -1
+     (nil))
+(jump_insn 137 136 138 19 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 147)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":967:10 discrim 1 -1
+     (nil)
+ -> 147)
+(note 138 137 139 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 139 138 140 20 (set (reg/f:SI 194)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":970:16 -1
+     (nil))
+(insn 140 139 141 20 (set (reg:SI 131 [ _18 ])
+        (mem/v:SI (plus:SI (reg/f:SI 194)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":970:16 -1
+     (nil))
+(insn 141 140 142 20 (set (reg:SI 132 [ _19 ])
+        (ior:SI (reg:SI 131 [ _18 ])
+            (const_int 8 [0x8]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":970:28 -1
+     (nil))
+(insn 142 141 143 20 (set (reg/f:SI 195)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":970:28 -1
+     (nil))
+(insn 143 142 144 20 (set (mem/v:SI (plus:SI (reg/f:SI 195)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])
+        (reg:SI 132 [ _19 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":970:28 -1
+     (nil))
+(insn 144 143 145 20 (set (reg:SI 155 [ _44 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":973:16 -1
+     (nil))
+(jump_insn 145 144 146 20 (set (pc)
+        (label_ref 241)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":973:16 -1
+     (nil)
+ -> 241)
+(barrier 146 145 147)
+(code_label 147 146 148 21 55 (nil) [1 uses])
+(note 148 147 149 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 149 148 150 21 (set (reg/f:SI 196)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":977:7 -1
+     (nil))
+(insn 150 149 151 21 (set (reg/f:SI 133 [ _20 ])
+        (mem/f:SI (reg/f:SI 196) [2 hcordic_52(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":977:7 -1
+     (nil))
+(insn 151 150 152 21 (set (reg:SI 134 [ _21 ])
+        (mem/v:SI (reg/f:SI 133 [ _20 ]) [4 _20->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":977:7 -1
+     (nil))
+(insn 152 151 153 21 (set (reg/f:SI 197)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":977:7 -1
+     (nil))
+(insn 153 152 154 21 (set (reg/f:SI 135 [ _22 ])
+        (mem/f:SI (reg/f:SI 197) [2 hcordic_52(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":977:7 -1
+     (nil))
+(insn 154 153 155 21 (set (reg:SI 136 [ _23 ])
+        (ior:SI (reg:SI 134 [ _21 ])
+            (const_int 131072 [0x20000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":977:7 -1
+     (nil))
+(insn 155 154 156 21 (set (mem/v:SI (reg/f:SI 135 [ _22 ]) [4 _22->CSR+0 S4 A32])
+        (reg:SI 136 [ _23 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":977:7 -1
+     (nil))
+(code_label 156 155 157 22 52 (nil) [1 uses])
+(note 157 156 158 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 158 157 159 22 (set (reg:SI 198)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 DMADirection+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":981:8 -1
+     (nil))
+(insn 159 158 160 22 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 198)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":981:8 -1
+     (nil))
+(jump_insn 160 159 161 22 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 165)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":981:8 -1
+     (nil)
+ -> 165)
+(note 161 160 162 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 162 161 163 23 (set (reg:SI 199)
+        (mem/c:SI (reg/f:SI 108 virtual-incoming-args) [4 DMADirection+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":981:45 discrim 1 -1
+     (nil))
+(insn 163 162 164 23 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 199)
+            (const_int 3 [0x3]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":981:45 discrim 1 -1
+     (nil))
+(jump_insn 164 163 165 23 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 228)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":981:45 discrim 1 -1
+     (nil)
+ -> 228)
+(code_label 165 164 166 24 56 (nil) [1 uses])
+(note 166 165 167 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 167 166 168 24 (set (reg/f:SI 200)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":984:14 -1
+     (nil))
+(insn 168 167 169 24 (set (reg/f:SI 137 [ _24 ])
+        (mem/f:SI (plus:SI (reg/f:SI 200)
+                (const_int 24 [0x18])) [5 hcordic_52(D)->hdmaIn+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":984:14 -1
+     (nil))
+(insn 169 168 170 24 (set (reg/f:SI 201)
+        (symbol_ref:SI ("CORDIC_DMAInCplt") [flags 0x3]  <function_decl 0x7fd654be1d00 CORDIC_DMAInCplt>)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":984:41 -1
+     (nil))
+(insn 170 169 171 24 (set (mem/f:SI (plus:SI (reg/f:SI 137 [ _24 ])
+                (const_int 44 [0x2c])) [8 _24->XferCpltCallback+0 S4 A32])
+        (reg/f:SI 201)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":984:41 -1
+     (nil))
+(insn 171 170 172 24 (set (reg/f:SI 202)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":986:14 -1
+     (nil))
+(insn 172 171 173 24 (set (reg/f:SI 138 [ _25 ])
+        (mem/f:SI (plus:SI (reg/f:SI 202)
+                (const_int 24 [0x18])) [5 hcordic_52(D)->hdmaIn+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":986:14 -1
+     (nil))
+(insn 173 172 174 24 (set (reg/f:SI 203)
+        (symbol_ref:SI ("CORDIC_DMAError") [flags 0x3]  <function_decl 0x7fd654be1f00 CORDIC_DMAError>)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":986:42 -1
+     (nil))
+(insn 174 173 175 24 (set (mem/f:SI (plus:SI (reg/f:SI 138 [ _25 ])
+                (const_int 52 [0x34])) [8 _25->XferErrorCallback+0 S4 A32])
+        (reg/f:SI 203)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":986:42 -1
+     (nil))
+(insn 175 174 176 24 (set (reg/f:SI 204)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":990:11 -1
+     (nil))
+(insn 176 175 177 24 (set (reg/f:SI 139 [ _26 ])
+        (mem/f:SI (reg/f:SI 204) [2 hcordic_52(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":990:11 -1
+     (nil))
+(insn 177 176 178 24 (set (reg:SI 140 [ _27 ])
+        (mem/v:SI (reg/f:SI 139 [ _26 ]) [4 _26->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":990:11 -1
+     (nil))
+(insn 178 177 179 24 (set (reg:SI 141 [ _28 ])
+        (and:SI (reg:SI 140 [ _27 ])
+            (const_int 1048576 [0x100000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":990:11 -1
+     (nil))
+(insn 179 178 180 24 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 141 [ _28 ])
+            (const_int 1048576 [0x100000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":990:10 -1
+     (nil))
+(jump_insn 180 179 181 24 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 187)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":990:10 -1
+     (nil)
+ -> 187)
+(note 181 180 182 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 182 181 183 25 (set (reg:SI 206)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":992:20 -1
+     (nil))
+(insn 183 182 184 25 (set (reg:SI 205 [ sizeinbuff_75 ])
+        (ashift:SI (reg:SI 206)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":992:20 -1
+     (nil))
+(insn 184 183 185 25 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 sizeinbuff+0 S4 A32])
+        (reg:SI 205 [ sizeinbuff_75 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":992:20 -1
+     (nil))
+(jump_insn 185 184 186 25 (set (pc)
+        (label_ref 191)) -1
+     (nil)
+ -> 191)
+(barrier 186 185 187)
+(code_label 187 186 188 26 58 (nil) [1 uses])
+(note 188 187 189 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 189 188 190 26 (set (reg:SI 207)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [4 NbCalc+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":996:20 -1
+     (nil))
+(insn 190 189 191 26 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 sizeinbuff+0 S4 A32])
+        (reg:SI 207)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":996:20 -1
+     (nil))
+(code_label 191 190 192 27 59 (nil) [1 uses])
+(note 192 191 193 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 193 192 194 27 (set (reg/f:SI 208)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":999:18 -1
+     (nil))
+(insn 194 193 195 27 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [4 inputaddr+0 S4 A64])
+        (reg/f:SI 208)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":999:18 -1
+     (nil))
+(insn 195 194 196 27 (set (reg/f:SI 209)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:11 -1
+     (nil))
+(insn 196 195 197 27 (set (reg/f:SI 142 [ _29 ])
+        (mem/f:SI (plus:SI (reg/f:SI 209)
+                (const_int 24 [0x18])) [5 hcordic_52(D)->hdmaIn+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:11 -1
+     (nil))
+(insn 197 196 198 27 (set (reg/f:SI 210)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:74 -1
+     (nil))
+(insn 198 197 199 27 (set (reg/f:SI 143 [ _30 ])
+        (mem/f:SI (reg/f:SI 210) [2 hcordic_52(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:74 -1
+     (nil))
+(insn 199 198 200 27 (set (reg/f:SI 144 [ _31 ])
+        (plus:SI (reg/f:SI 143 [ _30 ])
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:66 -1
+     (nil))
+(insn 200 199 201 27 (set (reg:SI 145 [ _32 ])
+        (reg/f:SI 144 [ _31 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:11 -1
+     (nil))
+(insn 201 200 202 27 (set (reg:SI 3 r3)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 sizeinbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:11 -1
+     (nil))
+(insn 202 201 203 27 (set (reg:SI 2 r2)
+        (reg:SI 145 [ _32 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:11 -1
+     (nil))
+(insn 203 202 204 27 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [4 inputaddr+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:11 -1
+     (nil))
+(insn 204 203 205 27 (set (reg:SI 0 r0)
+        (reg/f:SI 142 [ _29 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:11 -1
+     (nil))
+(call_insn 205 204 206 27 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_DMA_Start_IT") [flags 0x41]  <function_decl 0x7fd654e2f000 HAL_DMA_Start_IT>) [0 HAL_DMA_Start_IT S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:11 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 206 205 207 27 (set (reg:SI 211)
+        (reg:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:11 -1
+     (nil))
+(insn 207 206 208 27 (set (reg:SI 146 [ _33 ])
+        (reg:SI 211)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:11 -1
+     (nil))
+(insn 208 207 209 27 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 146 [ _33 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:10 discrim 1 -1
+     (nil))
+(jump_insn 209 208 210 27 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 219)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1002:10 discrim 1 -1
+     (nil)
+ -> 219)
+(note 210 209 211 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 211 210 212 28 (set (reg/f:SI 212)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1005:16 -1
+     (nil))
+(insn 212 211 213 28 (set (reg:SI 147 [ _34 ])
+        (mem/v:SI (plus:SI (reg/f:SI 212)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1005:16 -1
+     (nil))
+(insn 213 212 214 28 (set (reg:SI 148 [ _35 ])
+        (ior:SI (reg:SI 147 [ _34 ])
+            (const_int 8 [0x8]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1005:28 -1
+     (nil))
+(insn 214 213 215 28 (set (reg/f:SI 213)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1005:28 -1
+     (nil))
+(insn 215 214 216 28 (set (mem/v:SI (plus:SI (reg/f:SI 213)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])
+        (reg:SI 148 [ _35 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1005:28 -1
+     (nil))
+(insn 216 215 217 28 (set (reg:SI 155 [ _44 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1008:16 -1
+     (nil))
+(jump_insn 217 216 218 28 (set (pc)
+        (label_ref 241)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1008:16 -1
+     (nil)
+ -> 241)
+(barrier 218 217 219)
+(code_label 219 218 220 29 60 (nil) [1 uses])
+(note 220 219 221 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(insn 221 220 222 29 (set (reg/f:SI 214)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1012:7 -1
+     (nil))
+(insn 222 221 223 29 (set (reg/f:SI 149 [ _36 ])
+        (mem/f:SI (reg/f:SI 214) [2 hcordic_52(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1012:7 -1
+     (nil))
+(insn 223 222 224 29 (set (reg:SI 150 [ _37 ])
+        (mem/v:SI (reg/f:SI 149 [ _36 ]) [4 _36->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1012:7 -1
+     (nil))
+(insn 224 223 225 29 (set (reg/f:SI 215)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1012:7 -1
+     (nil))
+(insn 225 224 226 29 (set (reg/f:SI 151 [ _38 ])
+        (mem/f:SI (reg/f:SI 215) [2 hcordic_52(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1012:7 -1
+     (nil))
+(insn 226 225 227 29 (set (reg:SI 152 [ _39 ])
+        (ior:SI (reg:SI 150 [ _37 ])
+            (const_int 262144 [0x40000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1012:7 -1
+     (nil))
+(insn 227 226 228 29 (set (mem/v:SI (reg/f:SI 151 [ _38 ]) [4 _38->CSR+0 S4 A32])
+        (reg:SI 152 [ _39 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1012:7 -1
+     (nil))
+(code_label 228 227 229 30 57 (nil) [1 uses])
+(note 229 228 230 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 230 229 231 30 (set (reg:SI 155 [ _44 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1016:12 -1
+     (nil))
+(jump_insn 231 230 232 30 (set (pc)
+        (label_ref 241)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1016:12 -1
+     (nil)
+ -> 241)
+(barrier 232 231 233)
+(code_label 233 232 234 31 50 (nil) [1 uses])
+(note 234 233 235 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(insn 235 234 236 31 (set (reg/f:SI 216)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1021:12 -1
+     (nil))
+(insn 236 235 237 31 (set (reg:SI 153 [ _40 ])
+        (mem/v:SI (plus:SI (reg/f:SI 216)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1021:12 -1
+     (nil))
+(insn 237 236 238 31 (set (reg:SI 154 [ _41 ])
+        (ior:SI (reg:SI 153 [ _40 ])
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1021:24 -1
+     (nil))
+(insn 238 237 239 31 (set (reg/f:SI 217)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1021:24 -1
+     (nil))
+(insn 239 238 240 31 (set (mem/v:SI (plus:SI (reg/f:SI 217)
+                (const_int 36 [0x24])) [4 hcordic_52(D)->ErrorCode+0 S4 A32])
+        (reg:SI 154 [ _41 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1021:24 -1
+     (nil))
+(insn 240 239 241 31 (set (reg:SI 155 [ _44 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1024:12 -1
+     (nil))
+(code_label 241 240 242 32 45 (nil) [6 uses])
+(note 242 241 243 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 243 242 247 32 (set (reg:SI 156 [ <retval> ])
+        (reg:SI 155 [ _44 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1026:1 -1
+     (nil))
+(insn 247 243 248 32 (set (reg/i:SI 0 r0)
+        (reg:SI 156 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1026:1 -1
+     (nil))
+(insn 248 247 0 32 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1026:1 -1
+     (nil))
+
+;; Function HAL_CORDIC_ErrorCallback (HAL_CORDIC_ErrorCallback, funcdef_no=370, decl_uid=7791, cgraph_uid=374, symbol_order=373)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1054:1 -1
+     (nil))
+(note 3 2 0 2 NOTE_INSN_FUNCTION_BEG)
+
+;; Function HAL_CORDIC_CalculateCpltCallback (HAL_CORDIC_CalculateCpltCallback, funcdef_no=371, decl_uid=7793, cgraph_uid=375, symbol_order=374)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1070:1 -1
+     (nil))
+(note 3 2 0 2 NOTE_INSN_FUNCTION_BEG)
+
+;; Function HAL_CORDIC_IRQHandler (HAL_CORDIC_IRQHandler, funcdef_no=372, decl_uid=7795, cgraph_uid=376, symbol_order=375)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->12 redirected to 13
+Edge 7->12 redirected to 13
+Edge 10->12 redirected to 13
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1103:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1106:7 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (reg/f:SI 133) [2 hcordic_23(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1106:7 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 115 [ _2 ])
+        (mem/v:SI (reg/f:SI 114 [ _1 ]) [4 _1->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1106:7 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 116 [ _3 ])
+        (and:SI (reg:SI 115 [ _2 ])
+            (const_int 65536 [0x10000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1106:7 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 116 [ _3 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1106:6 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 78)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1106:6 277 {arm_cond_branch}
+     (nil)
+ -> 78)
+(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 14 4 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1108:9 -1
+     (nil))
+(insn 14 13 15 4 (set (reg/f:SI 117 [ _4 ])
+        (mem/f:SI (reg/f:SI 134) [2 hcordic_23(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1108:9 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:SI 118 [ _5 ])
+        (mem/v:SI (reg/f:SI 117 [ _4 ]) [4 _4->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1108:9 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:SI 119 [ _6 ])
+        (and:SI (reg:SI 118 [ _5 ])
+            (const_int -2147483648 [0xffffffff80000000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1108:9 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 119 [ _6 ])
+            (const_int -2147483648 [0xffffffff80000000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1108:58 -1
+     (nil))
+(jump_insn 18 17 19 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1108:58 -1
+     (nil)
+ -> 23)
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (set (reg:SI 132 [ iftmp.0_19 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1108:58 discrim 1 -1
+     (nil))
+(jump_insn 21 20 22 5 (set (pc)
+        (label_ref 26)) -1
+     (nil)
+ -> 26)
+(barrier 22 21 23)
+(code_label 23 22 24 6 67 (nil) [1 uses])
+(note 24 23 25 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 6 (set (reg:SI 132 [ iftmp.0_19 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1108:58 discrim 2 -1
+     (nil))
+(code_label 26 25 27 7 68 (nil) [1 uses])
+(note 27 26 28 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 132 [ iftmp.0_19 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1108:8 discrim 4 -1
+     (nil))
+(jump_insn 29 28 30 7 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 78)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1108:8 discrim 4 277 {arm_cond_branch}
+     (nil)
+ -> 78)
+(note 30 29 31 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 8 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1111:14 -1
+     (nil))
+(insn 32 31 33 8 (set (reg:SI 120 [ _7 ])
+        (mem:SI (plus:SI (reg/f:SI 135)
+                (const_int 16 [0x10])) [4 hcordic_23(D)->NbCalcToGet+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1111:14 -1
+     (nil))
+(insn 33 32 34 8 (set (reg:SI 121 [ _8 ])
+        (plus:SI (reg:SI 120 [ _7 ])
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1111:27 -1
+     (nil))
+(insn 34 33 35 8 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1111:27 -1
+     (nil))
+(insn 35 34 36 8 (set (mem:SI (plus:SI (reg/f:SI 136)
+                (const_int 16 [0x10])) [4 hcordic_23(D)->NbCalcToGet+0 S4 A32])
+        (reg:SI 121 [ _8 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1111:27 -1
+     (nil))
+(insn 36 35 37 8 (set (reg:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1114:7 -1
+     (nil))
+(insn 37 36 38 8 (set (reg/f:SI 122 [ _9 ])
+        (plus:SI (reg:SI 137)
+            (const_int 8 [0x8]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1114:7 -1
+     (nil))
+(insn 38 37 39 8 (set (reg:SI 1 r1)
+        (reg/f:SI 122 [ _9 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1114:7 -1
+     (nil))
+(insn 39 38 40 8 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1114:7 -1
+     (nil))
+(call_insn 40 39 41 8 (parallel [
+            (call (mem:SI (symbol_ref:SI ("CORDIC_ReadOutDataIncrementPtr") [flags 0x3]  <function_decl 0x7fd654be1c00 CORDIC_ReadOutDataIncrementPtr>) [0 CORDIC_ReadOutDataIncrementPtr S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1114:7 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 41 40 42 8 (set (reg/f:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1117:18 -1
+     (nil))
+(insn 42 41 43 8 (set (reg:SI 123 [ _10 ])
+        (mem:SI (plus:SI (reg/f:SI 138)
+                (const_int 12 [0xc])) [4 hcordic_23(D)->NbCalcToOrder+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1117:18 -1
+     (nil))
+(insn 43 42 44 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 123 [ _10 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1117:10 -1
+     (nil))
+(jump_insn 44 43 45 8 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 56)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1117:10 -1
+     (nil)
+ -> 56)
+(note 45 44 46 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 9 (set (reg/f:SI 139)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1120:16 -1
+     (nil))
+(insn 47 46 48 9 (set (reg:SI 124 [ _11 ])
+        (mem:SI (plus:SI (reg/f:SI 139)
+                (const_int 12 [0xc])) [4 hcordic_23(D)->NbCalcToOrder+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1120:16 -1
+     (nil))
+(insn 48 47 49 9 (set (reg:SI 125 [ _12 ])
+        (plus:SI (reg:SI 124 [ _11 ])
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1120:31 -1
+     (nil))
+(insn 49 48 50 9 (set (reg/f:SI 140)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1120:31 -1
+     (nil))
+(insn 50 49 51 9 (set (mem:SI (plus:SI (reg/f:SI 140)
+                (const_int 12 [0xc])) [4 hcordic_23(D)->NbCalcToOrder+0 S4 A32])
+        (reg:SI 125 [ _12 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1120:31 -1
+     (nil))
+(insn 51 50 52 9 (set (reg:SI 141)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1124:9 -1
+     (nil))
+(insn 52 51 53 9 (set (reg/f:SI 126 [ _13 ])
+        (plus:SI (reg:SI 141)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1124:9 -1
+     (nil))
+(insn 53 52 54 9 (set (reg:SI 1 r1)
+        (reg/f:SI 126 [ _13 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1124:9 -1
+     (nil))
+(insn 54 53 55 9 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1124:9 -1
+     (nil))
+(call_insn 55 54 56 9 (parallel [
+            (call (mem:SI (symbol_ref:SI ("CORDIC_WriteInDataIncrementPtr") [flags 0x3]  <function_decl 0x7fd654be1b00 CORDIC_WriteInDataIncrementPtr>) [0 CORDIC_WriteInDataIncrementPtr S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1124:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(code_label 56 55 57 10 69 (nil) [1 uses])
+(note 57 56 58 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 58 57 59 10 (set (reg/f:SI 142)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1128:18 -1
+     (nil))
+(insn 59 58 60 10 (set (reg:SI 127 [ _14 ])
+        (mem:SI (plus:SI (reg/f:SI 142)
+                (const_int 16 [0x10])) [4 hcordic_23(D)->NbCalcToGet+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1128:18 -1
+     (nil))
+(insn 60 59 61 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 127 [ _14 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1128:10 -1
+     (nil))
+(jump_insn 61 60 62 10 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 78)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1128:10 277 {arm_cond_branch}
+     (nil)
+ -> 78)
+(note 62 61 63 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 11 (set (reg/f:SI 143)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1131:9 -1
+     (nil))
+(insn 64 63 65 11 (set (reg/f:SI 128 [ _15 ])
+        (mem/f:SI (reg/f:SI 143) [2 hcordic_23(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1131:9 -1
+     (nil))
+(insn 65 64 66 11 (set (reg:SI 129 [ _16 ])
+        (mem/v:SI (reg/f:SI 128 [ _15 ]) [4 _15->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1131:9 -1
+     (nil))
+(insn 66 65 67 11 (set (reg/f:SI 144)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1131:9 -1
+     (nil))
+(insn 67 66 68 11 (set (reg/f:SI 130 [ _17 ])
+        (mem/f:SI (reg/f:SI 144) [2 hcordic_23(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1131:9 -1
+     (nil))
+(insn 68 67 69 11 (set (reg:SI 131 [ _18 ])
+        (and:SI (reg:SI 129 [ _16 ])
+            (const_int -65537 [0xfffffffffffeffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1131:9 -1
+     (nil))
+(insn 69 68 70 11 (set (mem/v:SI (reg/f:SI 130 [ _17 ]) [4 _17->CSR+0 S4 A32])
+        (reg:SI 131 [ _18 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1131:9 -1
+     (nil))
+(insn 70 69 71 11 (set (reg/f:SI 145)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1134:24 -1
+     (nil))
+(insn 71 70 72 11 (set (reg:SI 146)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1134:24 -1
+     (nil))
+(insn 72 71 73 11 (set (reg:QI 147)
+        (subreg:QI (reg:SI 146) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1134:24 -1
+     (nil))
+(insn 73 72 74 11 (set (mem/v:QI (plus:SI (reg/f:SI 145)
+                (const_int 33 [0x21])) [0 hcordic_23(D)->State+0 S1 A8])
+        (reg:QI 147)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1134:24 -1
+     (nil))
+(insn 74 73 75 11 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1142:9 -1
+     (nil))
+(call_insn 75 74 78 11 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_CORDIC_CalculateCpltCallback") [flags 0x3]  <function_decl 0x7fd654fb7600 HAL_CORDIC_CalculateCpltCallback>) [0 HAL_CORDIC_CalculateCpltCallback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1142:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(code_label 78 75 79 13 65 (nil) [3 uses])
+(note 79 78 0 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+
+;; Function HAL_CORDIC_GetState (HAL_CORDIC_GetState, funcdef_no=373, decl_uid=7797, cgraph_uid=377, symbol_order=376)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 13.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1174:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 8 2 (set (reg/f:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1176:17 -1
+     (nil))
+(insn 8 6 9 2 (set (reg:QI 118)
+        (mem/v:QI (plus:SI (reg/f:SI 116)
+                (const_int 33 [0x21])) [0 hcordic_2(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1176:17 -1
+     (nil))
+(insn 9 8 12 2 (set (reg:SI 114 [ _3 ])
+        (zero_extend:SI (reg:QI 118))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1176:17 -1
+     (nil))
+(insn 12 9 16 2 (set (reg:SI 115 [ <retval> ])
+        (reg:SI 114 [ _3 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1176:17 discrim 1 -1
+     (nil))
+(insn 16 12 17 2 (set (reg/i:SI 0 r0)
+        (reg:SI 115 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1177:1 -1
+     (nil))
+(insn 17 16 0 2 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1177:1 -1
+     (nil))
+
+;; Function HAL_CORDIC_GetError (HAL_CORDIC_GetError, funcdef_no=374, decl_uid=7799, cgraph_uid=378, symbol_order=377)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 11.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1187:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1189:17 -1
+     (nil))
+(insn 7 6 10 2 (set (reg:SI 114 [ _3 ])
+        (mem/v:SI (plus:SI (reg/f:SI 116)
+                (const_int 36 [0x24])) [4 hcordic_2(D)->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1189:17 -1
+     (nil))
+(insn 10 7 14 2 (set (reg:SI 115 [ <retval> ])
+        (reg:SI 114 [ _3 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1189:17 discrim 1 -1
+     (nil))
+(insn 14 10 15 2 (set (reg/i:SI 0 r0)
+        (reg:SI 115 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1190:1 -1
+     (nil))
+(insn 15 14 0 2 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1190:1 -1
+     (nil))
+
+;; Function CORDIC_WriteInDataIncrementPtr (CORDIC_WriteInDataIncrementPtr, funcdef_no=375, decl_uid=12611, cgraph_uid=379, symbol_order=378)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+Merging block 5 into block 4...
+Merged blocks 4 and 5.
+Merged 4 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1212:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppInBuff+0 S4 A32])
+        (reg:SI 1 r1 [ ppInBuff ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1212:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg/f:SI 129)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1214:3 -1
+     (nil))
+(insn 8 7 9 2 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (reg/f:SI 129) [3 *ppInBuff_18(D)+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1214:3 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 115 [ _2 ])
+        (mem:SI (reg/f:SI 114 [ _1 ]) [4 *_1+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1214:3 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1214:3 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (reg/f:SI 130) [2 hcordic_19(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1214:3 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 117 [ _4 ])
+        (reg:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1214:3 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/v:SI (plus:SI (reg/f:SI 116 [ _3 ])
+                (const_int 4 [0x4])) [4 _3->WDATA+0 S4 A32])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1214:3 -1
+     (nil))
+(insn 14 13 15 2 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1217:4 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:SI 118 [ _5 ])
+        (mem/f:SI (reg/f:SI 131) [3 *ppInBuff_18(D)+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1217:4 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 119 [ _6 ])
+        (plus:SI (reg/f:SI 118 [ _5 ])
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1217:14 -1
+     (nil))
+(insn 17 16 18 2 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1217:14 -1
+     (nil))
+(insn 18 17 19 2 (set (mem/f:SI (reg/f:SI 132) [3 *ppInBuff_18(D)+0 S4 A32])
+        (reg/f:SI 119 [ _6 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1217:14 -1
+     (nil))
+(insn 19 18 20 2 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1220:7 -1
+     (nil))
+(insn 20 19 21 2 (set (reg/f:SI 120 [ _7 ])
+        (mem/f:SI (reg/f:SI 133) [2 hcordic_19(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1220:7 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 121 [ _8 ])
+        (mem/v:SI (reg/f:SI 120 [ _7 ]) [4 _7->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1220:7 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 122 [ _9 ])
+        (and:SI (reg:SI 121 [ _8 ])
+            (const_int 1048576 [0x100000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1220:7 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 122 [ _9 ])
+            (const_int 1048576 [0x100000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1220:6 -1
+     (nil))
+(jump_insn 24 23 25 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 40)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1220:6 277 {arm_cond_branch}
+     (nil)
+ -> 40)
+(note 25 24 26 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 4 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1223:5 -1
+     (nil))
+(insn 27 26 28 4 (set (reg/f:SI 123 [ _10 ])
+        (mem/f:SI (reg/f:SI 134) [3 *ppInBuff_18(D)+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1223:5 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:SI 124 [ _11 ])
+        (mem:SI (reg/f:SI 123 [ _10 ]) [4 *_10+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1223:5 -1
+     (nil))
+(insn 29 28 30 4 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1223:5 -1
+     (nil))
+(insn 30 29 31 4 (set (reg/f:SI 125 [ _12 ])
+        (mem/f:SI (reg/f:SI 135) [2 hcordic_19(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1223:5 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:SI 126 [ _13 ])
+        (reg:SI 124 [ _11 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1223:5 -1
+     (nil))
+(insn 32 31 33 4 (set (mem/v:SI (plus:SI (reg/f:SI 125 [ _12 ])
+                (const_int 4 [0x4])) [4 _12->WDATA+0 S4 A32])
+        (reg:SI 126 [ _13 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1223:5 -1
+     (nil))
+(insn 33 32 34 4 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1226:6 -1
+     (nil))
+(insn 34 33 35 4 (set (reg/f:SI 127 [ _14 ])
+        (mem/f:SI (reg/f:SI 136) [3 *ppInBuff_18(D)+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1226:6 -1
+     (nil))
+(insn 35 34 36 4 (set (reg/f:SI 128 [ _15 ])
+        (plus:SI (reg/f:SI 127 [ _14 ])
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1226:16 -1
+     (nil))
+(insn 36 35 37 4 (set (reg/f:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppInBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1226:16 -1
+     (nil))
+(insn 37 36 40 4 (set (mem/f:SI (reg/f:SI 137) [3 *ppInBuff_18(D)+0 S4 A32])
+        (reg/f:SI 128 [ _15 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1226:16 -1
+     (nil))
+(code_label 40 37 41 6 75 (nil) [1 uses])
+(note 41 40 0 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+;; Function CORDIC_ReadOutDataIncrementPtr (CORDIC_ReadOutDataIncrementPtr, funcdef_no=376, decl_uid=12614, cgraph_uid=380, symbol_order=379)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+Merging block 5 into block 4...
+Merged blocks 4 and 5.
+Merged 4 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg:SI 0 r0 [ hcordic ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1238:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppOutBuff+0 S4 A32])
+        (reg:SI 1 r1 [ ppOutBuff ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1238:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg/f:SI 129)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1240:26 -1
+     (nil))
+(insn 8 7 9 2 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (reg/f:SI 129) [2 hcordic_18(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1240:26 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 115 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 114 [ _1 ])
+                (const_int 8 [0x8])) [4 _1->RDATA+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1240:26 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1240:4 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (reg/f:SI 130) [3 *ppOutBuff_19(D)+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1240:4 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 117 [ _4 ])
+        (reg:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1240:17 -1
+     (nil))
+(insn 13 12 14 2 (set (mem:SI (reg/f:SI 116 [ _3 ]) [4 *_3+0 S4 A32])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1240:15 -1
+     (nil))
+(insn 14 13 15 2 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1243:4 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:SI 118 [ _5 ])
+        (mem/f:SI (reg/f:SI 131) [3 *ppOutBuff_19(D)+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1243:4 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 119 [ _6 ])
+        (plus:SI (reg/f:SI 118 [ _5 ])
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1243:15 -1
+     (nil))
+(insn 17 16 18 2 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1243:15 -1
+     (nil))
+(insn 18 17 19 2 (set (mem/f:SI (reg/f:SI 132) [3 *ppOutBuff_19(D)+0 S4 A32])
+        (reg/f:SI 119 [ _6 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1243:15 -1
+     (nil))
+(insn 19 18 20 2 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1246:7 -1
+     (nil))
+(insn 20 19 21 2 (set (reg/f:SI 120 [ _7 ])
+        (mem/f:SI (reg/f:SI 133) [2 hcordic_18(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1246:7 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 121 [ _8 ])
+        (mem/v:SI (reg/f:SI 120 [ _7 ]) [4 _7->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1246:7 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 122 [ _9 ])
+        (and:SI (reg:SI 121 [ _8 ])
+            (const_int 524288 [0x80000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1246:7 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 122 [ _9 ])
+            (const_int 524288 [0x80000]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1246:6 -1
+     (nil))
+(jump_insn 24 23 25 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 40)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1246:6 277 {arm_cond_branch}
+     (nil)
+ -> 40)
+(note 25 24 26 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 4 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1249:28 -1
+     (nil))
+(insn 27 26 28 4 (set (reg/f:SI 123 [ _10 ])
+        (mem/f:SI (reg/f:SI 134) [2 hcordic_18(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1249:28 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:SI 124 [ _11 ])
+        (mem/v:SI (plus:SI (reg/f:SI 123 [ _10 ])
+                (const_int 8 [0x8])) [4 _10->RDATA+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1249:28 -1
+     (nil))
+(insn 29 28 30 4 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1249:6 -1
+     (nil))
+(insn 30 29 31 4 (set (reg/f:SI 125 [ _12 ])
+        (mem/f:SI (reg/f:SI 135) [3 *ppOutBuff_19(D)+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1249:6 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:SI 126 [ _13 ])
+        (reg:SI 124 [ _11 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1249:19 -1
+     (nil))
+(insn 32 31 33 4 (set (mem:SI (reg/f:SI 125 [ _12 ]) [4 *_12+0 S4 A32])
+        (reg:SI 126 [ _13 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1249:17 -1
+     (nil))
+(insn 33 32 34 4 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1252:6 -1
+     (nil))
+(insn 34 33 35 4 (set (reg/f:SI 127 [ _14 ])
+        (mem/f:SI (reg/f:SI 136) [3 *ppOutBuff_19(D)+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1252:6 -1
+     (nil))
+(insn 35 34 36 4 (set (reg/f:SI 128 [ _15 ])
+        (plus:SI (reg/f:SI 127 [ _14 ])
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1252:17 -1
+     (nil))
+(insn 36 35 37 4 (set (reg/f:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [19 ppOutBuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1252:17 -1
+     (nil))
+(insn 37 36 40 4 (set (mem/f:SI (reg/f:SI 137) [3 *ppOutBuff_19(D)+0 S4 A32])
+        (reg/f:SI 128 [ _15 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1252:17 -1
+     (nil))
+(code_label 40 37 41 6 78 (nil) [1 uses])
+(note 41 40 0 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+;; Function CORDIC_DMAInCplt (CORDIC_DMAInCplt, funcdef_no=377, decl_uid=12616, cgraph_uid=381, symbol_order=380)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+Merging block 5 into block 4...
+Merged blocks 4 and 5.
+Merged 4 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [5 hdma+0 S4 A32])
+        (reg:SI 0 r0 [ hdma ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1262:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 119)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [5 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1263:25 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 120)
+        (mem/f:SI (plus:SI (reg/f:SI 119)
+                (const_int 40 [0x28])) [12 hdma_8(D)->Parent+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1263:25 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg/f:SI 120)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1263:25 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1266:3 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (reg/f:SI 121) [2 hcordic_9->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1266:3 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 115 [ _2 ])
+        (mem/v:SI (reg/f:SI 114 [ _1 ]) [4 _1->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1266:3 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1266:3 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (reg/f:SI 122) [2 hcordic_9->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1266:3 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 117 [ _4 ])
+        (and:SI (reg:SI 115 [ _2 ])
+            (const_int -262145 [0xfffffffffffbffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1266:3 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/v:SI (reg/f:SI 116 [ _3 ]) [4 _3->CSR+0 S4 A32])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1266:3 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 123)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1269:14 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 118 [ _5 ])
+        (mem:SI (plus:SI (reg/f:SI 123)
+                (const_int 20 [0x14])) [4 hcordic_9->DMADirection+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1269:14 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 118 [ _5 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1269:6 -1
+     (nil))
+(jump_insn 19 18 20 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 32)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1269:6 277 {arm_cond_branch}
+     (nil)
+ -> 32)
+(note 20 19 21 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 4 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1272:27 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:SI 125)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1272:27 -1
+     (nil))
+(insn 23 22 24 4 (set (mem:SI (plus:SI (reg/f:SI 124)
+                (const_int 20 [0x14])) [4 hcordic_9->DMADirection+0 S4 A32])
+        (reg:SI 125)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1272:27 -1
+     (nil))
+(insn 24 23 25 4 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1275:20 -1
+     (nil))
+(insn 25 24 26 4 (set (reg:SI 127)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1275:20 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:QI 128)
+        (subreg:QI (reg:SI 127) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1275:20 -1
+     (nil))
+(insn 27 26 28 4 (set (mem/v:QI (plus:SI (reg/f:SI 126)
+                (const_int 33 [0x21])) [0 hcordic_9->State+0 S1 A8])
+        (reg:QI 128)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1275:20 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1283:5 -1
+     (nil))
+(call_insn 29 28 32 4 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_CORDIC_CalculateCpltCallback") [flags 0x3]  <function_decl 0x7fd654fb7600 HAL_CORDIC_CalculateCpltCallback>) [0 HAL_CORDIC_CalculateCpltCallback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1283:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(code_label 32 29 33 6 81 (nil) [1 uses])
+(note 33 32 0 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+;; Function CORDIC_DMAOutCplt (CORDIC_DMAOutCplt, funcdef_no=378, decl_uid=12618, cgraph_uid=382, symbol_order=381)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [5 hdma+0 S4 A32])
+        (reg:SI 0 r0 [ hdma ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1294:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [5 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1295:25 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 119)
+        (mem/f:SI (plus:SI (reg/f:SI 118)
+                (const_int 40 [0x28])) [12 hdma_6(D)->Parent+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1295:25 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg/f:SI 119)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1295:25 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1298:3 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (reg/f:SI 120) [2 hcordic_7->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1298:3 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 115 [ _2 ])
+        (mem/v:SI (reg/f:SI 114 [ _1 ]) [4 _1->CSR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1298:3 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1298:3 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (reg/f:SI 121) [2 hcordic_7->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1298:3 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 117 [ _4 ])
+        (and:SI (reg:SI 115 [ _2 ])
+            (const_int -131073 [0xfffffffffffdffff]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1298:3 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/v:SI (reg/f:SI 116 [ _3 ]) [4 _3->CSR+0 S4 A32])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1298:3 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1301:25 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 123)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1301:25 -1
+     (nil))
+(insn 18 17 19 2 (set (mem:SI (plus:SI (reg/f:SI 122)
+                (const_int 20 [0x14])) [4 hcordic_7->DMADirection+0 S4 A32])
+        (reg:SI 123)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1301:25 -1
+     (nil))
+(insn 19 18 20 2 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1304:18 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 125)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1304:18 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:QI 126)
+        (subreg:QI (reg:SI 125) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1304:18 -1
+     (nil))
+(insn 22 21 23 2 (set (mem/v:QI (plus:SI (reg/f:SI 124)
+                (const_int 33 [0x21])) [0 hcordic_7->State+0 S1 A8])
+        (reg:QI 126)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1304:18 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1312:3 -1
+     (nil))
+(call_insn 24 23 0 2 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_CORDIC_CalculateCpltCallback") [flags 0x3]  <function_decl 0x7fd654fb7600 HAL_CORDIC_CalculateCpltCallback>) [0 HAL_CORDIC_CalculateCpltCallback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1312:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+
+;; Function CORDIC_DMAError (CORDIC_DMAError, funcdef_no=379, decl_uid=12620, cgraph_uid=383, symbol_order=382)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [5 hdma+0 S4 A32])
+        (reg:SI 0 r0 [ hdma ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1322:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [5 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1323:25 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 117)
+        (mem/f:SI (plus:SI (reg/f:SI 116)
+                (const_int 40 [0x28])) [12 hdma_4(D)->Parent+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1323:25 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])
+        (reg/f:SI 117)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1323:25 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1326:18 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 119)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1326:18 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:QI 120)
+        (subreg:QI (reg:SI 119) 0)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1326:18 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/v:QI (plus:SI (reg/f:SI 118)
+                (const_int 33 [0x21])) [0 hcordic_5->State+0 S1 A8])
+        (reg:QI 120)) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1326:18 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1329:10 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 114 [ _1 ])
+        (mem/v:SI (plus:SI (reg/f:SI 121)
+                (const_int 36 [0x24])) [4 hcordic_5->ErrorCode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1329:10 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 115 [ _2 ])
+        (ior:SI (reg:SI 114 [ _1 ])
+            (const_int 8 [0x8]))) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1329:22 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1329:22 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/v:SI (plus:SI (reg/f:SI 122)
+                (const_int 36 [0x24])) [4 hcordic_5->ErrorCode+0 S4 A32])
+        (reg:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1329:22 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [20 hcordic+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1337:3 -1
+     (nil))
+(call_insn 19 18 0 2 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_CORDIC_ErrorCallback") [flags 0x3]  <function_decl 0x7fd654fb7500 HAL_CORDIC_ErrorCallback>) [0 HAL_CORDIC_ErrorCallback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_cordic.c":1337:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))

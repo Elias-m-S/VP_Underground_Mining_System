@@ -1,0 +1,1599 @@
+
+;; Function stateTableInitialize (stateTableInitialize, funcdef_no=0, decl_uid=4675, cgraph_uid=1, symbol_order=0)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 126.
+Merging block 11 into block 10...
+Merged blocks 10 and 11.
+Merged 10 and 11 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])
+        (reg:SI 0 r0 [ pStateTable ])) "src/Util/StateTable/StateTable.c":40:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [3 pTableEntries+0 S4 A32])
+        (reg:SI 1 r1 [ pTableEntries ])) "src/Util/StateTable/StateTable.c":40:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [1 entryCount+0 S4 A32])
+        (reg:SI 2 r2 [ entryCount ])) "src/Util/StateTable/StateTable.c":40:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [1 initStateID+0 S4 A32])
+        (reg:SI 3 r3 [ initStateID ])) "src/Util/StateTable/StateTable.c":40:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":42:8 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 137)
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":42:8 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 16)
+            (pc))) "src/Util/StateTable/StateTable.c":42:8 -1
+     (nil)
+ -> 16)
+(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 14 4 (set (reg:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [3 pTableEntries+0 S4 A32])) "src/Util/StateTable/StateTable.c":42:26 discrim 1 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 138)
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":42:26 discrim 1 -1
+     (nil))
+(jump_insn 15 14 16 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "src/Util/StateTable/StateTable.c":42:26 discrim 1 -1
+     (nil)
+ -> 21)
+(code_label 16 15 17 5 2 (nil) [1 uses])
+(note 17 16 18 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 5 (set (reg:SI 135 [ _23 ])
+        (const_int -1 [0xffffffffffffffff])) "src/Util/StateTable/StateTable.c":43:16 -1
+     (nil))
+(jump_insn 19 18 20 5 (set (pc)
+        (label_ref 123)) "src/Util/StateTable/StateTable.c":43:16 -1
+     (nil)
+ -> 123)
+(barrier 20 19 21)
+(code_label 21 20 22 6 3 (nil) [1 uses])
+(note 22 21 23 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 6 (set (reg/f:SI 139)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":46:41 -1
+     (nil))
+(insn 24 23 25 6 (set (reg/f:SI 140)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [3 pTableEntries+0 S4 A32])) "src/Util/StateTable/StateTable.c":46:41 -1
+     (nil))
+(insn 25 24 26 6 (set (mem/f:SI (plus:SI (reg/f:SI 139)
+                (const_int 4 [0x4])) [3 pStateTable_26(D)->pTableEntries+0 S4 A32])
+        (reg/f:SI 140)) "src/Util/StateTable/StateTable.c":46:41 -1
+     (nil))
+(insn 26 25 27 6 (set (reg/f:SI 141)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":47:41 -1
+     (nil))
+(insn 27 26 28 6 (set (reg:SI 142)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [1 entryCount+0 S4 A32])) "src/Util/StateTable/StateTable.c":47:41 -1
+     (nil))
+(insn 28 27 29 6 (set (mem:SI (reg/f:SI 141) [1 pStateTable_26(D)->stateTableEntryCount+0 S4 A32])
+        (reg:SI 142)) "src/Util/StateTable/StateTable.c":47:41 -1
+     (nil))
+(insn 29 28 30 6 (set (reg:SI 143)
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":50:18 -1
+     (nil))
+(insn 30 29 31 6 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (reg:SI 143)) "src/Util/StateTable/StateTable.c":50:18 -1
+     (nil))
+(jump_insn 31 30 32 6 (set (pc)
+        (label_ref 99)) "src/Util/StateTable/StateTable.c":50:5 -1
+     (nil)
+ -> 99)
+(barrier 32 31 103)
+(code_label 103 32 33 7 6 (nil) [1 uses])
+(note 33 103 34 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 7 (set (reg/f:SI 144)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":52:42 -1
+     (nil))
+(insn 35 34 36 7 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (plus:SI (reg/f:SI 144)
+                (const_int 4 [0x4])) [3 pStateTable_26(D)->pTableEntries+0 S4 A32])) "src/Util/StateTable/StateTable.c":52:42 -1
+     (nil))
+(insn 36 35 37 7 (set (reg:SI 115 [ i.0_2 ])
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "src/Util/StateTable/StateTable.c":52:57 -1
+     (nil))
+(insn 37 36 38 7 (set (reg:SI 145 [ _3 ])
+        (reg:SI 115 [ i.0_2 ])) "src/Util/StateTable/StateTable.c":52:57 -1
+     (nil))
+(insn 38 37 39 7 (set (reg:SI 145 [ _3 ])
+        (ashift:SI (reg:SI 145 [ _3 ])
+            (const_int 1 [0x1]))) "src/Util/StateTable/StateTable.c":52:57 -1
+     (nil))
+(insn 39 38 40 7 (set (reg:SI 145 [ _3 ])
+        (plus:SI (reg:SI 145 [ _3 ])
+            (reg:SI 115 [ i.0_2 ]))) "src/Util/StateTable/StateTable.c":52:57 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 115 [ i.0_2 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 40 39 41 7 (set (reg:SI 146)
+        (ashift:SI (reg:SI 145 [ _3 ])
+            (const_int 3 [0x3]))) "src/Util/StateTable/StateTable.c":52:57 -1
+     (nil))
+(insn 41 40 42 7 (set (reg:SI 145 [ _3 ])
+        (reg:SI 146)) "src/Util/StateTable/StateTable.c":52:57 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 115 [ i.0_2 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 42 41 43 7 (set (reg:SI 116 [ _3 ])
+        (reg:SI 145 [ _3 ])) "src/Util/StateTable/StateTable.c":52:57 -1
+     (nil))
+(insn 43 42 44 7 (set (reg/f:SI 117 [ _4 ])
+        (plus:SI (reg/f:SI 114 [ _1 ])
+            (reg:SI 116 [ _3 ]))) "src/Util/StateTable/StateTable.c":52:57 -1
+     (nil))
+(insn 44 43 45 7 (set (reg:SI 147)
+        (mem:SI (reg/f:SI 117 [ _4 ]) [1 _4->stateIDFrom+0 S4 A32])) "src/Util/StateTable/StateTable.c":52:17 -1
+     (nil))
+(insn 45 44 46 7 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 fromStateID+0 S4 A64])
+        (reg:SI 147)) "src/Util/StateTable/StateTable.c":52:17 -1
+     (nil))
+(insn 46 45 47 7 (set (reg/f:SI 148)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":53:40 -1
+     (nil))
+(insn 47 46 48 7 (set (reg/f:SI 118 [ _5 ])
+        (mem/f:SI (plus:SI (reg/f:SI 148)
+                (const_int 4 [0x4])) [3 pStateTable_26(D)->pTableEntries+0 S4 A32])) "src/Util/StateTable/StateTable.c":53:40 -1
+     (nil))
+(insn 48 47 49 7 (set (reg:SI 119 [ i.1_6 ])
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "src/Util/StateTable/StateTable.c":53:55 -1
+     (nil))
+(insn 49 48 50 7 (set (reg:SI 149 [ _7 ])
+        (reg:SI 119 [ i.1_6 ])) "src/Util/StateTable/StateTable.c":53:55 -1
+     (nil))
+(insn 50 49 51 7 (set (reg:SI 149 [ _7 ])
+        (ashift:SI (reg:SI 149 [ _7 ])
+            (const_int 1 [0x1]))) "src/Util/StateTable/StateTable.c":53:55 -1
+     (nil))
+(insn 51 50 52 7 (set (reg:SI 149 [ _7 ])
+        (plus:SI (reg:SI 149 [ _7 ])
+            (reg:SI 119 [ i.1_6 ]))) "src/Util/StateTable/StateTable.c":53:55 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 119 [ i.1_6 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 52 51 53 7 (set (reg:SI 150)
+        (ashift:SI (reg:SI 149 [ _7 ])
+            (const_int 3 [0x3]))) "src/Util/StateTable/StateTable.c":53:55 -1
+     (nil))
+(insn 53 52 54 7 (set (reg:SI 149 [ _7 ])
+        (reg:SI 150)) "src/Util/StateTable/StateTable.c":53:55 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 119 [ i.1_6 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 54 53 55 7 (set (reg:SI 120 [ _7 ])
+        (reg:SI 149 [ _7 ])) "src/Util/StateTable/StateTable.c":53:55 -1
+     (nil))
+(insn 55 54 56 7 (set (reg/f:SI 121 [ _8 ])
+        (plus:SI (reg/f:SI 118 [ _5 ])
+            (reg:SI 120 [ _7 ]))) "src/Util/StateTable/StateTable.c":53:55 -1
+     (nil))
+(insn 56 55 57 7 (set (reg:SI 151)
+        (mem:SI (plus:SI (reg/f:SI 121 [ _8 ])
+                (const_int 4 [0x4])) [1 _8->stateIDTo+0 S4 A32])) "src/Util/StateTable/StateTable.c":53:17 -1
+     (nil))
+(insn 57 56 58 7 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 toStateID+0 S4 A32])
+        (reg:SI 151)) "src/Util/StateTable/StateTable.c":53:17 -1
+     (nil))
+(insn 58 57 59 7 (set (reg:SI 152)
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":56:18 -1
+     (nil))
+(insn 59 58 60 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [4 pStateFrom+0 S4 A64])
+        (reg:SI 152)) "src/Util/StateTable/StateTable.c":56:18 -1
+     (nil))
+(insn 60 59 61 7 (set (reg:SI 153)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -16 [0xfffffffffffffff0]))) "src/Util/StateTable/StateTable.c":57:9 -1
+     (nil))
+(insn 61 60 62 7 (set (reg:SI 2 r2)
+        (reg:SI 153)) "src/Util/StateTable/StateTable.c":57:9 -1
+     (nil))
+(insn 62 61 63 7 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 fromStateID+0 S4 A64])) "src/Util/StateTable/StateTable.c":57:9 -1
+     (nil))
+(insn 63 62 64 7 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":57:9 -1
+     (nil))
+(call_insn 64 63 65 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("stateTableFindState") [flags 0x3]  <function_decl 0x7fca1f051f00 stateTableFindState>) [0 stateTableFindState S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/Util/StateTable/StateTable.c":57:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 65 64 66 7 (set (reg:SI 154)
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":59:18 -1
+     (nil))
+(insn 66 65 67 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pStateTo+0 S4 A32])
+        (reg:SI 154)) "src/Util/StateTable/StateTable.c":59:18 -1
+     (nil))
+(insn 67 66 68 7 (set (reg:SI 155)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -20 [0xffffffffffffffec]))) "src/Util/StateTable/StateTable.c":60:9 -1
+     (nil))
+(insn 68 67 69 7 (set (reg:SI 2 r2)
+        (reg:SI 155)) "src/Util/StateTable/StateTable.c":60:9 -1
+     (nil))
+(insn 69 68 70 7 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 toStateID+0 S4 A32])) "src/Util/StateTable/StateTable.c":60:9 -1
+     (nil))
+(insn 70 69 71 7 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":60:9 -1
+     (nil))
+(call_insn 71 70 72 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("stateTableFindState") [flags 0x3]  <function_decl 0x7fca1f051f00 stateTableFindState>) [0 stateTableFindState S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/Util/StateTable/StateTable.c":60:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 72 71 73 7 (set (reg/f:SI 156)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":62:20 -1
+     (nil))
+(insn 73 72 74 7 (set (reg/f:SI 122 [ _9 ])
+        (mem/f:SI (plus:SI (reg/f:SI 156)
+                (const_int 4 [0x4])) [3 pStateTable_26(D)->pTableEntries+0 S4 A32])) "src/Util/StateTable/StateTable.c":62:20 -1
+     (nil))
+(insn 74 73 75 7 (set (reg:SI 123 [ i.2_10 ])
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "src/Util/StateTable/StateTable.c":62:35 -1
+     (nil))
+(insn 75 74 76 7 (set (reg:SI 157 [ _11 ])
+        (reg:SI 123 [ i.2_10 ])) "src/Util/StateTable/StateTable.c":62:35 -1
+     (nil))
+(insn 76 75 77 7 (set (reg:SI 157 [ _11 ])
+        (ashift:SI (reg:SI 157 [ _11 ])
+            (const_int 1 [0x1]))) "src/Util/StateTable/StateTable.c":62:35 -1
+     (nil))
+(insn 77 76 78 7 (set (reg:SI 157 [ _11 ])
+        (plus:SI (reg:SI 157 [ _11 ])
+            (reg:SI 123 [ i.2_10 ]))) "src/Util/StateTable/StateTable.c":62:35 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 123 [ i.2_10 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 78 77 79 7 (set (reg:SI 158)
+        (ashift:SI (reg:SI 157 [ _11 ])
+            (const_int 3 [0x3]))) "src/Util/StateTable/StateTable.c":62:35 -1
+     (nil))
+(insn 79 78 80 7 (set (reg:SI 157 [ _11 ])
+        (reg:SI 158)) "src/Util/StateTable/StateTable.c":62:35 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 123 [ i.2_10 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 80 79 81 7 (set (reg:SI 124 [ _11 ])
+        (reg:SI 157 [ _11 ])) "src/Util/StateTable/StateTable.c":62:35 -1
+     (nil))
+(insn 81 80 82 7 (set (reg/f:SI 125 [ _12 ])
+        (plus:SI (reg/f:SI 122 [ _9 ])
+            (reg:SI 124 [ _11 ]))) "src/Util/StateTable/StateTable.c":62:35 -1
+     (nil))
+(insn 82 81 83 7 (set (reg/f:SI 126 [ pStateFrom.3_13 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [4 pStateFrom+0 S4 A64])) "src/Util/StateTable/StateTable.c":62:53 -1
+     (nil))
+(insn 83 82 84 7 (set (mem/f:SI (plus:SI (reg/f:SI 125 [ _12 ])
+                (const_int 16 [0x10])) [4 _12->pFromStateRef+0 S4 A32])
+        (reg/f:SI 126 [ pStateFrom.3_13 ])) "src/Util/StateTable/StateTable.c":62:53 -1
+     (nil))
+(insn 84 83 85 7 (set (reg/f:SI 159)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":63:20 -1
+     (nil))
+(insn 85 84 86 7 (set (reg/f:SI 127 [ _14 ])
+        (mem/f:SI (plus:SI (reg/f:SI 159)
+                (const_int 4 [0x4])) [3 pStateTable_26(D)->pTableEntries+0 S4 A32])) "src/Util/StateTable/StateTable.c":63:20 -1
+     (nil))
+(insn 86 85 87 7 (set (reg:SI 128 [ i.4_15 ])
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "src/Util/StateTable/StateTable.c":63:35 -1
+     (nil))
+(insn 87 86 88 7 (set (reg:SI 160 [ _16 ])
+        (reg:SI 128 [ i.4_15 ])) "src/Util/StateTable/StateTable.c":63:35 -1
+     (nil))
+(insn 88 87 89 7 (set (reg:SI 160 [ _16 ])
+        (ashift:SI (reg:SI 160 [ _16 ])
+            (const_int 1 [0x1]))) "src/Util/StateTable/StateTable.c":63:35 -1
+     (nil))
+(insn 89 88 90 7 (set (reg:SI 160 [ _16 ])
+        (plus:SI (reg:SI 160 [ _16 ])
+            (reg:SI 128 [ i.4_15 ]))) "src/Util/StateTable/StateTable.c":63:35 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 128 [ i.4_15 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 90 89 91 7 (set (reg:SI 161)
+        (ashift:SI (reg:SI 160 [ _16 ])
+            (const_int 3 [0x3]))) "src/Util/StateTable/StateTable.c":63:35 -1
+     (nil))
+(insn 91 90 92 7 (set (reg:SI 160 [ _16 ])
+        (reg:SI 161)) "src/Util/StateTable/StateTable.c":63:35 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 128 [ i.4_15 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 92 91 93 7 (set (reg:SI 129 [ _16 ])
+        (reg:SI 160 [ _16 ])) "src/Util/StateTable/StateTable.c":63:35 -1
+     (nil))
+(insn 93 92 94 7 (set (reg/f:SI 130 [ _17 ])
+        (plus:SI (reg/f:SI 127 [ _14 ])
+            (reg:SI 129 [ _16 ]))) "src/Util/StateTable/StateTable.c":63:35 -1
+     (nil))
+(insn 94 93 95 7 (set (reg/f:SI 131 [ pStateTo.5_18 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pStateTo+0 S4 A32])) "src/Util/StateTable/StateTable.c":63:51 -1
+     (nil))
+(insn 95 94 96 7 (set (mem/f:SI (plus:SI (reg/f:SI 130 [ _17 ])
+                (const_int 20 [0x14])) [4 _17->pToStateRef+0 S4 A32])
+        (reg/f:SI 131 [ pStateTo.5_18 ])) "src/Util/StateTable/StateTable.c":63:51 -1
+     (nil))
+(insn 96 95 97 7 (set (reg:SI 163)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "src/Util/StateTable/StateTable.c":50:61 discrim 3 -1
+     (nil))
+(insn 97 96 98 7 (set (reg:SI 162 [ i_48 ])
+        (plus:SI (reg:SI 163)
+            (const_int 1 [0x1]))) "src/Util/StateTable/StateTable.c":50:61 discrim 3 -1
+     (nil))
+(insn 98 97 99 7 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (reg:SI 162 [ i_48 ])) "src/Util/StateTable/StateTable.c":50:61 discrim 3 -1
+     (nil))
+(code_label 99 98 100 8 5 (nil) [1 uses])
+(note 100 99 101 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 101 100 102 8 (set (reg/f:SI 164)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":50:36 discrim 1 -1
+     (nil))
+(insn 102 101 104 8 (set (reg:SI 132 [ _19 ])
+        (mem:SI (reg/f:SI 164) [1 pStateTable_26(D)->stateTableEntryCount+0 S4 A32])) "src/Util/StateTable/StateTable.c":50:36 discrim 1 -1
+     (nil))
+(insn 104 102 105 8 (set (reg:SI 165)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "src/Util/StateTable/StateTable.c":50:24 discrim 1 -1
+     (nil))
+(insn 105 104 106 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 165)
+            (reg:SI 132 [ _19 ]))) "src/Util/StateTable/StateTable.c":50:24 discrim 1 -1
+     (nil))
+(jump_insn 106 105 107 8 (set (pc)
+        (if_then_else (lt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 103)
+            (pc))) "src/Util/StateTable/StateTable.c":50:24 discrim 1 -1
+     (nil)
+ -> 103)
+(note 107 106 108 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 108 107 109 9 (set (reg/f:SI 166)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":66:41 -1
+     (nil))
+(insn 109 108 110 9 (set (reg:SI 167)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [1 initStateID+0 S4 A32])) "src/Util/StateTable/StateTable.c":66:41 -1
+     (nil))
+(insn 110 109 111 9 (set (mem:SI (plus:SI (reg/f:SI 166)
+                (const_int 16 [0x10])) [1 pStateTable_26(D)->currentStateID+0 S4 A32])
+        (reg:SI 167)) "src/Util/StateTable/StateTable.c":66:41 -1
+     (nil))
+(insn 111 110 112 9 (set (reg/f:SI 168)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":67:41 -1
+     (nil))
+(insn 112 111 113 9 (set (reg:SI 169)
+        (const_int 1 [0x1])) "src/Util/StateTable/StateTable.c":67:41 -1
+     (nil))
+(insn 113 112 114 9 (set (mem:SI (plus:SI (reg/f:SI 168)
+                (const_int 20 [0x14])) [1 pStateTable_26(D)->previousStateID+0 S4 A32])
+        (reg:SI 169)) "src/Util/StateTable/StateTable.c":67:41 -1
+     (nil))
+(insn 114 113 115 9 (set (reg/f:SI 170)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":69:5 -1
+     (nil))
+(insn 115 114 116 9 (set (reg:SI 133 [ _20 ])
+        (mem:SI (plus:SI (reg/f:SI 170)
+                (const_int 16 [0x10])) [1 pStateTable_26(D)->currentStateID+0 S4 A32])) "src/Util/StateTable/StateTable.c":69:5 -1
+     (nil))
+(insn 116 115 117 9 (set (reg:SI 171)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":69:5 -1
+     (nil))
+(insn 117 116 118 9 (set (reg/f:SI 134 [ _21 ])
+        (plus:SI (reg:SI 171)
+            (const_int 24 [0x18]))) "src/Util/StateTable/StateTable.c":69:5 -1
+     (nil))
+(insn 118 117 119 9 (set (reg:SI 2 r2)
+        (reg/f:SI 134 [ _21 ])) "src/Util/StateTable/StateTable.c":69:5 -1
+     (nil))
+(insn 119 118 120 9 (set (reg:SI 1 r1)
+        (reg:SI 133 [ _20 ])) "src/Util/StateTable/StateTable.c":69:5 -1
+     (nil))
+(insn 120 119 121 9 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":69:5 -1
+     (nil))
+(call_insn 121 120 122 9 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("stateTableFindState") [flags 0x3]  <function_decl 0x7fca1f051f00 stateTableFindState>) [0 stateTableFindState S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/Util/StateTable/StateTable.c":69:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 122 121 123 9 (set (reg:SI 135 [ _23 ])
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":71:12 -1
+     (nil))
+(code_label 123 122 124 10 4 (nil) [1 uses])
+(note 124 123 125 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 125 124 129 10 (set (reg:SI 136 [ <retval> ])
+        (reg:SI 135 [ _23 ])) "src/Util/StateTable/StateTable.c":72:1 -1
+     (nil))
+(insn 129 125 130 10 (set (reg/i:SI 0 r0)
+        (reg:SI 136 [ <retval> ])) "src/Util/StateTable/StateTable.c":72:1 -1
+     (nil))
+(insn 130 129 0 10 (use (reg/i:SI 0 r0)) "src/Util/StateTable/StateTable.c":72:1 -1
+     (nil))
+
+;; Function stateTableRunCyclic (stateTableRunCyclic, funcdef_no=1, decl_uid=4677, cgraph_uid=2, symbol_order=1)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 111 from 17 to 24.
+Forwarding edge 16->17 to 24 failed.
+Deleted label in block 17.
+Merging block 25 into block 24...
+Merged blocks 24 and 25.
+Merged 24 and 25 without moving.
+Removing jump 179.
+Merging block 26 into block 24...
+Merged blocks 24 and 26.
+Merged 24 and 26 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 16->17 to 24 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])
+        (reg:SI 0 r0 [ pStateTable ])) "src/Util/StateTable/StateTable.c":76:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 142)
+        (const_int -5 [0xfffffffffffffffb])) "src/Util/StateTable/StateTable.c":77:13 -1
+     (nil))
+(insn 7 6 8 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 result+0 S4 A32])
+        (reg:SI 142)) "src/Util/StateTable/StateTable.c":77:13 -1
+     (nil))
+(insn 8 7 9 2 (set (reg/f:SI 143)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":81:13 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 144)
+        (mem:SI (plus:SI (reg/f:SI 143)
+                (const_int 28 [0x1c])) [1 pStateTable_41(D)->pendingEvent+0 S4 A32])) "src/Util/StateTable/StateTable.c":81:13 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 currentEvent+0 S4 A64])
+        (reg:SI 144)) "src/Util/StateTable/StateTable.c":81:13 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 145)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":82:33 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 146)
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":82:33 -1
+     (nil))
+(insn 13 12 14 2 (set (mem:SI (plus:SI (reg/f:SI 145)
+                (const_int 28 [0x1c])) [1 pStateTable_41(D)->pendingEvent+0 S4 A32])
+        (reg:SI 146)) "src/Util/StateTable/StateTable.c":82:33 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 147)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 currentEvent+0 S4 A64])) "src/Util/StateTable/StateTable.c":85:8 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 147)
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":85:8 -1
+     (nil))
+(jump_insn 16 15 17 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 130)
+            (pc))) "src/Util/StateTable/StateTable.c":85:8 -1
+     (nil)
+ -> 130)
+(note 17 16 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 4 (set (reg:SI 148)
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":88:22 -1
+     (nil))
+(insn 19 18 20 4 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])
+        (reg:SI 148)) "src/Util/StateTable/StateTable.c":88:22 -1
+     (nil))
+(jump_insn 20 19 21 4 (set (pc)
+        (label_ref 118)) "src/Util/StateTable/StateTable.c":88:9 -1
+     (nil)
+ -> 118)
+(barrier 21 20 122)
+(code_label 122 21 22 5 15 (nil) [1 uses])
+(note 22 122 23 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 5 (set (reg/f:SI 149)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":90:54 -1
+     (nil))
+(insn 24 23 25 5 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (plus:SI (reg/f:SI 149)
+                (const_int 4 [0x4])) [3 pStateTable_41(D)->pTableEntries+0 S4 A32])) "src/Util/StateTable/StateTable.c":90:54 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:SI 115 [ i.6_2 ])
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "src/Util/StateTable/StateTable.c":90:69 -1
+     (nil))
+(insn 26 25 27 5 (set (reg:SI 150 [ _3 ])
+        (reg:SI 115 [ i.6_2 ])) "src/Util/StateTable/StateTable.c":90:69 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:SI 150 [ _3 ])
+        (ashift:SI (reg:SI 150 [ _3 ])
+            (const_int 1 [0x1]))) "src/Util/StateTable/StateTable.c":90:69 -1
+     (nil))
+(insn 28 27 29 5 (set (reg:SI 150 [ _3 ])
+        (plus:SI (reg:SI 150 [ _3 ])
+            (reg:SI 115 [ i.6_2 ]))) "src/Util/StateTable/StateTable.c":90:69 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 115 [ i.6_2 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 29 28 30 5 (set (reg:SI 151)
+        (ashift:SI (reg:SI 150 [ _3 ])
+            (const_int 3 [0x3]))) "src/Util/StateTable/StateTable.c":90:69 -1
+     (nil))
+(insn 30 29 31 5 (set (reg:SI 150 [ _3 ])
+        (reg:SI 151)) "src/Util/StateTable/StateTable.c":90:69 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 115 [ i.6_2 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 31 30 32 5 (set (reg:SI 116 [ _3 ])
+        (reg:SI 150 [ _3 ])) "src/Util/StateTable/StateTable.c":90:69 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:SI 152 [ pEntry_49 ])
+        (plus:SI (reg/f:SI 114 [ _1 ])
+            (reg:SI 116 [ _3 ]))) "src/Util/StateTable/StateTable.c":90:32 -1
+     (nil))
+(insn 33 32 34 5 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])
+        (reg:SI 152 [ pEntry_49 ])) "src/Util/StateTable/StateTable.c":90:32 -1
+     (nil))
+(insn 34 33 35 5 (set (reg/f:SI 153)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":92:23 -1
+     (nil))
+(insn 35 34 36 5 (set (reg:SI 117 [ _4 ])
+        (mem:SI (reg/f:SI 153) [1 pEntry_49->stateIDFrom+0 S4 A32])) "src/Util/StateTable/StateTable.c":92:23 -1
+     (nil))
+(insn 36 35 37 5 (set (reg/f:SI 154)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":92:51 -1
+     (nil))
+(insn 37 36 38 5 (set (reg:SI 118 [ _5 ])
+        (mem:SI (plus:SI (reg/f:SI 154)
+                (const_int 16 [0x10])) [1 pStateTable_41(D)->currentStateID+0 S4 A32])) "src/Util/StateTable/StateTable.c":92:51 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 117 [ _4 ])
+            (reg:SI 118 [ _5 ]))) "src/Util/StateTable/StateTable.c":92:16 -1
+     (nil))
+(jump_insn 39 38 40 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 113)
+            (pc))) "src/Util/StateTable/StateTable.c":92:16 -1
+     (nil)
+ -> 113)
+(note 40 39 41 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 6 (set (reg/f:SI 155)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":92:77 discrim 1 -1
+     (nil))
+(insn 42 41 43 6 (set (reg:SI 119 [ _6 ])
+        (mem:SI (plus:SI (reg/f:SI 155)
+                (const_int 8 [0x8])) [1 pEntry_49->eventID+0 S4 A32])) "src/Util/StateTable/StateTable.c":92:77 discrim 1 -1
+     (nil))
+(insn 43 42 44 6 (set (reg:SI 156)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 currentEvent+0 S4 A64])) "src/Util/StateTable/StateTable.c":92:68 discrim 1 -1
+     (nil))
+(insn 44 43 45 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 156)
+            (reg:SI 119 [ _6 ]))) "src/Util/StateTable/StateTable.c":92:68 discrim 1 -1
+     (nil))
+(jump_insn 45 44 46 6 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 113)
+            (pc))) "src/Util/StateTable/StateTable.c":92:68 discrim 1 -1
+     (nil)
+ -> 113)
+(note 46 45 47 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 47 46 48 7 (set (reg:SI 157)
+        (const_int 1 [0x1])) "src/Util/StateTable/StateTable.c":94:22 -1
+     (nil))
+(insn 48 47 49 7 (set (reg:QI 158)
+        (subreg:QI (reg:SI 157) 0)) "src/Util/StateTable/StateTable.c":94:22 -1
+     (nil))
+(insn 49 48 50 7 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -9 [0xfffffffffffffff7])) [7 transitionAllowed+0 S1 A8])
+        (reg:QI 158)) "src/Util/StateTable/StateTable.c":94:22 -1
+     (nil))
+(insn 50 49 51 7 (set (reg/f:SI 159)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":97:27 -1
+     (nil))
+(insn 51 50 52 7 (set (reg/f:SI 120 [ _7 ])
+        (mem/f:SI (plus:SI (reg/f:SI 159)
+                (const_int 12 [0xc])) [9 pEntry_49->pGuard+0 S4 A32])) "src/Util/StateTable/StateTable.c":97:27 -1
+     (nil))
+(insn 52 51 53 7 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 120 [ _7 ])
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":97:20 -1
+     (nil))
+(jump_insn 53 52 54 7 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "src/Util/StateTable/StateTable.c":97:20 -1
+     (nil)
+ -> 63)
+(note 54 53 55 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 8 (set (reg/f:SI 160)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":100:47 -1
+     (nil))
+(insn 56 55 57 8 (set (reg/f:SI 121 [ _8 ])
+        (mem/f:SI (plus:SI (reg/f:SI 160)
+                (const_int 12 [0xc])) [9 pEntry_49->pGuard+0 S4 A32])) "src/Util/StateTable/StateTable.c":100:47 -1
+     (nil))
+(insn 57 56 58 8 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 currentEvent+0 S4 A64])) "src/Util/StateTable/StateTable.c":100:41 -1
+     (nil))
+(insn 58 57 59 8 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":100:41 -1
+     (nil))
+(call_insn 59 58 60 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (reg/f:SI 121 [ _8 ]) [0 *_8 S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/Util/StateTable/StateTable.c":100:41 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 60 59 61 8 (set (reg:SI 161)
+        (reg:SI 0 r0)) "src/Util/StateTable/StateTable.c":100:41 -1
+     (nil))
+(insn 61 60 62 8 (set (reg:QI 162)
+        (subreg/s/v:QI (reg:SI 161) 0)) "src/Util/StateTable/StateTable.c":100:41 -1
+     (nil))
+(insn 62 61 63 8 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -9 [0xfffffffffffffff7])) [7 transitionAllowed+0 S1 A8])
+        (reg:QI 162)) "src/Util/StateTable/StateTable.c":100:41 -1
+     (nil))
+(code_label 63 62 64 9 11 (nil) [1 uses])
+(note 64 63 65 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 9 (set (reg:SI 163)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -9 [0xfffffffffffffff7])) [7 transitionAllowed+0 S1 A8]))) "src/Util/StateTable/StateTable.c":103:20 -1
+     (nil))
+(insn 66 65 67 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 163)
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":103:20 -1
+     (nil))
+(jump_insn 67 66 68 9 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 113)
+            (pc))) "src/Util/StateTable/StateTable.c":103:20 -1
+     (nil)
+ -> 113)
+(note 68 67 69 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 10 (set (reg/f:SI 164)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":106:31 -1
+     (nil))
+(insn 70 69 71 10 (set (reg/f:SI 122 [ _9 ])
+        (mem/f:SI (plus:SI (reg/f:SI 164)
+                (const_int 16 [0x10])) [4 pEntry_49->pFromStateRef+0 S4 A32])) "src/Util/StateTable/StateTable.c":106:31 -1
+     (nil))
+(insn 71 70 72 10 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 122 [ _9 ])
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":106:24 -1
+     (nil))
+(jump_insn 72 71 73 10 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 95)
+            (pc))) "src/Util/StateTable/StateTable.c":106:24 -1
+     (nil)
+ -> 95)
+(note 73 72 74 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 75 11 (set (reg/f:SI 165)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":108:35 -1
+     (nil))
+(insn 75 74 76 11 (set (reg/f:SI 123 [ _10 ])
+        (mem/f:SI (plus:SI (reg/f:SI 165)
+                (const_int 16 [0x10])) [4 pEntry_49->pFromStateRef+0 S4 A32])) "src/Util/StateTable/StateTable.c":108:35 -1
+     (nil))
+(insn 76 75 77 11 (set (reg/f:SI 124 [ _11 ])
+        (mem/f:SI (plus:SI (reg/f:SI 123 [ _10 ])
+                (const_int 12 [0xc])) [5 _10->pOnExit+0 S4 A32])) "src/Util/StateTable/StateTable.c":108:50 -1
+     (nil))
+(insn 77 76 78 11 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 124 [ _11 ])
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":108:28 -1
+     (nil))
+(jump_insn 78 77 79 11 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 88)
+            (pc))) "src/Util/StateTable/StateTable.c":108:28 -1
+     (nil)
+ -> 88)
+(note 79 78 80 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 81 12 (set (reg/f:SI 166)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":111:35 -1
+     (nil))
+(insn 81 80 82 12 (set (reg/f:SI 125 [ _12 ])
+        (mem/f:SI (plus:SI (reg/f:SI 166)
+                (const_int 16 [0x10])) [4 pEntry_49->pFromStateRef+0 S4 A32])) "src/Util/StateTable/StateTable.c":111:35 -1
+     (nil))
+(insn 82 81 83 12 (set (reg/f:SI 126 [ _13 ])
+        (mem/f:SI (plus:SI (reg/f:SI 125 [ _12 ])
+                (const_int 12 [0xc])) [5 _12->pOnExit+0 S4 A32])) "src/Util/StateTable/StateTable.c":111:50 -1
+     (nil))
+(insn 83 82 84 12 (set (reg/f:SI 167)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":111:29 -1
+     (nil))
+(insn 84 83 85 12 (set (reg/f:SI 127 [ _14 ])
+        (mem/f:SI (plus:SI (reg/f:SI 167)
+                (const_int 16 [0x10])) [4 pEntry_49->pFromStateRef+0 S4 A32])) "src/Util/StateTable/StateTable.c":111:29 -1
+     (nil))
+(insn 85 84 86 12 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 currentEvent+0 S4 A64])) "src/Util/StateTable/StateTable.c":111:29 -1
+     (nil))
+(insn 86 85 87 12 (set (reg:SI 0 r0)
+        (reg/f:SI 127 [ _14 ])) "src/Util/StateTable/StateTable.c":111:29 -1
+     (nil))
+(call_insn 87 86 88 12 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (reg/f:SI 126 [ _13 ]) [0 *_13 S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/Util/StateTable/StateTable.c":111:29 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(code_label 88 87 89 13 13 (nil) [1 uses])
+(note 89 88 90 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 13 (set (reg/f:SI 168)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":115:31 -1
+     (nil))
+(insn 91 90 92 13 (set (reg/f:SI 128 [ _15 ])
+        (mem/f:SI (plus:SI (reg/f:SI 168)
+                (const_int 16 [0x10])) [4 pEntry_49->pFromStateRef+0 S4 A32])) "src/Util/StateTable/StateTable.c":115:31 -1
+     (nil))
+(insn 92 91 93 13 (set (reg:SI 169)
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":115:62 -1
+     (nil))
+(insn 93 92 94 13 (set (reg:QI 170)
+        (subreg:QI (reg:SI 169) 0)) "src/Util/StateTable/StateTable.c":115:62 -1
+     (nil))
+(insn 94 93 95 13 (set (mem:QI (plus:SI (reg/f:SI 128 [ _15 ])
+                (const_int 16 [0x10])) [7 _15->onEntryCalled+0 S1 A32])
+        (reg:QI 170)) "src/Util/StateTable/StateTable.c":115:62 -1
+     (nil))
+(code_label 95 94 96 14 12 (nil) [1 uses])
+(note 96 95 97 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 97 96 98 14 (set (reg/f:SI 171)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":119:66 -1
+     (nil))
+(insn 98 97 99 14 (set (reg:SI 129 [ _16 ])
+        (mem:SI (plus:SI (reg/f:SI 171)
+                (const_int 16 [0x10])) [1 pStateTable_41(D)->currentStateID+0 S4 A32])) "src/Util/StateTable/StateTable.c":119:66 -1
+     (nil))
+(insn 99 98 100 14 (set (reg/f:SI 172)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":119:53 -1
+     (nil))
+(insn 100 99 101 14 (set (mem:SI (plus:SI (reg/f:SI 172)
+                (const_int 20 [0x14])) [1 pStateTable_41(D)->previousStateID+0 S4 A32])
+        (reg:SI 129 [ _16 ])) "src/Util/StateTable/StateTable.c":119:53 -1
+     (nil))
+(insn 101 100 102 14 (set (reg/f:SI 173)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":120:61 -1
+     (nil))
+(insn 102 101 103 14 (set (reg:SI 130 [ _17 ])
+        (mem:SI (plus:SI (reg/f:SI 173)
+                (const_int 4 [0x4])) [1 pEntry_49->stateIDTo+0 S4 A32])) "src/Util/StateTable/StateTable.c":120:61 -1
+     (nil))
+(insn 103 102 104 14 (set (reg/f:SI 174)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":120:53 -1
+     (nil))
+(insn 104 103 105 14 (set (mem:SI (plus:SI (reg/f:SI 174)
+                (const_int 16 [0x10])) [1 pStateTable_41(D)->currentStateID+0 S4 A32])
+        (reg:SI 130 [ _17 ])) "src/Util/StateTable/StateTable.c":120:53 -1
+     (nil))
+(insn 105 104 106 14 (set (reg/f:SI 175)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 pEntry+0 S4 A64])) "src/Util/StateTable/StateTable.c":121:61 -1
+     (nil))
+(insn 106 105 107 14 (set (reg/f:SI 131 [ _18 ])
+        (mem/f:SI (plus:SI (reg/f:SI 175)
+                (const_int 20 [0x14])) [4 pEntry_49->pToStateRef+0 S4 A32])) "src/Util/StateTable/StateTable.c":121:61 -1
+     (nil))
+(insn 107 106 108 14 (set (reg/f:SI 176)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":121:53 -1
+     (nil))
+(insn 108 107 109 14 (set (mem/f:SI (plus:SI (reg/f:SI 176)
+                (const_int 24 [0x18])) [4 pStateTable_41(D)->pCurrentStateRef+0 S4 A32])
+        (reg/f:SI 131 [ _18 ])) "src/Util/StateTable/StateTable.c":121:53 -1
+     (nil))
+(insn 109 108 110 14 (set (reg:SI 177)
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":125:28 -1
+     (nil))
+(insn 110 109 111 14 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 result+0 S4 A32])
+        (reg:SI 177)) "src/Util/StateTable/StateTable.c":125:28 -1
+     (nil))
+(jump_insn 111 110 112 14 (set (pc)
+        (label_ref:SI 173)) "src/Util/StateTable/StateTable.c":126:21 288 {*arm_jump}
+     (nil)
+ -> 173)
+(barrier 112 111 113)
+(code_label 113 112 114 15 10 (nil) [3 uses])
+(note 114 113 115 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 115 114 116 15 (set (reg:SI 179)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "src/Util/StateTable/StateTable.c":88:65 discrim 2 -1
+     (nil))
+(insn 116 115 117 15 (set (reg:SI 178 [ i_59 ])
+        (plus:SI (reg:SI 179)
+            (const_int 1 [0x1]))) "src/Util/StateTable/StateTable.c":88:65 discrim 2 -1
+     (nil))
+(insn 117 116 118 15 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])
+        (reg:SI 178 [ i_59 ])) "src/Util/StateTable/StateTable.c":88:65 discrim 2 -1
+     (nil))
+(code_label 118 117 119 16 9 (nil) [1 uses])
+(note 119 118 120 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 120 119 121 16 (set (reg/f:SI 180)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":88:40 discrim 1 -1
+     (nil))
+(insn 121 120 123 16 (set (reg:SI 132 [ _19 ])
+        (mem:SI (reg/f:SI 180) [1 pStateTable_41(D)->stateTableEntryCount+0 S4 A32])) "src/Util/StateTable/StateTable.c":88:40 discrim 1 -1
+     (nil))
+(insn 123 121 124 16 (set (reg:SI 181)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "src/Util/StateTable/StateTable.c":88:28 discrim 1 -1
+     (nil))
+(insn 124 123 125 16 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 181)
+            (reg:SI 132 [ _19 ]))) "src/Util/StateTable/StateTable.c":88:28 discrim 1 -1
+     (nil))
+(jump_insn 125 124 127 16 (set (pc)
+        (if_then_else (lt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 122)
+            (pc))) "src/Util/StateTable/StateTable.c":88:28 discrim 1 -1
+     (nil)
+ -> 122)
+(note 127 125 128 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 128 127 129 17 (set (pc)
+        (label_ref 173)) -1
+     (nil)
+ -> 173)
+(barrier 129 128 130)
+(code_label 130 129 131 18 8 (nil) [1 uses])
+(note 131 130 132 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 132 131 133 18 (set (reg/f:SI 182)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":135:24 -1
+     (nil))
+(insn 133 132 134 18 (set (reg/f:SI 133 [ _20 ])
+        (mem/f:SI (plus:SI (reg/f:SI 182)
+                (const_int 24 [0x18])) [4 pStateTable_41(D)->pCurrentStateRef+0 S4 A32])) "src/Util/StateTable/StateTable.c":135:24 -1
+     (nil))
+(insn 134 133 135 18 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 133 [ _20 ])
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":135:12 -1
+     (nil))
+(jump_insn 135 134 136 18 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 173)
+            (pc))) "src/Util/StateTable/StateTable.c":135:12 -1
+     (nil)
+ -> 173)
+(note 136 135 137 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 137 136 138 19 (set (reg/f:SI 183)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":137:22 -1
+     (nil))
+(insn 138 137 139 19 (set (reg/f:SI 184)
+        (mem/f:SI (plus:SI (reg/f:SI 183)
+                (const_int 24 [0x18])) [4 pStateTable_41(D)->pCurrentStateRef+0 S4 A32])) "src/Util/StateTable/StateTable.c":137:22 -1
+     (nil))
+(insn 139 138 140 19 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pCurrentState+0 S4 A32])
+        (reg/f:SI 184)) "src/Util/StateTable/StateTable.c":137:22 -1
+     (nil))
+(insn 140 139 141 19 (set (reg/f:SI 185)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pCurrentState+0 S4 A32])) "src/Util/StateTable/StateTable.c":140:30 -1
+     (nil))
+(insn 141 140 142 19 (set (reg/f:SI 134 [ _21 ])
+        (mem/f:SI (plus:SI (reg/f:SI 185)
+                (const_int 4 [0x4])) [5 pCurrentState_44->pOnEntry+0 S4 A32])) "src/Util/StateTable/StateTable.c":140:30 -1
+     (nil))
+(insn 142 141 143 19 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 134 [ _21 ])
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":140:16 -1
+     (nil))
+(jump_insn 143 142 144 19 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 161)
+            (pc))) "src/Util/StateTable/StateTable.c":140:16 -1
+     (nil)
+ -> 161)
+(note 144 143 145 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 145 144 146 20 (set (reg/f:SI 186)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pCurrentState+0 S4 A32])) "src/Util/StateTable/StateTable.c":140:62 discrim 1 -1
+     (nil))
+(insn 146 145 147 20 (set (reg:SI 135 [ _22 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 186)
+                    (const_int 16 [0x10])) [7 pCurrentState_44->onEntryCalled+0 S1 A32]))) "src/Util/StateTable/StateTable.c":140:62 discrim 1 -1
+     (nil))
+(insn 147 146 148 20 (set (reg:SI 187)
+        (xor:SI (reg:SI 135 [ _22 ])
+            (const_int 1 [0x1]))) "src/Util/StateTable/StateTable.c":140:78 discrim 1 -1
+     (nil))
+(insn 148 147 149 20 (set (reg:SI 136 [ _23 ])
+        (zero_extend:SI (subreg:QI (reg:SI 187) 0))) "src/Util/StateTable/StateTable.c":140:78 discrim 1 -1
+     (nil))
+(insn 149 148 150 20 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 136 [ _23 ])
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":140:46 discrim 1 -1
+     (nil))
+(jump_insn 150 149 151 20 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 161)
+            (pc))) "src/Util/StateTable/StateTable.c":140:46 discrim 1 -1
+     (nil)
+ -> 161)
+(note 151 150 152 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 152 151 153 21 (set (reg/f:SI 188)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pCurrentState+0 S4 A32])) "src/Util/StateTable/StateTable.c":142:30 -1
+     (nil))
+(insn 153 152 154 21 (set (reg/f:SI 137 [ _24 ])
+        (mem/f:SI (plus:SI (reg/f:SI 188)
+                (const_int 4 [0x4])) [5 pCurrentState_44->pOnEntry+0 S4 A32])) "src/Util/StateTable/StateTable.c":142:30 -1
+     (nil))
+(insn 154 153 155 21 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 currentEvent+0 S4 A64])) "src/Util/StateTable/StateTable.c":142:17 -1
+     (nil))
+(insn 155 154 156 21 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pCurrentState+0 S4 A32])) "src/Util/StateTable/StateTable.c":142:17 -1
+     (nil))
+(call_insn 156 155 157 21 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (reg/f:SI 137 [ _24 ]) [0 *_24 S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/Util/StateTable/StateTable.c":142:17 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 157 156 158 21 (set (reg/f:SI 189)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pCurrentState+0 S4 A32])) "src/Util/StateTable/StateTable.c":143:46 -1
+     (nil))
+(insn 158 157 159 21 (set (reg:SI 190)
+        (const_int 1 [0x1])) "src/Util/StateTable/StateTable.c":143:46 -1
+     (nil))
+(insn 159 158 160 21 (set (reg:QI 191)
+        (subreg:QI (reg:SI 190) 0)) "src/Util/StateTable/StateTable.c":143:46 -1
+     (nil))
+(insn 160 159 161 21 (set (mem:QI (plus:SI (reg/f:SI 189)
+                (const_int 16 [0x10])) [7 pCurrentState_44->onEntryCalled+0 S1 A32])
+        (reg:QI 191)) "src/Util/StateTable/StateTable.c":143:46 -1
+     (nil))
+(code_label 161 160 162 22 17 (nil) [2 uses])
+(note 162 161 163 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 163 162 164 22 (set (reg/f:SI 192)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pCurrentState+0 S4 A32])) "src/Util/StateTable/StateTable.c":147:30 -1
+     (nil))
+(insn 164 163 165 22 (set (reg/f:SI 138 [ _25 ])
+        (mem/f:SI (plus:SI (reg/f:SI 192)
+                (const_int 8 [0x8])) [5 pCurrentState_44->pOnState+0 S4 A32])) "src/Util/StateTable/StateTable.c":147:30 -1
+     (nil))
+(insn 165 164 166 22 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 138 [ _25 ])
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":147:16 -1
+     (nil))
+(jump_insn 166 165 167 22 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 173)
+            (pc))) "src/Util/StateTable/StateTable.c":147:16 -1
+     (nil)
+ -> 173)
+(note 167 166 168 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 168 167 169 23 (set (reg/f:SI 193)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pCurrentState+0 S4 A32])) "src/Util/StateTable/StateTable.c":149:30 -1
+     (nil))
+(insn 169 168 170 23 (set (reg/f:SI 139 [ _26 ])
+        (mem/f:SI (plus:SI (reg/f:SI 193)
+                (const_int 8 [0x8])) [5 pCurrentState_44->pOnState+0 S4 A32])) "src/Util/StateTable/StateTable.c":149:30 -1
+     (nil))
+(insn 170 169 171 23 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 currentEvent+0 S4 A64])) "src/Util/StateTable/StateTable.c":149:17 -1
+     (nil))
+(insn 171 170 172 23 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pCurrentState+0 S4 A32])) "src/Util/StateTable/StateTable.c":149:17 -1
+     (nil))
+(call_insn 172 171 173 23 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (reg/f:SI 139 [ _26 ]) [0 *_26 S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/Util/StateTable/StateTable.c":149:17 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(code_label 173 172 174 24 16 (nil) [4 uses])
+(note 174 173 175 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 175 174 178 24 (set (reg:SI 140 [ _60 ])
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 result+0 S4 A32])) "src/Util/StateTable/StateTable.c":154:12 -1
+     (nil))
+(insn 178 175 182 24 (set (reg:SI 141 [ <retval> ])
+        (reg:SI 140 [ _60 ])) "src/Util/StateTable/StateTable.c":154:12 discrim 1 -1
+     (nil))
+(insn 182 178 183 24 (set (reg/i:SI 0 r0)
+        (reg:SI 141 [ <retval> ])) "src/Util/StateTable/StateTable.c":155:1 -1
+     (nil))
+(insn 183 182 0 24 (use (reg/i:SI 0 r0)) "src/Util/StateTable/StateTable.c":155:1 -1
+     (nil))
+
+;; Function stateTableSendEvent (stateTableSendEvent, funcdef_no=2, decl_uid=4680, cgraph_uid=3, symbol_order=2)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 33.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 pStateTable+0 S4 A32])
+        (reg:SI 0 r0 [ pStateTable ])) "src/Util/StateTable/StateTable.c":158:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 event+0 S4 A32])
+        (reg:SI 1 r1 [ event ])) "src/Util/StateTable/StateTable.c":158:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 117)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":160:8 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 117)
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":160:8 -1
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 14)
+            (pc))) "src/Util/StateTable/StateTable.c":160:8 -1
+     (nil)
+ -> 14)
+(note 10 9 11 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 4 (set (reg:SI 115 [ _2 ])
+        (const_int -1 [0xffffffffffffffff])) "src/Util/StateTable/StateTable.c":161:16 -1
+     (nil))
+(jump_insn 12 11 13 4 (set (pc)
+        (label_ref 30)) "src/Util/StateTable/StateTable.c":161:16 -1
+     (nil)
+ -> 30)
+(barrier 13 12 14)
+(code_label 14 13 15 5 20 (nil) [1 uses])
+(note 15 14 16 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 5 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":165:20 -1
+     (nil))
+(insn 17 16 18 5 (set (reg:SI 114 [ _1 ])
+        (mem:SI (plus:SI (reg/f:SI 118)
+                (const_int 28 [0x1c])) [1 pStateTable_4(D)->pendingEvent+0 S4 A32])) "src/Util/StateTable/StateTable.c":165:20 -1
+     (nil))
+(insn 18 17 19 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 0 [0]))) "src/Util/StateTable/StateTable.c":165:8 -1
+     (nil))
+(jump_insn 19 18 20 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "src/Util/StateTable/StateTable.c":165:8 -1
+     (nil)
+ -> 24)
+(note 20 19 21 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 6 (set (reg:SI 115 [ _2 ])
+        (const_int -4 [0xfffffffffffffffc])) "src/Util/StateTable/StateTable.c":167:16 -1
+     (nil))
+(jump_insn 22 21 23 6 (set (pc)
+        (label_ref 30)) "src/Util/StateTable/StateTable.c":167:16 -1
+     (nil)
+ -> 30)
+(barrier 23 22 24)
+(code_label 24 23 25 7 22 (nil) [1 uses])
+(note 25 24 26 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 7 (set (reg/f:SI 119)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":172:35 -1
+     (nil))
+(insn 27 26 28 7 (set (reg:SI 120)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 event+0 S4 A32])) "src/Util/StateTable/StateTable.c":172:35 -1
+     (nil))
+(insn 28 27 29 7 (set (mem:SI (plus:SI (reg/f:SI 119)
+                (const_int 28 [0x1c])) [1 pStateTable_4(D)->pendingEvent+0 S4 A32])
+        (reg:SI 120)) "src/Util/StateTable/StateTable.c":172:35 -1
+     (nil))
+(insn 29 28 30 7 (set (reg:SI 115 [ _2 ])
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":175:12 -1
+     (nil))
+(code_label 30 29 31 8 21 (nil) [2 uses])
+(note 31 30 32 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 36 8 (set (reg:SI 116 [ <retval> ])
+        (reg:SI 115 [ _2 ])) "src/Util/StateTable/StateTable.c":176:1 -1
+     (nil))
+(insn 36 32 37 8 (set (reg/i:SI 0 r0)
+        (reg:SI 116 [ <retval> ])) "src/Util/StateTable/StateTable.c":176:1 -1
+     (nil))
+(insn 37 36 0 8 (use (reg/i:SI 0 r0)) "src/Util/StateTable/StateTable.c":176:1 -1
+     (nil))
+
+;; Function stateTableFindState (stateTableFindState, funcdef_no=3, decl_uid=4684, cgraph_uid=4, symbol_order=3)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+Removing jump 63.
+Merging block 10 into block 8...
+Merged blocks 8 and 10.
+Merged 8 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [11 pStateTable+0 S4 A32])
+        (reg:SI 0 r0 [ pStateTable ])) "src/Util/StateTable/StateTable.c":191:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 stateID+0 S4 A32])
+        (reg:SI 1 r1 [ stateID ])) "src/Util/StateTable/StateTable.c":191:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [10 pFoundState+0 S4 A32])
+        (reg:SI 2 r2 [ pFoundState ])) "src/Util/StateTable/StateTable.c":191:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:SI 121)
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":192:10 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:QI 122)
+        (subreg:QI (reg:SI 121) 0)) "src/Util/StateTable/StateTable.c":192:10 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [7 foundState+0 S1 A8])
+        (reg:QI 122)) "src/Util/StateTable/StateTable.c":192:10 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 123)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [10 pFoundState+0 S4 A32])) "src/Util/StateTable/StateTable.c":193:18 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 124)
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":193:18 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/f:SI (reg/f:SI 123) [4 *pFoundState_11(D)+0 S4 A32])
+        (reg:SI 124)) "src/Util/StateTable/StateTable.c":193:18 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 125)
+        (const_int 0 [0])) "src/Util/StateTable/StateTable.c":195:18 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])
+        (reg:SI 125)) "src/Util/StateTable/StateTable.c":195:18 -1
+     (nil))
+(jump_insn 16 15 17 2 (set (pc)
+        (label_ref 49)) "src/Util/StateTable/StateTable.c":195:5 -1
+     (nil)
+ -> 49)
+(barrier 17 16 53)
+(code_label 53 17 18 4 27 (nil) [1 uses])
+(note 18 53 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 4 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":197:40 -1
+     (nil))
+(insn 20 19 21 4 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (plus:SI (reg/f:SI 126)
+                (const_int 12 [0xc])) [4 pStateTable_14(D)->pStateList+0 S4 A32])) "src/Util/StateTable/StateTable.c":197:40 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:SI 115 [ i.7_2 ])
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "src/Util/StateTable/StateTable.c":197:52 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:SI 127 [ _3 ])
+        (reg:SI 115 [ i.7_2 ])) "src/Util/StateTable/StateTable.c":197:52 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:SI 127 [ _3 ])
+        (ashift:SI (reg:SI 127 [ _3 ])
+            (const_int 2 [0x2]))) "src/Util/StateTable/StateTable.c":197:52 -1
+     (nil))
+(insn 24 23 25 4 (set (reg:SI 127 [ _3 ])
+        (plus:SI (reg:SI 127 [ _3 ])
+            (reg:SI 115 [ i.7_2 ]))) "src/Util/StateTable/StateTable.c":197:52 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 115 [ i.7_2 ])
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 25 24 26 4 (set (reg:SI 128)
+        (ashift:SI (reg:SI 127 [ _3 ])
+            (const_int 2 [0x2]))) "src/Util/StateTable/StateTable.c":197:52 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:SI 127 [ _3 ])
+        (reg:SI 128)) "src/Util/StateTable/StateTable.c":197:52 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 115 [ i.7_2 ])
+            (const_int 20 [0x14]))
+        (nil)))
+(insn 27 26 28 4 (set (reg:SI 116 [ _3 ])
+        (reg:SI 127 [ _3 ])) "src/Util/StateTable/StateTable.c":197:52 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:SI 129 [ pState_15 ])
+        (plus:SI (reg/f:SI 114 [ _1 ])
+            (reg:SI 116 [ _3 ]))) "src/Util/StateTable/StateTable.c":197:18 -1
+     (nil))
+(insn 29 28 30 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [4 pState+0 S4 A32])
+        (reg:SI 129 [ pState_15 ])) "src/Util/StateTable/StateTable.c":197:18 -1
+     (nil))
+(insn 30 29 31 4 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [4 pState+0 S4 A32])) "src/Util/StateTable/StateTable.c":198:19 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:SI 117 [ _4 ])
+        (mem:SI (reg/f:SI 130) [1 pState_15->stateID+0 S4 A32])) "src/Util/StateTable/StateTable.c":198:19 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:SI 131)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 stateID+0 S4 A32])) "src/Util/StateTable/StateTable.c":198:12 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 131)
+            (reg:SI 117 [ _4 ]))) "src/Util/StateTable/StateTable.c":198:12 -1
+     (nil))
+(jump_insn 34 33 35 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) "src/Util/StateTable/StateTable.c":198:12 -1
+     (nil)
+ -> 44)
+(note 35 34 36 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 37 5 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [10 pFoundState+0 S4 A32])) "src/Util/StateTable/StateTable.c":201:26 -1
+     (nil))
+(insn 37 36 38 5 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [4 pState+0 S4 A32])) "src/Util/StateTable/StateTable.c":201:26 -1
+     (nil))
+(insn 38 37 39 5 (set (mem/f:SI (reg/f:SI 132) [4 *pFoundState_11(D)+0 S4 A32])
+        (reg/f:SI 133)) "src/Util/StateTable/StateTable.c":201:26 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:SI 134)
+        (const_int 1 [0x1])) "src/Util/StateTable/StateTable.c":202:24 -1
+     (nil))
+(insn 40 39 41 5 (set (reg:QI 135)
+        (subreg:QI (reg:SI 134) 0)) "src/Util/StateTable/StateTable.c":202:24 -1
+     (nil))
+(insn 41 40 42 5 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [7 foundState+0 S1 A8])
+        (reg:QI 135)) "src/Util/StateTable/StateTable.c":202:24 -1
+     (nil))
+(jump_insn 42 41 43 5 (set (pc)
+        (label_ref 57)) "src/Util/StateTable/StateTable.c":203:13 -1
+     (nil)
+ -> 57)
+(barrier 43 42 44)
+(code_label 44 43 45 6 25 (nil) [1 uses])
+(note 45 44 46 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 6 (set (reg:SI 137)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "src/Util/StateTable/StateTable.c":195:51 discrim 2 -1
+     (nil))
+(insn 47 46 48 6 (set (reg:SI 136 [ i_17 ])
+        (plus:SI (reg:SI 137)
+            (const_int 1 [0x1]))) "src/Util/StateTable/StateTable.c":195:51 discrim 2 -1
+     (nil))
+(insn 48 47 49 6 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])
+        (reg:SI 136 [ i_17 ])) "src/Util/StateTable/StateTable.c":195:51 discrim 2 -1
+     (nil))
+(code_label 49 48 50 7 24 (nil) [1 uses])
+(note 50 49 51 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 7 (set (reg/f:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [11 pStateTable+0 S4 A32])) "src/Util/StateTable/StateTable.c":195:36 discrim 1 -1
+     (nil))
+(insn 52 51 54 7 (set (reg:SI 118 [ _5 ])
+        (mem:SI (plus:SI (reg/f:SI 138)
+                (const_int 8 [0x8])) [1 pStateTable_14(D)->stateCount+0 S4 A32])) "src/Util/StateTable/StateTable.c":195:36 discrim 1 -1
+     (nil))
+(insn 54 52 55 7 (set (reg:SI 139)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "src/Util/StateTable/StateTable.c":195:24 discrim 1 -1
+     (nil))
+(insn 55 54 56 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 139)
+            (reg:SI 118 [ _5 ]))) "src/Util/StateTable/StateTable.c":195:24 discrim 1 -1
+     (nil))
+(jump_insn 56 55 57 7 (set (pc)
+        (if_then_else (lt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 53)
+            (pc))) "src/Util/StateTable/StateTable.c":195:24 discrim 1 -1
+     (nil)
+ -> 53)
+(code_label 57 56 58 8 26 (nil) [1 uses])
+(note 58 57 59 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 62 8 (set (reg:SI 119 [ _20 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -1 [0xffffffffffffffff])) [7 foundState+0 S1 A8]))) "src/Util/StateTable/StateTable.c":207:12 -1
+     (nil))
+(insn 62 59 66 8 (set (reg:SI 120 [ <retval> ])
+        (reg:SI 119 [ _20 ])) "src/Util/StateTable/StateTable.c":207:12 discrim 1 -1
+     (nil))
+(insn 66 62 67 8 (set (reg/i:SI 0 r0)
+        (reg:SI 120 [ <retval> ])) "src/Util/StateTable/StateTable.c":208:1 -1
+     (nil))
+(insn 67 66 0 8 (use (reg/i:SI 0 r0)) "src/Util/StateTable/StateTable.c":208:1 -1
+     (nil))

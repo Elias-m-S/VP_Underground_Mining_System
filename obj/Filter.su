@@ -1,0 +1,3 @@
+src/Util/Filter/Filter.c:36:9:filterInitEMA	24	static
+src/Util/Filter/Filter.c:41:9:filterResetEMA	16	static
+src/Util/Filter/Filter.c:46:9:filterEMA	16	static

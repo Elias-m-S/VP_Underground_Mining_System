@@ -1,0 +1,1524 @@
+
+;; Function HAL_PCDEx_PMAConfig (HAL_PCDEx_PMAConfig, funcdef_no=361, decl_uid=10235, cgraph_uid=365, symbol_order=364)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+Removing jump 84.
+Merging block 11 into block 9...
+Merged blocks 9 and 11.
+Merged 9 and 11 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 11 NOTE_INSN_DELETED)
+(note 11 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 11 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])
+        (reg:SI 0 r0 [ hpcd ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":83:1 -1
+     (nil))
+(insn 3 2 6 2 (set (reg:SI 124)
+        (reg:SI 1 r1 [ ep_addr ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":83:1 -1
+     (nil))
+(insn 6 3 9 2 (set (reg:SI 126)
+        (reg:SI 2 r2 [ ep_kind ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":83:1 -1
+     (nil))
+(insn 9 6 4 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pmaadress+0 S4 A32])
+        (reg:SI 3 r3 [ pmaadress ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":83:1 -1
+     (nil))
+(insn 4 9 5 2 (set (reg:HI 125)
+        (subreg:HI (reg:SI 124) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":83:1 -1
+     (nil))
+(insn 5 4 7 2 (set (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -14 [0xfffffffffffffff2])) [3 ep_addr+0 S2 A16])
+        (reg:HI 125)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":83:1 -1
+     (nil))
+(insn 7 5 8 2 (set (reg:HI 127)
+        (subreg:HI (reg:SI 126) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":83:1 -1
+     (nil))
+(insn 8 7 10 2 (set (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [3 ep_kind+0 S2 A16])
+        (reg:HI 127)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":83:1 -1
+     (nil))
+(note 10 8 13 2 NOTE_INSN_FUNCTION_BEG)
+(insn 13 10 14 2 (set (reg:HI 128)
+        (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -14 [0xfffffffffffffff2])) [3 ep_addr+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":87:25 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 129)
+        (and:SI (subreg:SI (reg:HI 128) 0)
+            (const_int 128 [0x80]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":87:25 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (subreg:HI (reg:SI 129) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":87:25 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":87:6 -1
+     (nil))
+(jump_insn 17 16 18 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 32)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":87:6 -1
+     (nil)
+ -> 32)
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 4 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -14 [0xfffffffffffffff2])) [3 ep_addr+0 S2 A16]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:31 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:SI 116 [ _3 ])
+        (and:SI (reg:SI 115 [ _2 ])
+            (const_int 7 [0x7]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:31 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:SI 130)
+        (plus:SI (reg:SI 116 [ _3 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:8 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:SI 131)
+        (reg:SI 130)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:8 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:SI 131)
+        (ashift:SI (reg:SI 131)
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:8 -1
+     (nil))
+(insn 24 23 25 4 (set (reg:SI 131)
+        (plus:SI (reg:SI 131)
+            (reg:SI 130))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:8 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 130)
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 25 24 26 4 (set (reg:SI 132)
+        (ashift:SI (reg:SI 131)
+            (const_int 3 [0x3]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:8 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:SI 131)
+        (reg:SI 132)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:8 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 130)
+            (const_int 40 [0x28]))
+        (nil)))
+(insn 27 26 28 4 (set (reg:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:8 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:SI 133)
+        (plus:SI (reg:SI 134)
+            (reg:SI 131))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:8 -1
+     (nil))
+(insn 29 28 30 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ep+0 S4 A32])
+        (reg:SI 133)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":89:8 -1
+     (nil))
+(jump_insn 30 29 31 4 (set (pc)
+        (label_ref 44)) -1
+     (nil)
+ -> 44)
+(barrier 31 30 32)
+(code_label 32 31 33 5 2 (nil) [1 uses])
+(note 33 32 34 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 5 (set (reg:SI 117 [ _4 ])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -14 [0xfffffffffffffff2])) [3 ep_addr+0 S2 A16]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":93:23 -1
+     (nil))
+(insn 35 34 36 5 (set (reg:SI 135)
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":93:8 -1
+     (nil))
+(insn 36 35 37 5 (set (reg:SI 135)
+        (ashift:SI (reg:SI 135)
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":93:8 -1
+     (nil))
+(insn 37 36 38 5 (set (reg:SI 135)
+        (plus:SI (reg:SI 135)
+            (reg:SI 117 [ _4 ]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":93:8 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 117 [ _4 ])
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 38 37 39 5 (set (reg:SI 136)
+        (ashift:SI (reg:SI 135)
+            (const_int 3 [0x3]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":93:8 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:SI 135)
+        (reg:SI 136)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":93:8 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 117 [ _4 ])
+            (const_int 40 [0x28]))
+        (nil)))
+(insn 40 39 41 5 (set (reg:SI 137)
+        (plus:SI (reg:SI 135)
+            (const_int 360 [0x168]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":93:8 -1
+     (nil))
+(insn 41 40 42 5 (set (reg:SI 139)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":93:8 -1
+     (nil))
+(insn 42 41 43 5 (set (reg:SI 138)
+        (plus:SI (reg:SI 139)
+            (reg:SI 137))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":93:8 -1
+     (nil))
+(insn 43 42 44 5 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ep+0 S4 A32])
+        (reg:SI 138)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":93:8 -1
+     (nil))
+(code_label 44 43 45 6 3 (nil) [1 uses])
+(note 45 44 46 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 6 (set (reg:SI 140)
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [3 ep_kind+0 S2 A16]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":97:6 -1
+     (nil))
+(insn 47 46 48 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 140)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":97:6 -1
+     (nil))
+(jump_insn 48 47 49 6 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 61)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":97:6 -1
+     (nil)
+ -> 61)
+(note 49 48 50 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 7 (set (reg/f:SI 141)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ep+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":100:22 -1
+     (nil))
+(insn 51 50 52 7 (set (reg:SI 142)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":100:22 -1
+     (nil))
+(insn 52 51 53 7 (set (reg:QI 143)
+        (subreg:QI (reg:SI 142) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":100:22 -1
+     (nil))
+(insn 53 52 54 7 (set (mem:QI (plus:SI (reg/f:SI 141)
+                (const_int 12 [0xc])) [0 ep_9->doublebuffer+0 S1 A32])
+        (reg:QI 143)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":100:22 -1
+     (nil))
+(insn 54 53 55 7 (set (reg:SI 144)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pmaadress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":102:21 -1
+     (nil))
+(insn 55 54 56 7 (set (reg:SI 118 [ _5 ])
+        (zero_extend:SI (subreg:HI (reg:SI 144) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":102:21 -1
+     (nil))
+(insn 56 55 57 7 (set (reg/f:SI 145)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ep+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":102:19 -1
+     (nil))
+(insn 57 56 58 7 (set (reg:HI 146)
+        (subreg/s/v:HI (reg:SI 118 [ _5 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":102:19 -1
+     (nil))
+(insn 58 57 59 7 (set (mem:HI (plus:SI (reg/f:SI 145)
+                (const_int 6 [0x6])) [3 ep_9->pmaadress+0 S2 A16])
+        (reg:HI 146)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":102:19 -1
+     (nil))
+(jump_insn 59 58 60 7 (set (pc)
+        (label_ref 78)) -1
+     (nil)
+ -> 78)
+(barrier 60 59 61)
+(code_label 61 60 62 8 4 (nil) [1 uses])
+(note 62 61 63 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 8 (set (reg/f:SI 147)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ep+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":107:22 -1
+     (nil))
+(insn 64 63 65 8 (set (reg:SI 148)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":107:22 -1
+     (nil))
+(insn 65 64 66 8 (set (reg:QI 149)
+        (subreg:QI (reg:SI 148) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":107:22 -1
+     (nil))
+(insn 66 65 67 8 (set (mem:QI (plus:SI (reg/f:SI 147)
+                (const_int 12 [0xc])) [0 ep_9->doublebuffer+0 S1 A32])
+        (reg:QI 149)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":107:22 -1
+     (nil))
+(insn 67 66 68 8 (set (reg:SI 150)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pmaadress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":109:20 -1
+     (nil))
+(insn 68 67 69 8 (set (reg:SI 119 [ _6 ])
+        (zero_extend:SI (subreg:HI (reg:SI 150) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":109:20 -1
+     (nil))
+(insn 69 68 70 8 (set (reg/f:SI 151)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ep+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":109:18 -1
+     (nil))
+(insn 70 69 71 8 (set (reg:HI 152)
+        (subreg/s/v:HI (reg:SI 119 [ _6 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":109:18 -1
+     (nil))
+(insn 71 70 72 8 (set (mem:HI (plus:SI (reg/f:SI 151)
+                (const_int 8 [0x8])) [3 ep_9->pmaaddr0+0 S2 A32])
+        (reg:HI 152)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":109:18 -1
+     (nil))
+(insn 72 71 73 8 (set (reg:SI 153)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [4 pmaadress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":110:57 -1
+     (nil))
+(insn 73 72 74 8 (set (reg:SI 120 [ _7 ])
+        (lshiftrt:SI (reg:SI 153)
+            (const_int 16 [0x10]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":110:57 -1
+     (nil))
+(insn 74 73 75 8 (set (reg:SI 121 [ _8 ])
+        (zero_extend:SI (subreg:HI (reg:SI 120 [ _7 ]) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":110:20 -1
+     (nil))
+(insn 75 74 76 8 (set (reg/f:SI 154)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ep+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":110:18 -1
+     (nil))
+(insn 76 75 77 8 (set (reg:HI 155)
+        (subreg/s/v:HI (reg:SI 121 [ _8 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":110:18 -1
+     (nil))
+(insn 77 76 78 8 (set (mem:HI (plus:SI (reg/f:SI 154)
+                (const_int 10 [0xa])) [3 ep_9->pmaaddr1+0 S2 A16])
+        (reg:HI 155)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":110:18 -1
+     (nil))
+(code_label 78 77 79 9 5 (nil) [1 uses])
+(note 79 78 80 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 83 9 (set (reg:SI 122 [ _23 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":113:10 -1
+     (nil))
+(insn 83 80 87 9 (set (reg:SI 123 [ <retval> ])
+        (reg:SI 122 [ _23 ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":113:10 discrim 1 -1
+     (nil))
+(insn 87 83 88 9 (set (reg/i:SI 0 r0)
+        (reg:SI 123 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":114:1 -1
+     (nil))
+(insn 88 87 0 9 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":114:1 -1
+     (nil))
+
+;; Function HAL_PCDEx_ActivateBCD (HAL_PCDEx_ActivateBCD, funcdef_no=362, decl_uid=10241, cgraph_uid=366, symbol_order=365)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 52.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])
+        (reg:SI 0 r0 [ hpcd ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":122:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":123:16 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 125)
+        (mem/f:SI (reg/f:SI 124) [6 hpcd_10(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":123:16 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])
+        (reg/f:SI 125)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":123:16 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":124:33 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 127)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":124:33 -1
+     (nil))
+(insn 11 10 12 2 (set (mem:SI (plus:SI (reg/f:SI 126)
+                (const_int 748 [0x2ec])) [4 hpcd_10(D)->battery_charging_active+0 S4 A32])
+        (reg:SI 127)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":124:33 -1
+     (nil))
+(insn 12 11 14 2 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":127:7 -1
+     (nil))
+(insn 14 12 15 2 (set (reg:HI 130)
+        (mem/v:HI (plus:SI (reg/f:SI 128)
+                (const_int 88 [0x58])) [3 USBx_11->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":127:7 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:HI 130))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":127:7 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 131)
+        (ior:SI (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":127:14 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (subreg:HI (reg:SI 131) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":127:14 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":127:14 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:HI 133)
+        (subreg/s/v:HI (reg:SI 115 [ _2 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":127:14 -1
+     (nil))
+(insn 20 19 21 2 (set (mem/v:HI (plus:SI (reg/f:SI 132)
+                (const_int 88 [0x58])) [3 USBx_11->BCDR+0 S2 A16])
+        (reg:HI 133)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":127:14 -1
+     (nil))
+(insn 21 20 23 2 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":130:7 -1
+     (nil))
+(insn 23 21 24 2 (set (reg:HI 136)
+        (mem/v:HI (plus:SI (reg/f:SI 134)
+                (const_int 88 [0x58])) [3 USBx_11->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":130:7 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 116 [ _3 ])
+        (zero_extend:SI (reg:HI 136))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":130:7 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:SI 137)
+        (and:SI (reg:SI 116 [ _3 ])
+            (const_int -5 [0xfffffffffffffffb]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":130:14 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 117 [ _4 ])
+        (zero_extend:SI (subreg:HI (reg:SI 137) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":130:14 -1
+     (nil))
+(insn 27 26 28 2 (set (reg/f:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":130:14 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:HI 139)
+        (subreg/s/v:HI (reg:SI 117 [ _4 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":130:14 -1
+     (nil))
+(insn 29 28 30 2 (set (mem/v:HI (plus:SI (reg/f:SI 138)
+                (const_int 88 [0x58])) [3 USBx_11->BCDR+0 S2 A16])
+        (reg:HI 139)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":130:14 -1
+     (nil))
+(insn 30 29 32 2 (set (reg/f:SI 140)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":131:7 -1
+     (nil))
+(insn 32 30 33 2 (set (reg:HI 142)
+        (mem/v:HI (plus:SI (reg/f:SI 140)
+                (const_int 88 [0x58])) [3 USBx_11->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":131:7 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:SI 118 [ _5 ])
+        (zero_extend:SI (reg:HI 142))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":131:7 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:SI 143)
+        (and:SI (reg:SI 118 [ _5 ])
+            (const_int -9 [0xfffffffffffffff7]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":131:14 -1
+     (nil))
+(insn 35 34 36 2 (set (reg:SI 119 [ _6 ])
+        (zero_extend:SI (subreg:HI (reg:SI 143) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":131:14 -1
+     (nil))
+(insn 36 35 37 2 (set (reg/f:SI 144)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":131:14 -1
+     (nil))
+(insn 37 36 38 2 (set (reg:HI 145)
+        (subreg/s/v:HI (reg:SI 119 [ _6 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":131:14 -1
+     (nil))
+(insn 38 37 39 2 (set (mem/v:HI (plus:SI (reg/f:SI 144)
+                (const_int 88 [0x58])) [3 USBx_11->BCDR+0 S2 A16])
+        (reg:HI 145)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":131:14 -1
+     (nil))
+(insn 39 38 41 2 (set (reg/f:SI 146)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":132:7 -1
+     (nil))
+(insn 41 39 42 2 (set (reg:HI 148)
+        (mem/v:HI (plus:SI (reg/f:SI 146)
+                (const_int 88 [0x58])) [3 USBx_11->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":132:7 -1
+     (nil))
+(insn 42 41 43 2 (set (reg:SI 120 [ _7 ])
+        (zero_extend:SI (reg:HI 148))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":132:7 -1
+     (nil))
+(insn 43 42 44 2 (set (reg:SI 149)
+        (ior:SI (reg:SI 120 [ _7 ])
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":132:14 -1
+     (nil))
+(insn 44 43 45 2 (set (reg:SI 121 [ _8 ])
+        (zero_extend:SI (subreg:HI (reg:SI 149) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":132:14 -1
+     (nil))
+(insn 45 44 46 2 (set (reg/f:SI 150)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":132:14 -1
+     (nil))
+(insn 46 45 47 2 (set (reg:HI 151)
+        (subreg/s/v:HI (reg:SI 121 [ _8 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":132:14 -1
+     (nil))
+(insn 47 46 48 2 (set (mem/v:HI (plus:SI (reg/f:SI 150)
+                (const_int 88 [0x58])) [3 USBx_11->BCDR+0 S2 A16])
+        (reg:HI 151)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":132:14 -1
+     (nil))
+(insn 48 47 51 2 (set (reg:SI 122 [ _17 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":134:10 -1
+     (nil))
+(insn 51 48 55 2 (set (reg:SI 123 [ <retval> ])
+        (reg:SI 122 [ _17 ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":134:10 discrim 1 -1
+     (nil))
+(insn 55 51 56 2 (set (reg/i:SI 0 r0)
+        (reg:SI 123 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":135:1 -1
+     (nil))
+(insn 56 55 0 2 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":135:1 -1
+     (nil))
+
+;; Function HAL_PCDEx_DeActivateBCD (HAL_PCDEx_DeActivateBCD, funcdef_no=363, decl_uid=10243, cgraph_uid=367, symbol_order=366)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 25.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])
+        (reg:SI 0 r0 [ hpcd ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":143:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":144:16 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 119)
+        (mem/f:SI (reg/f:SI 118) [6 hpcd_4(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":144:16 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])
+        (reg/f:SI 119)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":144:16 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":145:33 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 121)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":145:33 -1
+     (nil))
+(insn 11 10 12 2 (set (mem:SI (plus:SI (reg/f:SI 120)
+                (const_int 748 [0x2ec])) [4 hpcd_4(D)->battery_charging_active+0 S4 A32])
+        (reg:SI 121)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":145:33 -1
+     (nil))
+(insn 12 11 14 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":148:7 -1
+     (nil))
+(insn 14 12 15 2 (set (reg:HI 124)
+        (mem/v:HI (plus:SI (reg/f:SI 122)
+                (const_int 88 [0x58])) [3 USBx_5->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":148:7 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:HI 124))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":148:7 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 125)
+        (and:SI (reg:SI 114 [ _1 ])
+            (const_int -2 [0xfffffffffffffffe]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":148:14 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (subreg:HI (reg:SI 125) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":148:14 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":148:14 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:HI 127)
+        (subreg/s/v:HI (reg:SI 115 [ _2 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":148:14 -1
+     (nil))
+(insn 20 19 21 2 (set (mem/v:HI (plus:SI (reg/f:SI 126)
+                (const_int 88 [0x58])) [3 USBx_5->BCDR+0 S2 A16])
+        (reg:HI 127)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":148:14 -1
+     (nil))
+(insn 21 20 24 2 (set (reg:SI 116 [ _8 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":150:10 -1
+     (nil))
+(insn 24 21 28 2 (set (reg:SI 117 [ <retval> ])
+        (reg:SI 116 [ _8 ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":150:10 discrim 1 -1
+     (nil))
+(insn 28 24 29 2 (set (reg/i:SI 0 r0)
+        (reg:SI 117 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":151:1 -1
+     (nil))
+(insn 29 28 0 2 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":151:1 -1
+     (nil))
+
+;; Function HAL_PCDEx_BCD_VBUSDetect (HAL_PCDEx_BCD_VBUSDetect, funcdef_no=364, decl_uid=10245, cgraph_uid=368, symbol_order=367)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 26 from 15 to 16.
+Merging block 15 into block 14...
+Merged blocks 14 and 15.
+Merged 14 and 15 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])
+        (reg:SI 0 r0 [ hpcd ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":159:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":160:16 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 137)
+        (mem/f:SI (reg/f:SI 136) [6 hpcd_28(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":160:16 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])
+        (reg/f:SI 137)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":160:16 -1
+     (nil))
+(call_insn 9 8 10 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_GetTick") [flags 0x41]  <function_decl 0x7ffb6f9d8f00 HAL_GetTick>) [0 HAL_GetTick S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":161:24 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 10 9 11 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 tickstart+0 S4 A64])
+        (reg:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":161:24 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (label_ref 28)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":164:9 -1
+     (nil)
+ -> 28)
+(barrier 12 11 36)
+(code_label 36 12 13 4 14 (nil) [1 uses])
+(note 13 36 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(call_insn 14 13 15 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_GetTick") [flags 0x41]  <function_decl 0x7ffb6f9d8f00 HAL_GetTick>) [0 HAL_GetTick S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":167:10 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 15 14 16 4 (set (reg:SI 114 [ _1 ])
+        (reg:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":167:10 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:SI 138)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [4 tickstart+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":167:24 discrim 1 -1
+     (nil))
+(insn 17 16 20 4 (set (reg:SI 115 [ _2 ])
+        (minus:SI (reg:SI 114 [ _1 ])
+            (reg:SI 138))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":167:24 discrim 1 -1
+     (nil))
+(insn 20 17 21 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 115 [ _2 ])
+            (const_int 1000 [0x3e8]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":167:8 discrim 1 -1
+     (nil))
+(jump_insn 21 20 22 4 (set (pc)
+        (if_then_else (leu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":167:8 discrim 1 -1
+     (nil)
+ -> 28)
+(note 22 21 23 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 5 (set (reg:SI 1 r1)
+        (const_int 255 [0xff])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":172:7 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":172:7 -1
+     (nil))
+(call_insn 25 24 26 5 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_PCDEx_BCD_Callback") [flags 0x3]  <function_decl 0x7ffb6fbd0300 HAL_PCDEx_BCD_Callback>) [0 HAL_PCDEx_BCD_Callback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":172:7 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (nil)))))
+(jump_insn 26 25 27 5 (set (pc)
+        (label_ref:SI 144)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":175:7 288 {*arm_jump}
+     (nil)
+ -> 144)
+(barrier 27 26 28)
+(code_label 28 27 29 6 12 (nil) [2 uses])
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 32 6 (set (reg/f:SI 139)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":164:15 -1
+     (nil))
+(insn 32 30 33 6 (set (reg:HI 141)
+        (mem/v:HI (plus:SI (reg/f:SI 139)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":164:15 -1
+     (nil))
+(insn 33 32 34 6 (set (reg:SI 116 [ _3 ])
+        (zero_extend:SI (reg:HI 141))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":164:15 -1
+     (nil))
+(insn 34 33 35 6 (set (reg:SI 117 [ _4 ])
+        (reg:SI 116 [ _3 ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":164:22 -1
+     (nil))
+(insn 35 34 37 6 (set (reg:SI 118 [ _5 ])
+        (and:SI (reg:SI 117 [ _4 ])
+            (const_int 16 [0x10]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":164:22 -1
+     (nil))
+(insn 37 35 38 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 118 [ _5 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":164:40 -1
+     (nil))
+(jump_insn 38 37 39 6 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 36)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":164:40 -1
+     (nil)
+ -> 36)
+(note 39 38 40 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 40 39 41 7 (set (reg:SI 0 r0)
+        (const_int 200 [0xc8])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":179:3 -1
+     (nil))
+(call_insn 41 40 42 7 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 0x7ffb6f9d8e00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":179:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 42 41 44 7 (set (reg/f:SI 142)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":182:12 -1
+     (nil))
+(insn 44 42 45 7 (set (reg:HI 144)
+        (mem/v:HI (plus:SI (reg/f:SI 142)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":182:12 -1
+     (nil))
+(insn 45 44 46 7 (set (reg:SI 119 [ _6 ])
+        (zero_extend:SI (reg:HI 144))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":182:12 -1
+     (nil))
+(insn 46 45 47 7 (set (reg:SI 120 [ _7 ])
+        (reg:SI 119 [ _6 ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":182:19 -1
+     (nil))
+(insn 47 46 48 7 (set (reg:SI 121 [ _8 ])
+        (and:SI (reg:SI 120 [ _7 ])
+            (const_int 16 [0x10]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":182:19 -1
+     (nil))
+(insn 48 47 49 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 121 [ _8 ])
+            (const_int 16 [0x10]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":182:6 -1
+     (nil))
+(jump_insn 49 48 50 7 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 54)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":182:6 -1
+     (nil)
+ -> 54)
+(note 50 49 51 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 8 (set (reg:SI 1 r1)
+        (const_int 254 [0xfe])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":187:5 -1
+     (nil))
+(insn 52 51 53 8 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":187:5 -1
+     (nil))
+(call_insn 53 52 54 8 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_PCDEx_BCD_Callback") [flags 0x3]  <function_decl 0x7ffb6fbd0300 HAL_PCDEx_BCD_Callback>) [0 HAL_PCDEx_BCD_Callback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":187:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (nil)))))
+(code_label 54 53 55 9 15 (nil) [1 uses])
+(note 55 54 56 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 56 55 58 9 (set (reg/f:SI 145)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":192:7 -1
+     (nil))
+(insn 58 56 59 9 (set (reg:HI 147)
+        (mem/v:HI (plus:SI (reg/f:SI 145)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":192:7 -1
+     (nil))
+(insn 59 58 60 9 (set (reg:SI 122 [ _9 ])
+        (zero_extend:SI (reg:HI 147))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":192:7 -1
+     (nil))
+(insn 60 59 61 9 (set (reg:SI 148)
+        (and:SI (reg:SI 122 [ _9 ])
+            (const_int -3 [0xfffffffffffffffd]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":192:14 -1
+     (nil))
+(insn 61 60 62 9 (set (reg:SI 123 [ _10 ])
+        (zero_extend:SI (subreg:HI (reg:SI 148) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":192:14 -1
+     (nil))
+(insn 62 61 63 9 (set (reg/f:SI 149)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":192:14 -1
+     (nil))
+(insn 63 62 64 9 (set (reg:HI 150)
+        (subreg/s/v:HI (reg:SI 123 [ _10 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":192:14 -1
+     (nil))
+(insn 64 63 65 9 (set (mem/v:HI (plus:SI (reg/f:SI 149)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])
+        (reg:HI 150)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":192:14 -1
+     (nil))
+(insn 65 64 66 9 (set (reg:SI 0 r0)
+        (const_int 50 [0x32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":193:3 -1
+     (nil))
+(call_insn 66 65 67 9 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 0x7ffb6f9d8e00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":193:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 67 66 69 9 (set (reg/f:SI 151)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":194:7 -1
+     (nil))
+(insn 69 67 70 9 (set (reg:HI 153)
+        (mem/v:HI (plus:SI (reg/f:SI 151)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":194:7 -1
+     (nil))
+(insn 70 69 71 9 (set (reg:SI 124 [ _11 ])
+        (zero_extend:SI (reg:HI 153))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":194:7 -1
+     (nil))
+(insn 71 70 72 9 (set (reg:SI 154)
+        (ior:SI (reg:SI 124 [ _11 ])
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":194:14 -1
+     (nil))
+(insn 72 71 73 9 (set (reg:SI 125 [ _12 ])
+        (zero_extend:SI (subreg:HI (reg:SI 154) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":194:14 -1
+     (nil))
+(insn 73 72 74 9 (set (reg/f:SI 155)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":194:14 -1
+     (nil))
+(insn 74 73 75 9 (set (reg:HI 156)
+        (subreg/s/v:HI (reg:SI 125 [ _12 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":194:14 -1
+     (nil))
+(insn 75 74 76 9 (set (mem/v:HI (plus:SI (reg/f:SI 155)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])
+        (reg:HI 156)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":194:14 -1
+     (nil))
+(insn 76 75 77 9 (set (reg:SI 0 r0)
+        (const_int 50 [0x32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":195:3 -1
+     (nil))
+(call_insn 77 76 78 9 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 0x7ffb6f9d8e00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":195:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 78 77 80 9 (set (reg/f:SI 157)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":198:12 -1
+     (nil))
+(insn 80 78 81 9 (set (reg:HI 159)
+        (mem/v:HI (plus:SI (reg/f:SI 157)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":198:12 -1
+     (nil))
+(insn 81 80 82 9 (set (reg:SI 126 [ _13 ])
+        (zero_extend:SI (reg:HI 159))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":198:12 -1
+     (nil))
+(insn 82 81 83 9 (set (reg:SI 127 [ _14 ])
+        (reg:SI 126 [ _13 ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":198:19 -1
+     (nil))
+(insn 83 82 84 9 (set (reg:SI 128 [ _15 ])
+        (and:SI (reg:SI 127 [ _14 ])
+            (const_int 32 [0x20]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":198:19 -1
+     (nil))
+(insn 84 83 85 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 128 [ _15 ])
+            (const_int 32 [0x20]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":198:6 -1
+     (nil))
+(jump_insn 85 84 86 9 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 130)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":198:6 -1
+     (nil)
+ -> 130)
+(note 86 85 87 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 87 86 89 10 (set (reg/f:SI 160)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":202:9 -1
+     (nil))
+(insn 89 87 90 10 (set (reg:HI 162)
+        (mem/v:HI (plus:SI (reg/f:SI 160)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":202:9 -1
+     (nil))
+(insn 90 89 91 10 (set (reg:SI 129 [ _16 ])
+        (zero_extend:SI (reg:HI 162))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":202:9 -1
+     (nil))
+(insn 91 90 92 10 (set (reg:SI 163)
+        (and:SI (reg:SI 129 [ _16 ])
+            (const_int -5 [0xfffffffffffffffb]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":202:16 -1
+     (nil))
+(insn 92 91 93 10 (set (reg:SI 130 [ _17 ])
+        (zero_extend:SI (subreg:HI (reg:SI 163) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":202:16 -1
+     (nil))
+(insn 93 92 94 10 (set (reg/f:SI 164)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":202:16 -1
+     (nil))
+(insn 94 93 95 10 (set (reg:HI 165)
+        (subreg/s/v:HI (reg:SI 130 [ _17 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":202:16 -1
+     (nil))
+(insn 95 94 96 10 (set (mem/v:HI (plus:SI (reg/f:SI 164)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])
+        (reg:HI 165)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":202:16 -1
+     (nil))
+(insn 96 95 97 10 (set (reg:SI 0 r0)
+        (const_int 50 [0x32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":203:5 -1
+     (nil))
+(call_insn 97 96 98 10 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 0x7ffb6f9d8e00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":203:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 98 97 100 10 (set (reg/f:SI 166)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":204:9 -1
+     (nil))
+(insn 100 98 101 10 (set (reg:HI 168)
+        (mem/v:HI (plus:SI (reg/f:SI 166)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":204:9 -1
+     (nil))
+(insn 101 100 102 10 (set (reg:SI 131 [ _18 ])
+        (zero_extend:SI (reg:HI 168))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":204:9 -1
+     (nil))
+(insn 102 101 103 10 (set (reg:SI 169)
+        (ior:SI (reg:SI 131 [ _18 ])
+            (const_int 8 [0x8]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":204:16 -1
+     (nil))
+(insn 103 102 104 10 (set (reg:SI 132 [ _19 ])
+        (zero_extend:SI (subreg:HI (reg:SI 169) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":204:16 -1
+     (nil))
+(insn 104 103 105 10 (set (reg/f:SI 170)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":204:16 -1
+     (nil))
+(insn 105 104 106 10 (set (reg:HI 171)
+        (subreg/s/v:HI (reg:SI 132 [ _19 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":204:16 -1
+     (nil))
+(insn 106 105 107 10 (set (mem/v:HI (plus:SI (reg/f:SI 170)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])
+        (reg:HI 171)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":204:16 -1
+     (nil))
+(insn 107 106 108 10 (set (reg:SI 0 r0)
+        (const_int 50 [0x32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":205:5 -1
+     (nil))
+(call_insn 108 107 109 10 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 0x7ffb6f9d8e00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":205:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 109 108 111 10 (set (reg/f:SI 172)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":208:14 -1
+     (nil))
+(insn 111 109 112 10 (set (reg:HI 174)
+        (mem/v:HI (plus:SI (reg/f:SI 172)
+                (const_int 88 [0x58])) [3 USBx_29->BCDR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":208:14 -1
+     (nil))
+(insn 112 111 113 10 (set (reg:SI 133 [ _20 ])
+        (zero_extend:SI (reg:HI 174))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":208:14 -1
+     (nil))
+(insn 113 112 114 10 (set (reg:SI 134 [ _21 ])
+        (reg:SI 133 [ _20 ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":208:21 -1
+     (nil))
+(insn 114 113 115 10 (set (reg:SI 135 [ _22 ])
+        (and:SI (reg:SI 134 [ _21 ])
+            (const_int 64 [0x40]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":208:21 -1
+     (nil))
+(insn 115 114 116 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 135 [ _22 ])
+            (const_int 64 [0x40]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":208:8 -1
+     (nil))
+(jump_insn 116 115 117 10 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 123)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":208:8 -1
+     (nil)
+ -> 123)
+(note 117 116 118 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 118 117 119 11 (set (reg:SI 1 r1)
+        (const_int 251 [0xfb])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":214:7 -1
+     (nil))
+(insn 119 118 120 11 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":214:7 -1
+     (nil))
+(call_insn 120 119 121 11 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_PCDEx_BCD_Callback") [flags 0x3]  <function_decl 0x7ffb6fbd0300 HAL_PCDEx_BCD_Callback>) [0 HAL_PCDEx_BCD_Callback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":214:7 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (nil)))))
+(jump_insn 121 120 122 11 (set (pc)
+        (label_ref 135)) -1
+     (nil)
+ -> 135)
+(barrier 122 121 123)
+(code_label 123 122 124 12 17 (nil) [1 uses])
+(note 124 123 125 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 125 124 126 12 (set (reg:SI 1 r1)
+        (const_int 252 [0xfc])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":223:7 -1
+     (nil))
+(insn 126 125 127 12 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":223:7 -1
+     (nil))
+(call_insn 127 126 128 12 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_PCDEx_BCD_Callback") [flags 0x3]  <function_decl 0x7ffb6fbd0300 HAL_PCDEx_BCD_Callback>) [0 HAL_PCDEx_BCD_Callback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":223:7 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (nil)))))
+(jump_insn 128 127 129 12 (set (pc)
+        (label_ref 135)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":223:7 -1
+     (nil)
+ -> 135)
+(barrier 129 128 130)
+(code_label 130 129 131 13 16 (nil) [1 uses])
+(note 131 130 132 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 132 131 133 13 (set (reg:SI 1 r1)
+        (const_int 253 [0xfd])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":233:5 -1
+     (nil))
+(insn 133 132 134 13 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":233:5 -1
+     (nil))
+(call_insn 134 133 135 13 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_PCDEx_BCD_Callback") [flags 0x3]  <function_decl 0x7ffb6fbd0300 HAL_PCDEx_BCD_Callback>) [0 HAL_PCDEx_BCD_Callback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":233:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (nil)))))
+(code_label 135 134 136 14 18 (nil) [2 uses])
+(note 136 135 137 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 137 136 138 14 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":238:9 -1
+     (nil))
+(call_insn 138 137 139 14 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_PCDEx_DeActivateBCD") [flags 0x3]  <function_decl 0x7ffb6fbd0000 HAL_PCDEx_DeActivateBCD>) [0 HAL_PCDEx_DeActivateBCD S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":238:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 139 138 140 14 (set (reg:SI 1 r1)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":242:3 -1
+     (nil))
+(insn 140 139 141 14 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":242:3 -1
+     (nil))
+(call_insn 141 140 144 14 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_PCDEx_BCD_Callback") [flags 0x3]  <function_decl 0x7ffb6fbd0300 HAL_PCDEx_BCD_Callback>) [0 HAL_PCDEx_BCD_Callback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":242:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (nil)))))
+(code_label 144 141 145 16 11 (nil) [1 uses])
+(note 145 144 0 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+
+;; Function HAL_PCDEx_ActivateLPM (HAL_PCDEx_ActivateLPM, funcdef_no=365, decl_uid=10237, cgraph_uid=369, symbol_order=368)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 38.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])
+        (reg:SI 0 r0 [ hpcd ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":253:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":255:16 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 121)
+        (mem/f:SI (reg/f:SI 120) [6 hpcd_6(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":255:16 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])
+        (reg/f:SI 121)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":255:16 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":256:20 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 123)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":256:20 -1
+     (nil))
+(insn 11 10 12 2 (set (mem:SI (plus:SI (reg/f:SI 122)
+                (const_int 744 [0x2e8])) [4 hpcd_6(D)->lpm_active+0 S4 A32])
+        (reg:SI 123)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":256:20 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":257:19 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 125)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":257:19 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:QI 126)
+        (subreg:QI (reg:SI 125) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":257:19 -1
+     (nil))
+(insn 15 14 16 2 (set (mem:QI (plus:SI (reg/f:SI 124)
+                (const_int 736 [0x2e0])) [0 hpcd_6(D)->LPM_State+0 S1 A32])
+        (reg:QI 126)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":257:19 -1
+     (nil))
+(insn 16 15 18 2 (set (reg/f:SI 127)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":259:7 -1
+     (nil))
+(insn 18 16 19 2 (set (reg:HI 129)
+        (mem/v:HI (plus:SI (reg/f:SI 127)
+                (const_int 84 [0x54])) [3 USBx_7->LPMCSR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":259:7 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:HI 129))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":259:7 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 130)
+        (ior:SI (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":259:16 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (subreg:HI (reg:SI 130) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":259:16 -1
+     (nil))
+(insn 22 21 23 2 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":259:16 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:HI 132)
+        (subreg/s/v:HI (reg:SI 115 [ _2 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":259:16 -1
+     (nil))
+(insn 24 23 25 2 (set (mem/v:HI (plus:SI (reg/f:SI 131)
+                (const_int 84 [0x54])) [3 USBx_7->LPMCSR+0 S2 A16])
+        (reg:HI 132)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":259:16 -1
+     (nil))
+(insn 25 24 27 2 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":260:7 -1
+     (nil))
+(insn 27 25 28 2 (set (reg:HI 135)
+        (mem/v:HI (plus:SI (reg/f:SI 133)
+                (const_int 84 [0x54])) [3 USBx_7->LPMCSR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":260:7 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:SI 116 [ _3 ])
+        (zero_extend:SI (reg:HI 135))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":260:7 -1
+     (nil))
+(insn 29 28 30 2 (set (reg:SI 136)
+        (ior:SI (reg:SI 116 [ _3 ])
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":260:16 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 117 [ _4 ])
+        (zero_extend:SI (subreg:HI (reg:SI 136) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":260:16 -1
+     (nil))
+(insn 31 30 32 2 (set (reg/f:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":260:16 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:HI 138)
+        (subreg/s/v:HI (reg:SI 117 [ _4 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":260:16 -1
+     (nil))
+(insn 33 32 34 2 (set (mem/v:HI (plus:SI (reg/f:SI 137)
+                (const_int 84 [0x54])) [3 USBx_7->LPMCSR+0 S2 A16])
+        (reg:HI 138)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":260:16 -1
+     (nil))
+(insn 34 33 37 2 (set (reg:SI 118 [ _12 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":262:10 -1
+     (nil))
+(insn 37 34 41 2 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 118 [ _12 ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":262:10 discrim 1 -1
+     (nil))
+(insn 41 37 42 2 (set (reg/i:SI 0 r0)
+        (reg:SI 119 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":263:1 -1
+     (nil))
+(insn 42 41 0 2 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":263:1 -1
+     (nil))
+
+;; Function HAL_PCDEx_DeActivateLPM (HAL_PCDEx_DeActivateLPM, funcdef_no=366, decl_uid=10239, cgraph_uid=370, symbol_order=369)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 34.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])
+        (reg:SI 0 r0 [ hpcd ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":271:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":272:16 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 121)
+        (mem/f:SI (reg/f:SI 120) [6 hpcd_6(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":272:16 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])
+        (reg/f:SI 121)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":272:16 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 hpcd+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":274:20 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 123)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":274:20 -1
+     (nil))
+(insn 11 10 12 2 (set (mem:SI (plus:SI (reg/f:SI 122)
+                (const_int 744 [0x2e8])) [4 hpcd_6(D)->lpm_active+0 S4 A32])
+        (reg:SI 123)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":274:20 -1
+     (nil))
+(insn 12 11 14 2 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":276:7 -1
+     (nil))
+(insn 14 12 15 2 (set (reg:HI 126)
+        (mem/v:HI (plus:SI (reg/f:SI 124)
+                (const_int 84 [0x54])) [3 USBx_7->LPMCSR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":276:7 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:HI 126))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":276:7 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 127)
+        (and:SI (reg:SI 114 [ _1 ])
+            (const_int -2 [0xfffffffffffffffe]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":276:16 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (subreg:HI (reg:SI 127) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":276:16 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":276:16 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:HI 129)
+        (subreg/s/v:HI (reg:SI 115 [ _2 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":276:16 -1
+     (nil))
+(insn 20 19 21 2 (set (mem/v:HI (plus:SI (reg/f:SI 128)
+                (const_int 84 [0x54])) [3 USBx_7->LPMCSR+0 S2 A16])
+        (reg:HI 129)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":276:16 -1
+     (nil))
+(insn 21 20 23 2 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":277:7 -1
+     (nil))
+(insn 23 21 24 2 (set (reg:HI 132)
+        (mem/v:HI (plus:SI (reg/f:SI 130)
+                (const_int 84 [0x54])) [3 USBx_7->LPMCSR+0 S2 A16])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":277:7 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 116 [ _3 ])
+        (zero_extend:SI (reg:HI 132))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":277:7 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:SI 133)
+        (and:SI (reg:SI 116 [ _3 ])
+            (const_int -3 [0xfffffffffffffffd]))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":277:16 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 117 [ _4 ])
+        (zero_extend:SI (subreg:HI (reg:SI 133) 0))) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":277:16 -1
+     (nil))
+(insn 27 26 28 2 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 USBx+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":277:16 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:HI 135)
+        (subreg/s/v:HI (reg:SI 117 [ _4 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":277:16 -1
+     (nil))
+(insn 29 28 30 2 (set (mem/v:HI (plus:SI (reg/f:SI 134)
+                (const_int 84 [0x54])) [3 USBx_7->LPMCSR+0 S2 A16])
+        (reg:HI 135)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":277:16 -1
+     (nil))
+(insn 30 29 33 2 (set (reg:SI 118 [ _11 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":279:10 -1
+     (nil))
+(insn 33 30 37 2 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 118 [ _11 ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":279:10 discrim 1 -1
+     (nil))
+(insn 37 33 38 2 (set (reg/i:SI 0 r0)
+        (reg:SI 119 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":280:1 -1
+     (nil))
+(insn 38 37 0 2 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":280:1 -1
+     (nil))
+
+;; Function HAL_PCDEx_LPM_Callback (HAL_PCDEx_LPM_Callback, funcdef_no=367, decl_uid=10248, cgraph_uid=371, symbol_order=370)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 hpcd+0 S4 A32])
+        (reg:SI 0 r0 [ hpcd ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":291:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:SI 114)
+        (reg:SI 1 r1 [ msg ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":291:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg:QI 115)
+        (subreg:QI (reg:SI 114) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":291:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -5 [0xfffffffffffffffb])) [0 msg+0 S1 A8])
+        (reg:QI 115)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":291:1 -1
+     (nil))
+(note 6 5 0 2 NOTE_INSN_FUNCTION_BEG)
+
+;; Function HAL_PCDEx_BCD_Callback (HAL_PCDEx_BCD_Callback, funcdef_no=368, decl_uid=10251, cgraph_uid=372, symbol_order=371)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 hpcd+0 S4 A32])
+        (reg:SI 0 r0 [ hpcd ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":308:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:SI 114)
+        (reg:SI 1 r1 [ msg ])) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":308:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg:QI 115)
+        (subreg:QI (reg:SI 114) 0)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":308:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -5 [0xfffffffffffffffb])) [0 msg+0 S1 A8])
+        (reg:QI 115)) "lib/HAL/Src/stm32g4xx_hal_pcd_ex.c":308:1 -1
+     (nil))
+(note 6 5 0 2 NOTE_INSN_FUNCTION_BEG)

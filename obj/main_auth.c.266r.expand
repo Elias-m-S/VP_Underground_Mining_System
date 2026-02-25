@@ -1,0 +1,422 @@
+
+;; Function main (main, funcdef_no=361, decl_uid=12728, cgraph_uid=365, symbol_order=365)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+deleting block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn 5 2 6 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_Init") [flags 0x41]  <function_decl 0x7f91cadd8800 HAL_Init>) [0 HAL_Init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":64:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 6 5 7 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("SystemClock_Config") [flags 0x41]  <function_decl 0x7f91cade1b00 SystemClock_Config>) [0 SystemClock_Config S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":66:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 7 6 8 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("initializePeripherals") [flags 0x3]  <function_decl 0x7f91cadf0700 initializePeripherals>) [0 initializePeripherals S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":69:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 8 7 9 2 (set (reg:SI 0 r0)
+        (symbol_ref:SI ("gScheduler") [flags 0x2]  <var_decl 0x7f91cad84d80 gScheduler>)) "src/main_auth.c":72:5 -1
+     (nil))
+(call_insn 9 8 55 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("schedInitialize") [flags 0x41]  <function_decl 0x7f91cadf0500 schedInitialize>) [0 schedInitialize S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":72:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(code_label 55 9 10 4 4 (nil) [1 uses])
+(note 10 55 11 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 4 (set (reg:SI 0 r0)
+        (const_int 0 [0])) "src/main_auth.c":77:9 -1
+     (nil))
+(call_insn 12 11 13 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("ledToggleLED") [flags 0x41]  <function_decl 0x7f91cade8d00 ledToggleLED>) [0 ledToggleLED S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":77:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:QI (use (reg:SI 0 r0))
+            (nil))))
+(insn 13 12 14 4 (set (reg:SI 0 r0)
+        (const_int 100 [0x64])) "src/main_auth.c":78:9 -1
+     (nil))
+(call_insn 14 13 15 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 0x7f91cadd8e00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":78:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 15 14 16 4 (set (reg:SI 0 r0)
+        (const_int 1 [0x1])) "src/main_auth.c":79:9 -1
+     (nil))
+(call_insn 16 15 17 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("ledToggleLED") [flags 0x41]  <function_decl 0x7f91cade8d00 ledToggleLED>) [0 ledToggleLED S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":79:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:QI (use (reg:SI 0 r0))
+            (nil))))
+(insn 17 16 18 4 (set (reg:SI 0 r0)
+        (const_int 100 [0x64])) "src/main_auth.c":80:9 -1
+     (nil))
+(call_insn 18 17 19 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 0x7f91cadd8e00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":80:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 19 18 20 4 (set (reg:SI 0 r0)
+        (const_int 2 [0x2])) "src/main_auth.c":81:9 -1
+     (nil))
+(call_insn 20 19 21 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("ledToggleLED") [flags 0x41]  <function_decl 0x7f91cade8d00 ledToggleLED>) [0 ledToggleLED S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":81:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:QI (use (reg:SI 0 r0))
+            (nil))))
+(insn 21 20 22 4 (set (reg:SI 0 r0)
+        (const_int 100 [0x64])) "src/main_auth.c":82:9 -1
+     (nil))
+(call_insn 22 21 23 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 0x7f91cadd8e00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":82:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 23 22 24 4 (set (reg:SI 0 r0)
+        (const_int 3 [0x3])) "src/main_auth.c":83:9 -1
+     (nil))
+(call_insn 24 23 25 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("ledToggleLED") [flags 0x41]  <function_decl 0x7f91cade8d00 ledToggleLED>) [0 ledToggleLED S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":83:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:QI (use (reg:SI 0 r0))
+            (nil))))
+(insn 25 24 26 4 (set (reg:SI 0 r0)
+        (const_int 100 [0x64])) "src/main_auth.c":84:9 -1
+     (nil))
+(call_insn 26 25 27 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 0x7f91cadd8e00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":84:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 27 26 28 4 (set (reg:SI 0 r0)
+        (const_int 4 [0x4])) "src/main_auth.c":85:9 -1
+     (nil))
+(call_insn 28 27 29 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("ledToggleLED") [flags 0x41]  <function_decl 0x7f91cade8d00 ledToggleLED>) [0 ledToggleLED S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":85:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:QI (use (reg:SI 0 r0))
+            (nil))))
+(insn 29 28 30 4 (set (reg:SI 0 r0)
+        (const_int 100 [0x64])) "src/main_auth.c":86:9 -1
+     (nil))
+(call_insn 30 29 31 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 0x7f91cadd8e00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":86:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 31 30 32 4 (set (reg:SI 117)
+        (plus:SI (reg/f:SI 109 virtual-stack-vars)
+            (const_int -12 [0xfffffffffffffff4]))) "src/main_auth.c":89:9 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:SI 1 r1)
+        (const_int 2 [0x2])) "src/main_auth.c":89:9 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:SI 0 r0)
+        (reg:SI 117)) "src/main_auth.c":89:9 -1
+     (nil))
+(call_insn 34 33 35 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("uartReceiveData") [flags 0x41]  <function_decl 0x7f91cade8800 uartReceiveData>) [0 uartReceiveData S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":89:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 35 34 36 4 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [0 buf[0]+0 S1 A32]))) "src/main_auth.c":90:16 -1
+     (nil))
+(insn 36 35 37 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 88 [0x58]))) "src/main_auth.c":90:12 -1
+     (nil))
+(jump_insn 37 36 38 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 48)
+            (pc))) "src/main_auth.c":90:12 -1
+     (nil)
+ -> 48)
+(note 38 37 39 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 39 38 40 5 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -11 [0xfffffffffffffff5])) [0 buf[1]+0 S1 A8]))) "src/main_auth.c":90:33 discrim 1 -1
+     (nil))
+(insn 40 39 41 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 115 [ _2 ])
+            (const_int 13 [0xd]))) "src/main_auth.c":90:27 discrim 1 -1
+     (nil))
+(jump_insn 41 40 42 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 48)
+            (pc))) "src/main_auth.c":90:27 discrim 1 -1
+     (nil)
+ -> 48)
+(note 42 41 43 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 6 (set (reg:SI 1 r1)
+        (const_int 16 [0x10])) "src/main_auth.c":92:13 -1
+     (nil))
+(insn 44 43 45 6 (set (reg:SI 0 r0)
+        (const_int 1 [0x1])) "src/main_auth.c":92:13 -1
+     (nil))
+(call_insn 45 44 46 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("displayShowDigit") [flags 0x41]  <function_decl 0x7f91cadf0000 displayShowDigit>) [0 displayShowDigit S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":92:13 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:QI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (nil)))))
+(jump_insn 46 45 47 6 (set (pc)
+        (label_ref 53)) "src/main_auth.c":92:13 -1
+     (nil)
+ -> 53)
+(barrier 47 46 48)
+(code_label 48 47 49 7 2 (nil) [2 uses])
+(note 49 48 50 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 7 (set (reg:SI 1 r1)
+        (const_int 19 [0x13])) "src/main_auth.c":96:13 -1
+     (nil))
+(insn 51 50 52 7 (set (reg:SI 0 r0)
+        (const_int 1 [0x1])) "src/main_auth.c":96:13 -1
+     (nil))
+(call_insn 52 51 53 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("displayShowDigit") [flags 0x41]  <function_decl 0x7f91cadf0000 displayShowDigit>) [0 displayShowDigit S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":96:13 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:QI (use (reg:SI 0 r0))
+            (expr_list:QI (use (reg:SI 1 r1))
+                (nil)))))
+(code_label 53 52 54 8 3 (nil) [1 uses])
+(note 54 53 56 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 56 54 57 8 (set (pc)
+        (label_ref 55)) "src/main_auth.c":75:5 -1
+     (nil)
+ -> 55)
+(barrier 57 56 0)
+
+;; Function initializePeripherals (initializePeripherals, funcdef_no=362, decl_uid=12725, cgraph_uid=366, symbol_order=366)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 16.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 0 r0)
+        (const_int 115200 [0x1c200])) "src/main_auth.c":112:5 -1
+     (nil))
+(call_insn 6 5 7 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("uartInitialize") [flags 0x41]  <function_decl 0x7f91cade8600 uartInitialize>) [0 uartInitialize S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":112:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(call_insn 7 6 8 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("ledInitialize") [flags 0x41]  <function_decl 0x7f91cade8c00 ledInitialize>) [0 ledInitialize S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":115:2 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 8 7 9 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("displayInitialize") [flags 0x41]  <function_decl 0x7f91cade8f00 displayInitialize>) [0 displayInitialize S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":116:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 9 8 10 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("buttonInitialize") [flags 0x41]  <function_decl 0x7f91cade8a00 buttonInitialize>) [0 buttonInitialize S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":119:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 10 9 11 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("timerInitialize") [flags 0x41]  <function_decl 0x7f91cadf0400 timerInitialize>) [0 timerInitialize S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":122:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 11 10 12 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("adcInitialize") [flags 0x41]  <function_decl 0x7f91cadf0100 adcInitialize>) [0 adcInitialize S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "src/main_auth.c":123:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 12 11 15 2 (set (reg:SI 114 [ _8 ])
+        (const_int 0 [0])) "src/main_auth.c":125:12 -1
+     (nil))
+(insn 15 12 19 2 (set (reg:SI 115 [ <retval> ])
+        (reg:SI 114 [ _8 ])) "src/main_auth.c":125:12 discrim 1 -1
+     (nil))
+(insn 19 15 20 2 (set (reg/i:SI 0 r0)
+        (reg:SI 115 [ <retval> ])) "src/main_auth.c":126:1 -1
+     (nil))
+(insn 20 19 0 2 (use (reg/i:SI 0 r0)) "src/main_auth.c":126:1 -1
+     (nil))

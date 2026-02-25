@@ -1,0 +1,2 @@
+src/main.c:61:5:main	24	static
+src/main.c:149:16:initializePeripherals	8	static

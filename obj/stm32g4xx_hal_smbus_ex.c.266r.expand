@@ -1,0 +1,183 @@
+
+;; Function HAL_SMBUSEx_EnableFastModePlus (HAL_SMBUSEx_EnableFastModePlus, funcdef_no=361, decl_uid=11202, cgraph_uid=365, symbol_order=364)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 ConfigFastModePlus+0 S4 A32])
+        (reg:SI 0 r0 [ ConfigFastModePlus ])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":98:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 114 [ _1 ])
+        (const_int 1073876992 [0x40021000])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":103:3 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 115 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 114 [ _1 ])
+                (const_int 96 [0x60])) [1 _1->APB2ENR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":103:3 -1
+     (nil))
+(insn 8 7 9 2 (set (reg/f:SI 116 [ _3 ])
+        (const_int 1073876992 [0x40021000])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":103:3 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 117 [ _4 ])
+        (ior:SI (reg:SI 115 [ _2 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":103:3 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/v:SI (plus:SI (reg/f:SI 116 [ _3 ])
+                (const_int 96 [0x60])) [1 _3->APB2ENR+0 S4 A32])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":103:3 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 118 [ _5 ])
+        (const_int 1073876992 [0x40021000])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":103:3 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 119 [ _6 ])
+        (mem/v:SI (plus:SI (reg/f:SI 118 [ _5 ])
+                (const_int 96 [0x60])) [1 _5->APB2ENR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":103:3 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 120 [ _7 ])
+        (and:SI (reg:SI 119 [ _6 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":103:3 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])
+        (reg:SI 120 [ _7 ])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":103:3 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 125 [ vol.0_15 ])
+        (mem/v/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":103:3 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 121 [ _8 ])
+        (const_int 1073807360 [0x40010000])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":106:3 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 122 [ _9 ])
+        (mem/v:SI (plus:SI (reg/f:SI 121 [ _8 ])
+                (const_int 4 [0x4])) [1 _8->CFGR1+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":106:3 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:SI 123 [ _10 ])
+        (const_int 1073807360 [0x40010000])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":106:3 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 126)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 ConfigFastModePlus+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":106:3 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 124 [ _11 ])
+        (ior:SI (reg:SI 122 [ _9 ])
+            (reg:SI 126))) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":106:3 -1
+     (nil))
+(insn 21 20 0 2 (set (mem/v:SI (plus:SI (reg/f:SI 123 [ _10 ])
+                (const_int 4 [0x4])) [1 _10->CFGR1+0 S4 A32])
+        (reg:SI 124 [ _11 ])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":106:3 -1
+     (nil))
+
+;; Function HAL_SMBUSEx_DisableFastModePlus (HAL_SMBUSEx_DisableFastModePlus, funcdef_no=362, decl_uid=11204, cgraph_uid=366, symbol_order=365)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 ConfigFastModePlus+0 S4 A32])
+        (reg:SI 0 r0 [ ConfigFastModePlus ])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":127:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 114 [ _1 ])
+        (const_int 1073876992 [0x40021000])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":132:3 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 115 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 114 [ _1 ])
+                (const_int 96 [0x60])) [1 _1->APB2ENR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":132:3 -1
+     (nil))
+(insn 8 7 9 2 (set (reg/f:SI 116 [ _3 ])
+        (const_int 1073876992 [0x40021000])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":132:3 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 117 [ _4 ])
+        (ior:SI (reg:SI 115 [ _2 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":132:3 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/v:SI (plus:SI (reg/f:SI 116 [ _3 ])
+                (const_int 96 [0x60])) [1 _3->APB2ENR+0 S4 A32])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":132:3 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 118 [ _5 ])
+        (const_int 1073876992 [0x40021000])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":132:3 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 119 [ _6 ])
+        (mem/v:SI (plus:SI (reg/f:SI 118 [ _5 ])
+                (const_int 96 [0x60])) [1 _5->APB2ENR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":132:3 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 120 [ _7 ])
+        (and:SI (reg:SI 119 [ _6 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":132:3 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])
+        (reg:SI 120 [ _7 ])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":132:3 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 126 [ vol.1_16 ])
+        (mem/v/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":132:3 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 121 [ _8 ])
+        (const_int 1073807360 [0x40010000])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":135:3 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 122 [ _9 ])
+        (mem/v:SI (plus:SI (reg/f:SI 121 [ _8 ])
+                (const_int 4 [0x4])) [1 _8->CFGR1+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":135:3 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 127)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 ConfigFastModePlus+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":135:3 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 123 [ _10 ])
+        (not:SI (reg:SI 127))) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":135:3 -1
+     (nil))
+(insn 20 19 21 2 (set (reg/f:SI 124 [ _11 ])
+        (const_int 1073807360 [0x40010000])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":135:3 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 125 [ _12 ])
+        (and:SI (reg:SI 122 [ _9 ])
+            (reg:SI 123 [ _10 ]))) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":135:3 -1
+     (nil))
+(insn 22 21 0 2 (set (mem/v:SI (plus:SI (reg/f:SI 124 [ _11 ])
+                (const_int 4 [0x4])) [1 _11->CFGR1+0 S4 A32])
+        (reg:SI 125 [ _12 ])) "lib/HAL/Src/stm32g4xx_hal_smbus_ex.c":135:3 -1
+     (nil))

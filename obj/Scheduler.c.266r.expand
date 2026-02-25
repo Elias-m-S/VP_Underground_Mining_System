@@ -1,0 +1,96 @@
+
+;; Function schedInitialize (schedInitialize, funcdef_no=0, decl_uid=4656, cgraph_uid=1, symbol_order=0)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 10.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 pScheduler+0 S4 A32])
+        (reg:SI 0 r0 [ pScheduler ])) "src/OS/Scheduler.c":46:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 9 2 (set (reg:SI 114 [ _1 ])
+        (const_int 0 [0])) "src/OS/Scheduler.c":48:12 -1
+     (nil))
+(insn 9 6 13 2 (set (reg:SI 115 [ <retval> ])
+        (reg:SI 114 [ _1 ])) "src/OS/Scheduler.c":48:12 discrim 1 -1
+     (nil))
+(insn 13 9 14 2 (set (reg/i:SI 0 r0)
+        (reg:SI 115 [ <retval> ])) "src/OS/Scheduler.c":49:1 -1
+     (nil))
+(insn 14 13 0 2 (use (reg/i:SI 0 r0)) "src/OS/Scheduler.c":49:1 -1
+     (nil))
+
+;; Function schedCycle (schedCycle, funcdef_no=1, decl_uid=4658, cgraph_uid=2, symbol_order=1)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 10.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 pScheduler+0 S4 A32])
+        (reg:SI 0 r0 [ pScheduler ])) "src/OS/Scheduler.c":53:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 9 2 (set (reg:SI 114 [ _1 ])
+        (const_int 0 [0])) "src/OS/Scheduler.c":56:12 -1
+     (nil))
+(insn 9 6 13 2 (set (reg:SI 115 [ <retval> ])
+        (reg:SI 114 [ _1 ])) "src/OS/Scheduler.c":56:12 discrim 1 -1
+     (nil))
+(insn 13 9 14 2 (set (reg/i:SI 0 r0)
+        (reg:SI 115 [ <retval> ])) "src/OS/Scheduler.c":57:1 -1
+     (nil))
+(insn 14 13 0 2 (use (reg/i:SI 0 r0)) "src/OS/Scheduler.c":57:1 -1
+     (nil))

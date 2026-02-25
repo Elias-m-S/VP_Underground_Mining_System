@@ -1,0 +1,5 @@
+src/OS/SystemHandler.c:50:6:NMI_Handler	4	static
+src/OS/SystemHandler.c:63:6:SVC_Handler	4	static
+src/OS/SystemHandler.c:76:6:PendSV_Handler	4	static
+src/OS/SystemHandler.c:94:6:SysTick_Handler	8	static
+src/OS/SystemHandler.c:106:6:DebugMon_Handler	4	static

@@ -1,0 +1,4041 @@
+
+;; Function HAL_SRAM_Init (HAL_SRAM_Init, funcdef_no=361, decl_uid=11454, cgraph_uid=365, symbol_order=364)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 77.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":170:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [20 Timing+0 S4 A32])
+        (reg:SI 1 r1 [ Timing ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":170:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 ExtTiming+0 S4 A32])
+        (reg:SI 2 r2 [ ExtTiming ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":170:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":172:6 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 130)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":172:6 -1
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":172:6 -1
+     (nil)
+ -> 15)
+(note 11 10 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 4 (set (reg:SI 128 [ _15 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":174:12 -1
+     (nil))
+(jump_insn 13 12 14 4 (set (pc)
+        (label_ref 74)) "lib/HAL/Src/stm32g4xx_hal_sram.c":174:12 -1
+     (nil)
+ -> 74)
+(barrier 14 13 15)
+(code_label 15 14 16 5 2 (nil) [1 uses])
+(note 16 15 17 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 19 5 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":177:12 -1
+     (nil))
+(insn 19 17 20 5 (set (reg:QI 133)
+        (mem/v:QI (plus:SI (reg/f:SI 131)
+                (const_int 81 [0x51])) [0 hsram_18(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":177:12 -1
+     (nil))
+(insn 20 19 21 5 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:QI 133))) "lib/HAL/Src/stm32g4xx_hal_sram.c":177:12 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":177:6 -1
+     (nil))
+(jump_insn 22 21 23 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 30)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":177:6 -1
+     (nil)
+ -> 30)
+(note 23 22 24 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 6 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":180:17 -1
+     (nil))
+(insn 25 24 26 6 (set (reg:SI 135)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":180:17 -1
+     (nil))
+(insn 26 25 27 6 (set (reg:QI 136)
+        (subreg:QI (reg:SI 135) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":180:17 -1
+     (nil))
+(insn 27 26 28 6 (set (mem:QI (plus:SI (reg/f:SI 134)
+                (const_int 80 [0x50])) [0 hsram_18(D)->Lock+0 S1 A32])
+        (reg:QI 136)) "lib/HAL/Src/stm32g4xx_hal_sram.c":180:17 -1
+     (nil))
+(insn 28 27 29 6 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":194:5 -1
+     (nil))
+(call_insn 29 28 30 6 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_SRAM_MspInit") [flags 0x3]  <function_decl 0x7fdbec0ee000 HAL_SRAM_MspInit>) [0 HAL_SRAM_MspInit S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":194:5 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(code_label 30 29 31 7 4 (nil) [1 uses])
+(note 31 30 32 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 33 7 (set (reg/f:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":199:9 -1
+     (nil))
+(insn 33 32 34 7 (set (reg/f:SI 115 [ _2 ])
+        (mem/f:SI (reg/f:SI 137) [2 hsram_18(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":199:9 -1
+     (nil))
+(insn 34 33 35 7 (set (reg:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":199:9 -1
+     (nil))
+(insn 35 34 36 7 (set (reg/f:SI 116 [ _3 ])
+        (plus:SI (reg:SI 138)
+            (const_int 8 [0x8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":199:9 -1
+     (nil))
+(insn 36 35 37 7 (set (reg:SI 1 r1)
+        (reg/f:SI 116 [ _3 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":199:9 -1
+     (nil))
+(insn 37 36 38 7 (set (reg:SI 0 r0)
+        (reg/f:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":199:9 -1
+     (nil))
+(call_insn 38 37 39 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("FMC_NORSRAM_Init") [flags 0x41]  <function_decl 0x7fdbec377200 FMC_NORSRAM_Init>) [0 FMC_NORSRAM_Init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":199:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 39 38 40 7 (set (reg/f:SI 139)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":202:9 -1
+     (nil))
+(insn 40 39 41 7 (set (reg/f:SI 117 [ _4 ])
+        (mem/f:SI (reg/f:SI 139) [2 hsram_18(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":202:9 -1
+     (nil))
+(insn 41 40 42 7 (set (reg/f:SI 140)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":202:9 -1
+     (nil))
+(insn 42 41 43 7 (set (reg:SI 118 [ _5 ])
+        (mem:SI (plus:SI (reg/f:SI 140)
+                (const_int 8 [0x8])) [5 hsram_18(D)->Init.NSBank+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":202:9 -1
+     (nil))
+(insn 43 42 44 7 (set (reg:SI 2 r2)
+        (reg:SI 118 [ _5 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":202:9 -1
+     (nil))
+(insn 44 43 45 7 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [20 Timing+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":202:9 -1
+     (nil))
+(insn 45 44 46 7 (set (reg:SI 0 r0)
+        (reg/f:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":202:9 -1
+     (nil))
+(call_insn 46 45 47 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("FMC_NORSRAM_Timing_Init") [flags 0x41]  <function_decl 0x7fdbec377300 FMC_NORSRAM_Timing_Init>) [0 FMC_NORSRAM_Timing_Init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":202:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 47 46 48 7 (set (reg/f:SI 141)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil))
+(insn 48 47 49 7 (set (reg/f:SI 119 [ _6 ])
+        (mem/f:SI (plus:SI (reg/f:SI 141)
+                (const_int 4 [0x4])) [3 hsram_18(D)->Extended+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil))
+(insn 49 48 50 7 (set (reg/f:SI 142)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil))
+(insn 50 49 51 7 (set (reg:SI 120 [ _7 ])
+        (mem:SI (plus:SI (reg/f:SI 142)
+                (const_int 8 [0x8])) [5 hsram_18(D)->Init.NSBank+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil))
+(insn 51 50 52 7 (set (reg/f:SI 143)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil))
+(insn 52 51 53 7 (set (reg:SI 121 [ _8 ])
+        (mem:SI (plus:SI (reg/f:SI 143)
+                (const_int 44 [0x2c])) [5 hsram_18(D)->Init.ExtendedMode+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil))
+(insn 53 52 54 7 (set (reg:SI 3 r3)
+        (reg:SI 121 [ _8 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil))
+(insn 54 53 55 7 (set (reg:SI 2 r2)
+        (reg:SI 120 [ _7 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil))
+(insn 55 54 56 7 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [20 ExtTiming+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil))
+(insn 56 55 57 7 (set (reg:SI 0 r0)
+        (reg/f:SI 119 [ _6 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil))
+(call_insn 57 56 58 7 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("FMC_NORSRAM_Extended_Timing_Init") [flags 0x41]  <function_decl 0x7fdbec377400 FMC_NORSRAM_Extended_Timing_Init>) [0 FMC_NORSRAM_Extended_Timing_Init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":205:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 58 57 59 7 (set (reg/f:SI 144)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 59 58 60 7 (set (reg/f:SI 122 [ _9 ])
+        (mem/f:SI (reg/f:SI 144) [2 hsram_18(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 60 59 61 7 (set (reg/f:SI 145)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 61 60 62 7 (set (reg:SI 123 [ _10 ])
+        (mem:SI (plus:SI (reg/f:SI 145)
+                (const_int 8 [0x8])) [5 hsram_18(D)->Init.NSBank+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 62 61 63 7 (set (reg:SI 124 [ _11 ])
+        (mem/v:SI (plus:SI (mult:SI (reg:SI 123 [ _10 ])
+                    (const_int 4 [0x4]))
+                (reg/f:SI 122 [ _9 ])) [5 _9->BTCR[_10]+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 63 62 64 7 (set (reg/f:SI 146)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 64 63 65 7 (set (reg/f:SI 125 [ _12 ])
+        (mem/f:SI (reg/f:SI 146) [2 hsram_18(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 65 64 66 7 (set (reg/f:SI 147)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 66 65 67 7 (set (reg:SI 126 [ _13 ])
+        (mem:SI (plus:SI (reg/f:SI 147)
+                (const_int 8 [0x8])) [5 hsram_18(D)->Init.NSBank+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 67 66 68 7 (set (reg:SI 127 [ _14 ])
+        (ior:SI (reg:SI 124 [ _11 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 68 67 69 7 (set (mem/v:SI (plus:SI (mult:SI (reg:SI 126 [ _13 ])
+                    (const_int 4 [0x4]))
+                (reg/f:SI 125 [ _12 ])) [5 _12->BTCR[_13]+0 S4 A32])
+        (reg:SI 127 [ _14 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":209:3 -1
+     (nil))
+(insn 69 68 70 7 (set (reg/f:SI 148)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":212:16 -1
+     (nil))
+(insn 70 69 71 7 (set (reg:SI 149)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":212:16 -1
+     (nil))
+(insn 71 70 72 7 (set (reg:QI 150)
+        (subreg:QI (reg:SI 149) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":212:16 -1
+     (nil))
+(insn 72 71 73 7 (set (mem/v:QI (plus:SI (reg/f:SI 148)
+                (const_int 81 [0x51])) [0 hsram_18(D)->State+0 S1 A8])
+        (reg:QI 150)) "lib/HAL/Src/stm32g4xx_hal_sram.c":212:16 -1
+     (nil))
+(insn 73 72 74 7 (set (reg:SI 128 [ _15 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":214:10 -1
+     (nil))
+(code_label 74 73 75 8 3 (nil) [1 uses])
+(note 75 74 76 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 76 75 80 8 (set (reg:SI 129 [ <retval> ])
+        (reg:SI 128 [ _15 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":215:1 -1
+     (nil))
+(insn 80 76 81 8 (set (reg/i:SI 0 r0)
+        (reg:SI 129 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":215:1 -1
+     (nil))
+(insn 81 80 0 8 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":215:1 -1
+     (nil))
+
+;; Function HAL_SRAM_DeInit (HAL_SRAM_DeInit, funcdef_no=362, decl_uid=11456, cgraph_uid=366, symbol_order=365)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 30.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":224:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":235:3 -1
+     (nil))
+(call_insn 7 6 8 2 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_SRAM_MspDeInit") [flags 0x3]  <function_decl 0x7fdbec0ee100 HAL_SRAM_MspDeInit>) [0 HAL_SRAM_MspDeInit S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":235:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 8 7 9 2 (set (reg/f:SI 119)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":239:9 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (reg/f:SI 119) [2 hsram_5(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":239:9 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":239:9 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 115 [ _2 ])
+        (mem/f:SI (plus:SI (reg/f:SI 120)
+                (const_int 4 [0x4])) [3 hsram_5(D)->Extended+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":239:9 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":239:9 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 116 [ _3 ])
+        (mem:SI (plus:SI (reg/f:SI 121)
+                (const_int 8 [0x8])) [5 hsram_5(D)->Init.NSBank+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":239:9 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 2 r2)
+        (reg:SI 116 [ _3 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":239:9 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 1 r1)
+        (reg/f:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":239:9 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 0 r0)
+        (reg/f:SI 114 [ _1 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":239:9 -1
+     (nil))
+(call_insn 17 16 18 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("FMC_NORSRAM_DeInit") [flags 0x41]  <function_decl 0x7fdbec377500 FMC_NORSRAM_DeInit>) [0 FMC_NORSRAM_DeInit S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":239:9 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 18 17 19 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":242:16 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 123)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":242:16 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:QI 124)
+        (subreg:QI (reg:SI 123) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":242:16 -1
+     (nil))
+(insn 21 20 22 2 (set (mem/v:QI (plus:SI (reg/f:SI 122)
+                (const_int 81 [0x51])) [0 hsram_5(D)->State+0 S1 A8])
+        (reg:QI 124)) "lib/HAL/Src/stm32g4xx_hal_sram.c":242:16 -1
+     (nil))
+(insn 22 21 23 2 (set (reg/f:SI 125)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":245:3 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:SI 126)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":245:3 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:QI 127)
+        (subreg:QI (reg:SI 126) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":245:3 -1
+     (nil))
+(insn 25 24 26 2 (set (mem:QI (plus:SI (reg/f:SI 125)
+                (const_int 80 [0x50])) [0 hsram_5(D)->Lock+0 S1 A32])
+        (reg:QI 127)) "lib/HAL/Src/stm32g4xx_hal_sram.c":245:3 -1
+     (nil))
+(insn 26 25 29 2 (set (reg:SI 117 [ _10 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":247:10 -1
+     (nil))
+(insn 29 26 33 2 (set (reg:SI 118 [ <retval> ])
+        (reg:SI 117 [ _10 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":247:10 discrim 1 -1
+     (nil))
+(insn 33 29 34 2 (set (reg/i:SI 0 r0)
+        (reg:SI 118 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":248:1 -1
+     (nil))
+(insn 34 33 0 2 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":248:1 -1
+     (nil))
+
+;; Function HAL_SRAM_MspInit (HAL_SRAM_MspInit, funcdef_no=363, decl_uid=11458, cgraph_uid=367, symbol_order=366)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":257:1 -1
+     (nil))
+(note 3 2 0 2 NOTE_INSN_FUNCTION_BEG)
+
+;; Function HAL_SRAM_MspDeInit (HAL_SRAM_MspDeInit, funcdef_no=364, decl_uid=11460, cgraph_uid=368, symbol_order=367)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":273:1 -1
+     (nil))
+(note 3 2 0 2 NOTE_INSN_FUNCTION_BEG)
+
+;; Function HAL_SRAM_DMA_XferCpltCallback (HAL_SRAM_DMA_XferCpltCallback, funcdef_no=365, decl_uid=11502, cgraph_uid=369, symbol_order=368)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 hdma+0 S4 A32])
+        (reg:SI 0 r0 [ hdma ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":289:1 -1
+     (nil))
+(note 3 2 0 2 NOTE_INSN_FUNCTION_BEG)
+
+;; Function HAL_SRAM_DMA_XferErrorCallback (HAL_SRAM_DMA_XferErrorCallback, funcdef_no=366, decl_uid=11504, cgraph_uid=370, symbol_order=369)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [6 hdma+0 S4 A32])
+        (reg:SI 0 r0 [ hdma ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":305:1 -1
+     (nil))
+(note 3 2 0 2 NOTE_INSN_FUNCTION_BEG)
+
+;; Function HAL_SRAM_Read_8b (HAL_SRAM_Read_8b, funcdef_no=367, decl_uid=11465, cgraph_uid=371, symbol_order=370)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 86.
+Merging block 13 into block 12...
+Merged blocks 12 and 13.
+Merged 12 and 13 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":343:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])
+        (reg:SI 1 r1 [ pAddress ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":343:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [23 pDstBuffer+0 S4 A32])
+        (reg:SI 2 r2 [ pDstBuffer ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":343:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])
+        (reg:SI 3 r3 [ BufferSize ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":343:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":345:17 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [23 psramaddress+0 S4 A64])
+        (reg/f:SI 118)) "lib/HAL/Src/stm32g4xx_hal_sram.c":345:17 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 119)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [23 pDstBuffer+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":346:12 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [23 pdestbuff+0 S4 A32])
+        (reg/f:SI 119)) "lib/HAL/Src/stm32g4xx_hal_sram.c":346:12 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":347:25 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:QI 121)
+        (mem/v:QI (plus:SI (reg/f:SI 120)
+                (const_int 81 [0x51])) [0 hsram_14(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":347:25 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8])
+        (reg:QI 121)) "lib/HAL/Src/stm32g4xx_hal_sram.c":347:25 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 122)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":350:6 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 122)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":350:6 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":350:6 -1
+     (nil)
+ -> 23)
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (set (reg:SI 123)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":350:39 discrim 1 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 123)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":350:39 discrim 1 -1
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 80)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":350:39 discrim 1 -1
+     (nil)
+ -> 80)
+(code_label 23 22 24 5 12 (nil) [1 uses])
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":353:5 -1
+     (nil))
+(insn 26 25 27 5 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 124)
+                    (const_int 80 [0x50])) [0 hsram_14(D)->Lock+0 S1 A32]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":353:5 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":353:5 -1
+     (nil))
+(jump_insn 28 27 29 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 33)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":353:5 -1
+     (nil)
+ -> 33)
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg:SI 116 [ _6 ])
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":353:5 discrim 1 -1
+     (nil))
+(jump_insn 31 30 32 6 (set (pc)
+        (label_ref 83)) "lib/HAL/Src/stm32g4xx_hal_sram.c":353:5 -1
+     (nil)
+ -> 83)
+(barrier 32 31 33)
+(code_label 33 32 34 7 14 (nil) [1 uses])
+(note 34 33 35 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 7 (set (reg/f:SI 125)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":353:5 discrim 2 -1
+     (nil))
+(insn 36 35 37 7 (set (reg:SI 126)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":353:5 discrim 2 -1
+     (nil))
+(insn 37 36 38 7 (set (reg:QI 127)
+        (subreg:QI (reg:SI 126) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":353:5 discrim 2 -1
+     (nil))
+(insn 38 37 39 7 (set (mem:QI (plus:SI (reg/f:SI 125)
+                (const_int 80 [0x50])) [0 hsram_14(D)->Lock+0 S1 A32])
+        (reg:QI 127)) "lib/HAL/Src/stm32g4xx_hal_sram.c":353:5 discrim 2 -1
+     (nil))
+(insn 39 38 40 7 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":356:18 -1
+     (nil))
+(insn 40 39 41 7 (set (reg:SI 129)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":356:18 -1
+     (nil))
+(insn 41 40 42 7 (set (reg:QI 130)
+        (subreg:QI (reg:SI 129) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":356:18 -1
+     (nil))
+(insn 42 41 43 7 (set (mem/v:QI (plus:SI (reg/f:SI 128)
+                (const_int 81 [0x51])) [0 hsram_14(D)->State+0 S1 A8])
+        (reg:QI 130)) "lib/HAL/Src/stm32g4xx_hal_sram.c":356:18 -1
+     (nil))
+(insn 43 42 44 7 (set (reg:SI 131)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":359:15 -1
+     (nil))
+(insn 44 43 45 7 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 131)) "lib/HAL/Src/stm32g4xx_hal_sram.c":359:15 -1
+     (nil))
+(jump_insn 45 44 46 7 (set (pc)
+        (label_ref 63)) "lib/HAL/Src/stm32g4xx_hal_sram.c":359:5 -1
+     (nil)
+ -> 63)
+(barrier 46 45 65)
+(code_label 65 46 47 8 17 (nil) [1 uses])
+(note 47 65 48 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 8 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [23 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":361:20 -1
+     (nil))
+(insn 49 48 50 8 (set (reg:QI 133)
+        (mem/v:QI (reg/f:SI 132) [0 *psramaddress_4+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":361:20 -1
+     (nil))
+(insn 50 49 51 8 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (reg:QI 133))) "lib/HAL/Src/stm32g4xx_hal_sram.c":361:20 -1
+     (nil))
+(insn 51 50 52 8 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [23 pdestbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":361:18 -1
+     (nil))
+(insn 52 51 53 8 (set (reg:QI 135)
+        (subreg/s/v:QI (reg:SI 115 [ _2 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":361:18 -1
+     (nil))
+(insn 53 52 54 8 (set (mem:QI (reg/f:SI 134) [0 *pdestbuff_5+0 S1 A8])
+        (reg:QI 135)) "lib/HAL/Src/stm32g4xx_hal_sram.c":361:18 -1
+     (nil))
+(insn 54 53 55 8 (set (reg:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [23 pdestbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":362:16 -1
+     (nil))
+(insn 55 54 56 8 (set (reg:SI 136 [ pdestbuff_25 ])
+        (plus:SI (reg:SI 137)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":362:16 -1
+     (nil))
+(insn 56 55 57 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [23 pdestbuff+0 S4 A32])
+        (reg:SI 136 [ pdestbuff_25 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":362:16 -1
+     (nil))
+(insn 57 56 58 8 (set (reg:SI 139)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [23 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":363:19 -1
+     (nil))
+(insn 58 57 59 8 (set (reg:SI 138 [ psramaddress_26 ])
+        (plus:SI (reg:SI 139)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":363:19 -1
+     (nil))
+(insn 59 58 60 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [23 psramaddress+0 S4 A64])
+        (reg:SI 138 [ psramaddress_26 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":363:19 -1
+     (nil))
+(insn 60 59 61 8 (set (reg:SI 141)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":359:45 discrim 3 -1
+     (nil))
+(insn 61 60 62 8 (set (reg:SI 140 [ size_27 ])
+        (plus:SI (reg:SI 141)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":359:45 discrim 3 -1
+     (nil))
+(insn 62 61 63 8 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 140 [ size_27 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":359:45 discrim 3 -1
+     (nil))
+(code_label 63 62 64 9 16 (nil) [1 uses])
+(note 64 63 66 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 66 64 67 9 (set (reg:SI 142)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":359:34 discrim 1 -1
+     (nil))
+(insn 67 66 68 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 142)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":359:34 discrim 1 -1
+     (nil))
+(jump_insn 68 67 69 9 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 65)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":359:34 discrim 1 -1
+     (nil)
+ -> 65)
+(note 69 68 70 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 70 69 71 10 (set (reg/f:SI 143)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":367:18 -1
+     (nil))
+(insn 71 70 72 10 (set (reg:QI 144)
+        (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":367:18 -1
+     (nil))
+(insn 72 71 73 10 (set (mem/v:QI (plus:SI (reg/f:SI 143)
+                (const_int 81 [0x51])) [0 hsram_14(D)->State+0 S1 A8])
+        (reg:QI 144)) "lib/HAL/Src/stm32g4xx_hal_sram.c":367:18 -1
+     (nil))
+(insn 73 72 74 10 (set (reg/f:SI 145)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":370:5 -1
+     (nil))
+(insn 74 73 75 10 (set (reg:SI 146)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":370:5 -1
+     (nil))
+(insn 75 74 76 10 (set (reg:QI 147)
+        (subreg:QI (reg:SI 146) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":370:5 -1
+     (nil))
+(insn 76 75 77 10 (set (mem:QI (plus:SI (reg/f:SI 145)
+                (const_int 80 [0x50])) [0 hsram_14(D)->Lock+0 S1 A32])
+        (reg:QI 147)) "lib/HAL/Src/stm32g4xx_hal_sram.c":370:5 -1
+     (nil))
+(insn 77 76 78 10 (set (reg:SI 116 [ _6 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":377:10 -1
+     (nil))
+(jump_insn 78 77 79 10 (set (pc)
+        (label_ref 83)) "lib/HAL/Src/stm32g4xx_hal_sram.c":377:10 -1
+     (nil)
+ -> 83)
+(barrier 79 78 80)
+(code_label 80 79 81 11 13 (nil) [1 uses])
+(note 81 80 82 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 11 (set (reg:SI 116 [ _6 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":374:12 -1
+     (nil))
+(code_label 83 82 84 12 15 (nil) [2 uses])
+(note 84 83 85 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 85 84 89 12 (set (reg:SI 117 [ <retval> ])
+        (reg:SI 116 [ _6 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":378:1 -1
+     (nil))
+(insn 89 85 90 12 (set (reg/i:SI 0 r0)
+        (reg:SI 117 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":378:1 -1
+     (nil))
+(insn 90 89 0 12 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":378:1 -1
+     (nil))
+
+;; Function HAL_SRAM_Write_8b (HAL_SRAM_Write_8b, funcdef_no=368, decl_uid=11470, cgraph_uid=372, symbol_order=371)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 85.
+Merging block 13 into block 12...
+Merged blocks 12 and 13.
+Merged 12 and 13 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":391:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])
+        (reg:SI 1 r1 [ pAddress ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":391:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [23 pSrcBuffer+0 S4 A32])
+        (reg:SI 2 r2 [ pSrcBuffer ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":391:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])
+        (reg:SI 3 r3 [ BufferSize ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":391:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 119)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":393:17 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [23 psramaddress+0 S4 A64])
+        (reg/f:SI 119)) "lib/HAL/Src/stm32g4xx_hal_sram.c":393:17 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [23 pSrcBuffer+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":394:12 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [23 psrcbuff+0 S4 A32])
+        (reg/f:SI 120)) "lib/HAL/Src/stm32g4xx_hal_sram.c":394:12 -1
+     (nil))
+(insn 13 12 15 2 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":397:12 -1
+     (nil))
+(insn 15 13 16 2 (set (reg:QI 123)
+        (mem/v:QI (plus:SI (reg/f:SI 121)
+                (const_int 81 [0x51])) [0 hsram_15(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":397:12 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:QI 123))) "lib/HAL/Src/stm32g4xx_hal_sram.c":397:12 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":397:6 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 74)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":397:6 -1
+     (nil)
+ -> 74)
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":400:5 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 124)
+                    (const_int 80 [0x50])) [0 hsram_15(D)->Lock+0 S1 A32]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":400:5 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 115 [ _2 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":400:5 -1
+     (nil))
+(jump_insn 23 22 24 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":400:5 -1
+     (nil)
+ -> 28)
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (set (reg:SI 117 [ _7 ])
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":400:5 discrim 1 -1
+     (nil))
+(jump_insn 26 25 27 5 (set (pc)
+        (label_ref 82)) "lib/HAL/Src/stm32g4xx_hal_sram.c":400:5 -1
+     (nil)
+ -> 82)
+(barrier 27 26 28)
+(code_label 28 27 29 6 20 (nil) [1 uses])
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg/f:SI 125)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":400:5 discrim 2 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 126)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":400:5 discrim 2 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:QI 127)
+        (subreg:QI (reg:SI 126) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":400:5 discrim 2 -1
+     (nil))
+(insn 33 32 34 6 (set (mem:QI (plus:SI (reg/f:SI 125)
+                (const_int 80 [0x50])) [0 hsram_15(D)->Lock+0 S1 A32])
+        (reg:QI 127)) "lib/HAL/Src/stm32g4xx_hal_sram.c":400:5 discrim 2 -1
+     (nil))
+(insn 34 33 35 6 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":403:18 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:SI 129)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":403:18 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:QI 130)
+        (subreg:QI (reg:SI 129) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":403:18 -1
+     (nil))
+(insn 37 36 38 6 (set (mem/v:QI (plus:SI (reg/f:SI 128)
+                (const_int 81 [0x51])) [0 hsram_15(D)->State+0 S1 A8])
+        (reg:QI 130)) "lib/HAL/Src/stm32g4xx_hal_sram.c":403:18 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:SI 131)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":406:15 -1
+     (nil))
+(insn 39 38 40 6 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 131)) "lib/HAL/Src/stm32g4xx_hal_sram.c":406:15 -1
+     (nil))
+(jump_insn 40 39 41 6 (set (pc)
+        (label_ref 57)) "lib/HAL/Src/stm32g4xx_hal_sram.c":406:5 -1
+     (nil)
+ -> 57)
+(barrier 41 40 59)
+(code_label 59 41 42 7 23 (nil) [1 uses])
+(note 42 59 43 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 7 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [23 psrcbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":408:23 -1
+     (nil))
+(insn 44 43 45 7 (set (reg:SI 116 [ _3 ])
+        (zero_extend:SI (mem:QI (reg/f:SI 132) [0 *psrcbuff_6+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":408:23 -1
+     (nil))
+(insn 45 44 46 7 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [23 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":408:21 -1
+     (nil))
+(insn 46 45 47 7 (set (reg:QI 134)
+        (subreg/s/v:QI (reg:SI 116 [ _3 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":408:21 -1
+     (nil))
+(insn 47 46 48 7 (set (mem/v:QI (reg/f:SI 133) [0 *psramaddress_5+0 S1 A8])
+        (reg:QI 134)) "lib/HAL/Src/stm32g4xx_hal_sram.c":408:21 -1
+     (nil))
+(insn 48 47 49 7 (set (reg:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [23 psrcbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":409:15 -1
+     (nil))
+(insn 49 48 50 7 (set (reg:SI 135 [ psrcbuff_25 ])
+        (plus:SI (reg:SI 136)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":409:15 -1
+     (nil))
+(insn 50 49 51 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [23 psrcbuff+0 S4 A32])
+        (reg:SI 135 [ psrcbuff_25 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":409:15 -1
+     (nil))
+(insn 51 50 52 7 (set (reg:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [23 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":410:19 -1
+     (nil))
+(insn 52 51 53 7 (set (reg:SI 137 [ psramaddress_26 ])
+        (plus:SI (reg:SI 138)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":410:19 -1
+     (nil))
+(insn 53 52 54 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [23 psramaddress+0 S4 A64])
+        (reg:SI 137 [ psramaddress_26 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":410:19 -1
+     (nil))
+(insn 54 53 55 7 (set (reg:SI 140)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":406:45 discrim 3 -1
+     (nil))
+(insn 55 54 56 7 (set (reg:SI 139 [ size_27 ])
+        (plus:SI (reg:SI 140)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":406:45 discrim 3 -1
+     (nil))
+(insn 56 55 57 7 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 139 [ size_27 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":406:45 discrim 3 -1
+     (nil))
+(code_label 57 56 58 8 22 (nil) [1 uses])
+(note 58 57 60 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 60 58 61 8 (set (reg:SI 141)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":406:34 discrim 1 -1
+     (nil))
+(insn 61 60 62 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 141)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":406:34 discrim 1 -1
+     (nil))
+(jump_insn 62 61 63 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 59)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":406:34 discrim 1 -1
+     (nil)
+ -> 59)
+(note 63 62 64 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 64 63 65 9 (set (reg/f:SI 142)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":414:18 -1
+     (nil))
+(insn 65 64 66 9 (set (reg:SI 143)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":414:18 -1
+     (nil))
+(insn 66 65 67 9 (set (reg:QI 144)
+        (subreg:QI (reg:SI 143) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":414:18 -1
+     (nil))
+(insn 67 66 68 9 (set (mem/v:QI (plus:SI (reg/f:SI 142)
+                (const_int 81 [0x51])) [0 hsram_15(D)->State+0 S1 A8])
+        (reg:QI 144)) "lib/HAL/Src/stm32g4xx_hal_sram.c":414:18 -1
+     (nil))
+(insn 68 67 69 9 (set (reg/f:SI 145)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":417:5 -1
+     (nil))
+(insn 69 68 70 9 (set (reg:SI 146)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":417:5 -1
+     (nil))
+(insn 70 69 71 9 (set (reg:QI 147)
+        (subreg:QI (reg:SI 146) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":417:5 -1
+     (nil))
+(insn 71 70 72 9 (set (mem:QI (plus:SI (reg/f:SI 145)
+                (const_int 80 [0x50])) [0 hsram_15(D)->Lock+0 S1 A32])
+        (reg:QI 147)) "lib/HAL/Src/stm32g4xx_hal_sram.c":417:5 -1
+     (nil))
+(jump_insn 72 71 73 9 (set (pc)
+        (label_ref 79)) -1
+     (nil)
+ -> 79)
+(barrier 73 72 74)
+(code_label 74 73 75 10 19 (nil) [1 uses])
+(note 75 74 76 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 76 75 77 10 (set (reg:SI 117 [ _7 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":421:12 -1
+     (nil))
+(jump_insn 77 76 78 10 (set (pc)
+        (label_ref 82)) "lib/HAL/Src/stm32g4xx_hal_sram.c":421:12 -1
+     (nil)
+ -> 82)
+(barrier 78 77 79)
+(code_label 79 78 80 11 24 (nil) [1 uses])
+(note 80 79 81 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 81 80 82 11 (set (reg:SI 117 [ _7 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":424:10 -1
+     (nil))
+(code_label 82 81 83 12 21 (nil) [2 uses])
+(note 83 82 84 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 84 83 88 12 (set (reg:SI 118 [ <retval> ])
+        (reg:SI 117 [ _7 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":425:1 -1
+     (nil))
+(insn 88 84 89 12 (set (reg/i:SI 0 r0)
+        (reg:SI 118 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":425:1 -1
+     (nil))
+(insn 89 88 0 12 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":425:1 -1
+     (nil))
+
+;; Function HAL_SRAM_Read_16b (HAL_SRAM_Read_16b, funcdef_no=369, decl_uid=11475, cgraph_uid=373, symbol_order=372)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 114.
+Merging block 15 into block 14...
+Merged blocks 14 and 15.
+Merged 14 and 15 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":438:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])
+        (reg:SI 1 r1 [ pAddress ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":438:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [25 pDstBuffer+0 S4 A32])
+        (reg:SI 2 r2 [ pDstBuffer ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":438:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])
+        (reg:SI 3 r3 [ BufferSize ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":438:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":440:18 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])
+        (reg/f:SI 126)) "lib/HAL/Src/stm32g4xx_hal_sram.c":440:18 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 127)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [25 pDstBuffer+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":441:13 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 pdestbuff+0 S4 A32])
+        (reg/f:SI 127)) "lib/HAL/Src/stm32g4xx_hal_sram.c":441:13 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":443:25 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:QI 129)
+        (mem/v:QI (plus:SI (reg/f:SI 128)
+                (const_int 81 [0x51])) [0 hsram_23(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":443:25 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8])
+        (reg:QI 129)) "lib/HAL/Src/stm32g4xx_hal_sram.c":443:25 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 130)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":446:6 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 130)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":446:6 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":446:6 -1
+     (nil)
+ -> 23)
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (set (reg:SI 131)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":446:39 discrim 1 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 131)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":446:39 discrim 1 -1
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 108)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":446:39 discrim 1 -1
+     (nil)
+ -> 108)
+(code_label 23 22 24 5 26 (nil) [1 uses])
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":449:5 -1
+     (nil))
+(insn 26 25 27 5 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 132)
+                    (const_int 80 [0x50])) [0 hsram_23(D)->Lock+0 S1 A32]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":449:5 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":449:5 -1
+     (nil))
+(jump_insn 28 27 29 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 33)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":449:5 -1
+     (nil)
+ -> 33)
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg:SI 124 [ _14 ])
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":449:5 discrim 1 -1
+     (nil))
+(jump_insn 31 30 32 6 (set (pc)
+        (label_ref 111)) "lib/HAL/Src/stm32g4xx_hal_sram.c":449:5 -1
+     (nil)
+ -> 111)
+(barrier 32 31 33)
+(code_label 33 32 34 7 28 (nil) [1 uses])
+(note 34 33 35 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 7 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":449:5 discrim 2 -1
+     (nil))
+(insn 36 35 37 7 (set (reg:SI 134)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":449:5 discrim 2 -1
+     (nil))
+(insn 37 36 38 7 (set (reg:QI 135)
+        (subreg:QI (reg:SI 134) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":449:5 discrim 2 -1
+     (nil))
+(insn 38 37 39 7 (set (mem:QI (plus:SI (reg/f:SI 133)
+                (const_int 80 [0x50])) [0 hsram_23(D)->Lock+0 S1 A32])
+        (reg:QI 135)) "lib/HAL/Src/stm32g4xx_hal_sram.c":449:5 discrim 2 -1
+     (nil))
+(insn 39 38 40 7 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":452:18 -1
+     (nil))
+(insn 40 39 41 7 (set (reg:SI 137)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":452:18 -1
+     (nil))
+(insn 41 40 42 7 (set (reg:QI 138)
+        (subreg:QI (reg:SI 137) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":452:18 -1
+     (nil))
+(insn 42 41 43 7 (set (mem/v:QI (plus:SI (reg/f:SI 136)
+                (const_int 81 [0x51])) [0 hsram_23(D)->State+0 S1 A8])
+        (reg:QI 138)) "lib/HAL/Src/stm32g4xx_hal_sram.c":452:18 -1
+     (nil))
+(insn 43 42 44 7 (set (reg:SI 139)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":455:45 -1
+     (nil))
+(insn 44 43 45 7 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (subreg:QI (reg:SI 139) 0))) "lib/HAL/Src/stm32g4xx_hal_sram.c":455:45 -1
+     (nil))
+(insn 45 44 46 7 (set (reg:SI 140)
+        (and:SI (reg:SI 115 [ _2 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":455:11 -1
+     (nil))
+(insn 46 45 47 7 (set (reg:QI 141)
+        (subreg:QI (reg:SI 140) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":455:11 -1
+     (nil))
+(insn 47 46 48 7 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -14 [0xfffffffffffffff2])) [0 limit+0 S1 A16])
+        (reg:QI 141)) "lib/HAL/Src/stm32g4xx_hal_sram.c":455:11 -1
+     (nil))
+(insn 48 47 49 7 (set (reg:SI 142)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":458:15 -1
+     (nil))
+(insn 49 48 50 7 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 142)) "lib/HAL/Src/stm32g4xx_hal_sram.c":458:15 -1
+     (nil))
+(jump_insn 50 49 51 7 (set (pc)
+        (label_ref 78)) "lib/HAL/Src/stm32g4xx_hal_sram.c":458:5 -1
+     (nil)
+ -> 78)
+(barrier 51 50 81)
+(code_label 81 51 52 8 31 (nil) [1 uses])
+(note 52 81 53 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 8 (set (reg/f:SI 143)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":460:32 -1
+     (nil))
+(insn 54 53 55 8 (set (reg:SI 116 [ _3 ])
+        (mem/v:SI (reg/f:SI 143) [5 *psramaddress_12+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":460:32 -1
+     (nil))
+(insn 55 54 56 8 (set (reg:SI 117 [ _4 ])
+        (zero_extend:SI (subreg:HI (reg:SI 116 [ _3 ]) 0))) "lib/HAL/Src/stm32g4xx_hal_sram.c":460:20 -1
+     (nil))
+(insn 56 55 57 8 (set (reg/f:SI 144)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 pdestbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":460:18 -1
+     (nil))
+(insn 57 56 58 8 (set (reg:HI 145)
+        (subreg/s/v:HI (reg:SI 117 [ _4 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":460:18 -1
+     (nil))
+(insn 58 57 59 8 (set (mem:HI (reg/f:SI 144) [18 *pdestbuff_13+0 S2 A16])
+        (reg:HI 145)) "lib/HAL/Src/stm32g4xx_hal_sram.c":460:18 -1
+     (nil))
+(insn 59 58 60 8 (set (reg:SI 147)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 pdestbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":461:16 -1
+     (nil))
+(insn 60 59 61 8 (set (reg:SI 146 [ pdestbuff_36 ])
+        (plus:SI (reg:SI 147)
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":461:16 -1
+     (nil))
+(insn 61 60 62 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 pdestbuff+0 S4 A32])
+        (reg:SI 146 [ pdestbuff_36 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":461:16 -1
+     (nil))
+(insn 62 61 63 8 (set (reg/f:SI 148)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":462:33 -1
+     (nil))
+(insn 63 62 64 8 (set (reg:SI 118 [ _5 ])
+        (mem/v:SI (reg/f:SI 148) [5 *psramaddress_12+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":462:33 -1
+     (nil))
+(insn 64 63 65 8 (set (reg:SI 119 [ _6 ])
+        (lshiftrt:SI (reg:SI 118 [ _5 ])
+            (const_int 16 [0x10]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":462:63 -1
+     (nil))
+(insn 65 64 66 8 (set (reg:SI 120 [ _7 ])
+        (zero_extend:SI (subreg:HI (reg:SI 119 [ _6 ]) 0))) "lib/HAL/Src/stm32g4xx_hal_sram.c":462:20 -1
+     (nil))
+(insn 66 65 67 8 (set (reg/f:SI 149)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 pdestbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":462:18 -1
+     (nil))
+(insn 67 66 68 8 (set (reg:HI 150)
+        (subreg/s/v:HI (reg:SI 120 [ _7 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":462:18 -1
+     (nil))
+(insn 68 67 69 8 (set (mem:HI (reg/f:SI 149) [18 *pdestbuff_36+0 S2 A16])
+        (reg:HI 150)) "lib/HAL/Src/stm32g4xx_hal_sram.c":462:18 -1
+     (nil))
+(insn 69 68 70 8 (set (reg:SI 152)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 pdestbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":463:16 -1
+     (nil))
+(insn 70 69 71 8 (set (reg:SI 151 [ pdestbuff_38 ])
+        (plus:SI (reg:SI 152)
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":463:16 -1
+     (nil))
+(insn 71 70 72 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 pdestbuff+0 S4 A32])
+        (reg:SI 151 [ pdestbuff_38 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":463:16 -1
+     (nil))
+(insn 72 71 73 8 (set (reg:SI 154)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":464:19 -1
+     (nil))
+(insn 73 72 74 8 (set (reg:SI 153 [ psramaddress_39 ])
+        (plus:SI (reg:SI 154)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":464:19 -1
+     (nil))
+(insn 74 73 75 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])
+        (reg:SI 153 [ psramaddress_39 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":464:19 -1
+     (nil))
+(insn 75 74 76 8 (set (reg:SI 156)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":458:49 discrim 3 -1
+     (nil))
+(insn 76 75 77 8 (set (reg:SI 155 [ size_40 ])
+        (plus:SI (reg:SI 156)
+            (const_int -2 [0xfffffffffffffffe]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":458:49 discrim 3 -1
+     (nil))
+(insn 77 76 78 8 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 155 [ size_40 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":458:49 discrim 3 -1
+     (nil))
+(code_label 78 77 79 9 30 (nil) [1 uses])
+(note 79 78 80 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 82 9 (set (reg:SI 121 [ _8 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -14 [0xfffffffffffffff2])) [0 limit+0 S1 A16]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":458:34 discrim 1 -1
+     (nil))
+(insn 82 80 83 9 (set (reg:SI 157)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":458:34 discrim 1 -1
+     (nil))
+(insn 83 82 84 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 157)
+            (reg:SI 121 [ _8 ]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":458:34 discrim 1 -1
+     (nil))
+(jump_insn 84 83 85 9 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 81)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":458:34 discrim 1 -1
+     (nil)
+ -> 81)
+(note 85 84 86 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 86 85 87 10 (set (reg:SI 158)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -14 [0xfffffffffffffff2])) [0 limit+0 S1 A16]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":468:8 -1
+     (nil))
+(insn 87 86 88 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 158)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":468:8 -1
+     (nil))
+(jump_insn 88 87 89 10 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 96)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":468:8 -1
+     (nil)
+ -> 96)
+(note 89 88 90 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 11 (set (reg/f:SI 159)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":470:32 -1
+     (nil))
+(insn 91 90 92 11 (set (reg:SI 122 [ _9 ])
+        (mem/v:SI (reg/f:SI 159) [5 *psramaddress_12+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":470:32 -1
+     (nil))
+(insn 92 91 93 11 (set (reg:SI 123 [ _10 ])
+        (zero_extend:SI (subreg:HI (reg:SI 122 [ _9 ]) 0))) "lib/HAL/Src/stm32g4xx_hal_sram.c":470:20 -1
+     (nil))
+(insn 93 92 94 11 (set (reg/f:SI 160)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 pdestbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":470:18 -1
+     (nil))
+(insn 94 93 95 11 (set (reg:HI 161)
+        (subreg/s/v:HI (reg:SI 123 [ _10 ]) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":470:18 -1
+     (nil))
+(insn 95 94 96 11 (set (mem:HI (reg/f:SI 160) [18 *pdestbuff_13+0 S2 A16])
+        (reg:HI 161)) "lib/HAL/Src/stm32g4xx_hal_sram.c":470:18 -1
+     (nil))
+(code_label 96 95 97 12 32 (nil) [1 uses])
+(note 97 96 98 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 98 97 99 12 (set (reg/f:SI 162)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":474:18 -1
+     (nil))
+(insn 99 98 100 12 (set (reg:QI 163)
+        (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":474:18 -1
+     (nil))
+(insn 100 99 101 12 (set (mem/v:QI (plus:SI (reg/f:SI 162)
+                (const_int 81 [0x51])) [0 hsram_23(D)->State+0 S1 A8])
+        (reg:QI 163)) "lib/HAL/Src/stm32g4xx_hal_sram.c":474:18 -1
+     (nil))
+(insn 101 100 102 12 (set (reg/f:SI 164)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":477:5 -1
+     (nil))
+(insn 102 101 103 12 (set (reg:SI 165)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":477:5 -1
+     (nil))
+(insn 103 102 104 12 (set (reg:QI 166)
+        (subreg:QI (reg:SI 165) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":477:5 -1
+     (nil))
+(insn 104 103 105 12 (set (mem:QI (plus:SI (reg/f:SI 164)
+                (const_int 80 [0x50])) [0 hsram_23(D)->Lock+0 S1 A32])
+        (reg:QI 166)) "lib/HAL/Src/stm32g4xx_hal_sram.c":477:5 -1
+     (nil))
+(insn 105 104 106 12 (set (reg:SI 124 [ _14 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":484:10 -1
+     (nil))
+(jump_insn 106 105 107 12 (set (pc)
+        (label_ref 111)) "lib/HAL/Src/stm32g4xx_hal_sram.c":484:10 -1
+     (nil)
+ -> 111)
+(barrier 107 106 108)
+(code_label 108 107 109 13 27 (nil) [1 uses])
+(note 109 108 110 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 110 109 111 13 (set (reg:SI 124 [ _14 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":481:12 -1
+     (nil))
+(code_label 111 110 112 14 29 (nil) [2 uses])
+(note 112 111 113 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 113 112 117 14 (set (reg:SI 125 [ <retval> ])
+        (reg:SI 124 [ _14 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":485:1 -1
+     (nil))
+(insn 117 113 118 14 (set (reg/i:SI 0 r0)
+        (reg:SI 125 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":485:1 -1
+     (nil))
+(insn 118 117 0 14 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":485:1 -1
+     (nil))
+
+;; Function HAL_SRAM_Write_16b (HAL_SRAM_Write_16b, funcdef_no=370, decl_uid=11480, cgraph_uid=374, symbol_order=373)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 119.
+Merging block 15 into block 14...
+Merged blocks 14 and 15.
+Merged 14 and 15 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":498:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])
+        (reg:SI 1 r1 [ pAddress ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":498:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [25 pSrcBuffer+0 S4 A32])
+        (reg:SI 2 r2 [ pSrcBuffer ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":498:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])
+        (reg:SI 3 r3 [ BufferSize ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":498:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":500:18 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])
+        (reg/f:SI 132)) "lib/HAL/Src/stm32g4xx_hal_sram.c":500:18 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [25 pSrcBuffer+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":501:13 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 psrcbuff+0 S4 A32])
+        (reg/f:SI 133)) "lib/HAL/Src/stm32g4xx_hal_sram.c":501:13 -1
+     (nil))
+(insn 13 12 15 2 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":505:12 -1
+     (nil))
+(insn 15 13 16 2 (set (reg:QI 136)
+        (mem/v:QI (plus:SI (reg/f:SI 134)
+                (const_int 81 [0x51])) [0 hsram_29(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":505:12 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:QI 136))) "lib/HAL/Src/stm32g4xx_hal_sram.c":505:12 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":505:6 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 108)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":505:6 -1
+     (nil)
+ -> 108)
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (set (reg/f:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":508:5 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 137)
+                    (const_int 80 [0x50])) [0 hsram_29(D)->Lock+0 S1 A32]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":508:5 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 115 [ _2 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":508:5 -1
+     (nil))
+(jump_insn 23 22 24 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":508:5 -1
+     (nil)
+ -> 28)
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (set (reg:SI 130 [ _20 ])
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":508:5 discrim 1 -1
+     (nil))
+(jump_insn 26 25 27 5 (set (pc)
+        (label_ref 116)) "lib/HAL/Src/stm32g4xx_hal_sram.c":508:5 -1
+     (nil)
+ -> 116)
+(barrier 27 26 28)
+(code_label 28 27 29 6 35 (nil) [1 uses])
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg/f:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":508:5 discrim 2 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 139)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":508:5 discrim 2 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:QI 140)
+        (subreg:QI (reg:SI 139) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":508:5 discrim 2 -1
+     (nil))
+(insn 33 32 34 6 (set (mem:QI (plus:SI (reg/f:SI 138)
+                (const_int 80 [0x50])) [0 hsram_29(D)->Lock+0 S1 A32])
+        (reg:QI 140)) "lib/HAL/Src/stm32g4xx_hal_sram.c":508:5 discrim 2 -1
+     (nil))
+(insn 34 33 35 6 (set (reg/f:SI 141)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":511:18 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:SI 142)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":511:18 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:QI 143)
+        (subreg:QI (reg:SI 142) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":511:18 -1
+     (nil))
+(insn 37 36 38 6 (set (mem/v:QI (plus:SI (reg/f:SI 141)
+                (const_int 81 [0x51])) [0 hsram_29(D)->State+0 S1 A8])
+        (reg:QI 143)) "lib/HAL/Src/stm32g4xx_hal_sram.c":511:18 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:SI 144)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":514:45 -1
+     (nil))
+(insn 39 38 40 6 (set (reg:SI 116 [ _3 ])
+        (zero_extend:SI (subreg:QI (reg:SI 144) 0))) "lib/HAL/Src/stm32g4xx_hal_sram.c":514:45 -1
+     (nil))
+(insn 40 39 41 6 (set (reg:SI 145)
+        (and:SI (reg:SI 116 [ _3 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":514:11 -1
+     (nil))
+(insn 41 40 42 6 (set (reg:QI 146)
+        (subreg:QI (reg:SI 145) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":514:11 -1
+     (nil))
+(insn 42 41 43 6 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -13 [0xfffffffffffffff3])) [0 limit+0 S1 A8])
+        (reg:QI 146)) "lib/HAL/Src/stm32g4xx_hal_sram.c":514:11 -1
+     (nil))
+(insn 43 42 44 6 (set (reg:SI 147)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":517:15 -1
+     (nil))
+(insn 44 43 45 6 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 147)) "lib/HAL/Src/stm32g4xx_hal_sram.c":517:15 -1
+     (nil))
+(jump_insn 45 44 46 6 (set (pc)
+        (label_ref 74)) "lib/HAL/Src/stm32g4xx_hal_sram.c":517:5 -1
+     (nil)
+ -> 74)
+(barrier 46 45 77)
+(code_label 77 46 47 7 38 (nil) [1 uses])
+(note 47 77 48 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 7 (set (reg/f:SI 148)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 psrcbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":519:34 -1
+     (nil))
+(insn 49 48 50 7 (set (reg:SI 117 [ _4 ])
+        (zero_extend:SI (mem:HI (reg/f:SI 148) [18 *psrcbuff_19+0 S2 A16]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":519:34 -1
+     (nil))
+(insn 50 49 51 7 (set (reg:SI 118 [ _5 ])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":519:23 -1
+     (nil))
+(insn 51 50 52 7 (set (reg/f:SI 149)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":519:21 -1
+     (nil))
+(insn 52 51 53 7 (set (mem/v:SI (reg/f:SI 149) [5 *psramaddress_18+0 S4 A32])
+        (reg:SI 118 [ _5 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":519:21 -1
+     (nil))
+(insn 53 52 54 7 (set (reg:SI 151)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 psrcbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":520:15 -1
+     (nil))
+(insn 54 53 55 7 (set (reg:SI 150 [ psrcbuff_41 ])
+        (plus:SI (reg:SI 151)
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":520:15 -1
+     (nil))
+(insn 55 54 56 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 psrcbuff+0 S4 A32])
+        (reg:SI 150 [ psrcbuff_41 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":520:15 -1
+     (nil))
+(insn 56 55 57 7 (set (reg/f:SI 152)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":521:7 -1
+     (nil))
+(insn 57 56 58 7 (set (reg:SI 119 [ _6 ])
+        (mem/v:SI (reg/f:SI 152) [5 *psramaddress_18+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":521:7 -1
+     (nil))
+(insn 58 57 59 7 (set (reg/f:SI 153)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 psrcbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":521:36 -1
+     (nil))
+(insn 59 58 60 7 (set (reg:SI 120 [ _7 ])
+        (zero_extend:SI (mem:HI (reg/f:SI 153) [18 *psrcbuff_41+0 S2 A16]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":521:36 -1
+     (nil))
+(insn 60 59 61 7 (set (reg:SI 121 [ _8 ])
+        (reg:SI 120 [ _7 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":521:25 -1
+     (nil))
+(insn 61 60 62 7 (set (reg:SI 122 [ _9 ])
+        (ashift:SI (reg:SI 121 [ _8 ])
+            (const_int 16 [0x10]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":521:47 -1
+     (nil))
+(insn 62 61 63 7 (set (reg:SI 123 [ _10 ])
+        (ior:SI (reg:SI 119 [ _6 ])
+            (reg:SI 122 [ _9 ]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":521:21 -1
+     (nil))
+(insn 63 62 64 7 (set (reg/f:SI 154)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":521:21 -1
+     (nil))
+(insn 64 63 65 7 (set (mem/v:SI (reg/f:SI 154) [5 *psramaddress_18+0 S4 A32])
+        (reg:SI 123 [ _10 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":521:21 -1
+     (nil))
+(insn 65 64 66 7 (set (reg:SI 156)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 psrcbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":522:15 -1
+     (nil))
+(insn 66 65 67 7 (set (reg:SI 155 [ psrcbuff_43 ])
+        (plus:SI (reg:SI 156)
+            (const_int 2 [0x2]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":522:15 -1
+     (nil))
+(insn 67 66 68 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 psrcbuff+0 S4 A32])
+        (reg:SI 155 [ psrcbuff_43 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":522:15 -1
+     (nil))
+(insn 68 67 69 7 (set (reg:SI 158)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":523:19 -1
+     (nil))
+(insn 69 68 70 7 (set (reg:SI 157 [ psramaddress_44 ])
+        (plus:SI (reg:SI 158)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":523:19 -1
+     (nil))
+(insn 70 69 71 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])
+        (reg:SI 157 [ psramaddress_44 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":523:19 -1
+     (nil))
+(insn 71 70 72 7 (set (reg:SI 160)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":517:49 discrim 3 -1
+     (nil))
+(insn 72 71 73 7 (set (reg:SI 159 [ size_45 ])
+        (plus:SI (reg:SI 160)
+            (const_int -2 [0xfffffffffffffffe]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":517:49 discrim 3 -1
+     (nil))
+(insn 73 72 74 7 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 159 [ size_45 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":517:49 discrim 3 -1
+     (nil))
+(code_label 74 73 75 8 37 (nil) [1 uses])
+(note 75 74 76 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 76 75 78 8 (set (reg:SI 124 [ _11 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -13 [0xfffffffffffffff3])) [0 limit+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":517:34 discrim 1 -1
+     (nil))
+(insn 78 76 79 8 (set (reg:SI 161)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":517:34 discrim 1 -1
+     (nil))
+(insn 79 78 80 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 161)
+            (reg:SI 124 [ _11 ]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":517:34 discrim 1 -1
+     (nil))
+(jump_insn 80 79 81 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 77)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":517:34 discrim 1 -1
+     (nil)
+ -> 77)
+(note 81 80 82 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 9 (set (reg:SI 162)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -13 [0xfffffffffffffff3])) [0 limit+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":527:8 -1
+     (nil))
+(insn 83 82 84 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 162)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":527:8 -1
+     (nil))
+(jump_insn 84 83 85 9 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 96)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":527:8 -1
+     (nil)
+ -> 96)
+(note 85 84 86 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 86 85 87 10 (set (reg/f:SI 163)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [25 psrcbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":529:35 -1
+     (nil))
+(insn 87 86 88 10 (set (reg:SI 125 [ _12 ])
+        (zero_extend:SI (mem:HI (reg/f:SI 163) [18 *psrcbuff_19+0 S2 A16]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":529:35 -1
+     (nil))
+(insn 88 87 89 10 (set (reg:SI 126 [ _13 ])
+        (reg:SI 125 [ _12 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":529:46 -1
+     (nil))
+(insn 89 88 90 10 (set (reg/f:SI 164)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":529:65 -1
+     (nil))
+(insn 90 89 91 10 (set (reg:SI 127 [ _14 ])
+        (mem/v:SI (reg/f:SI 164) [5 *psramaddress_18+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":529:65 -1
+     (nil))
+(insn 91 90 92 10 (set (reg:SI 128 [ _15 ])
+        (lshiftrt:SI (reg:SI 127 [ _14 ])
+            (const_int 16 [0x10]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":529:80 -1
+     (nil))
+(insn 92 91 93 10 (set (reg:SI 128 [ _15 ])
+        (ashift:SI (reg:SI 128 [ _15 ])
+            (const_int 16 [0x10]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":529:80 -1
+     (expr_list:REG_EQUAL (and:SI (reg:SI 127 [ _14 ])
+            (const_int -65536 [0xffffffffffff0000]))
+        (nil)))
+(insn 93 92 94 10 (set (reg:SI 129 [ _16 ])
+        (ior:SI (reg:SI 126 [ _13 ])
+            (reg:SI 128 [ _15 ]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":529:61 -1
+     (nil))
+(insn 94 93 95 10 (set (reg/f:SI 165)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":529:21 -1
+     (nil))
+(insn 95 94 96 10 (set (mem/v:SI (reg/f:SI 165) [5 *psramaddress_18+0 S4 A32])
+        (reg:SI 129 [ _16 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":529:21 -1
+     (nil))
+(code_label 96 95 97 11 39 (nil) [1 uses])
+(note 97 96 98 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 98 97 99 11 (set (reg/f:SI 166)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":533:18 -1
+     (nil))
+(insn 99 98 100 11 (set (reg:SI 167)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":533:18 -1
+     (nil))
+(insn 100 99 101 11 (set (reg:QI 168)
+        (subreg:QI (reg:SI 167) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":533:18 -1
+     (nil))
+(insn 101 100 102 11 (set (mem/v:QI (plus:SI (reg/f:SI 166)
+                (const_int 81 [0x51])) [0 hsram_29(D)->State+0 S1 A8])
+        (reg:QI 168)) "lib/HAL/Src/stm32g4xx_hal_sram.c":533:18 -1
+     (nil))
+(insn 102 101 103 11 (set (reg/f:SI 169)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":536:5 -1
+     (nil))
+(insn 103 102 104 11 (set (reg:SI 170)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":536:5 -1
+     (nil))
+(insn 104 103 105 11 (set (reg:QI 171)
+        (subreg:QI (reg:SI 170) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":536:5 -1
+     (nil))
+(insn 105 104 106 11 (set (mem:QI (plus:SI (reg/f:SI 169)
+                (const_int 80 [0x50])) [0 hsram_29(D)->Lock+0 S1 A32])
+        (reg:QI 171)) "lib/HAL/Src/stm32g4xx_hal_sram.c":536:5 -1
+     (nil))
+(jump_insn 106 105 107 11 (set (pc)
+        (label_ref 113)) -1
+     (nil)
+ -> 113)
+(barrier 107 106 108)
+(code_label 108 107 109 12 34 (nil) [1 uses])
+(note 109 108 110 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 110 109 111 12 (set (reg:SI 130 [ _20 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":540:12 -1
+     (nil))
+(jump_insn 111 110 112 12 (set (pc)
+        (label_ref 116)) "lib/HAL/Src/stm32g4xx_hal_sram.c":540:12 -1
+     (nil)
+ -> 116)
+(barrier 112 111 113)
+(code_label 113 112 114 13 40 (nil) [1 uses])
+(note 114 113 115 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 115 114 116 13 (set (reg:SI 130 [ _20 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":543:10 -1
+     (nil))
+(code_label 116 115 117 14 36 (nil) [2 uses])
+(note 117 116 118 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 118 117 122 14 (set (reg:SI 131 [ <retval> ])
+        (reg:SI 130 [ _20 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":544:1 -1
+     (nil))
+(insn 122 118 123 14 (set (reg/i:SI 0 r0)
+        (reg:SI 131 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":544:1 -1
+     (nil))
+(insn 123 122 0 14 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":544:1 -1
+     (nil))
+
+;; Function HAL_SRAM_Read_32b (HAL_SRAM_Read_32b, funcdef_no=371, decl_uid=11485, cgraph_uid=375, symbol_order=374)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 84.
+Merging block 13 into block 12...
+Merged blocks 12 and 13.
+Merged 12 and 13 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":557:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])
+        (reg:SI 1 r1 [ pAddress ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":557:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [24 pDstBuffer+0 S4 A32])
+        (reg:SI 2 r2 [ pDstBuffer ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":557:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])
+        (reg:SI 3 r3 [ BufferSize ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":557:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":559:18 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])
+        (reg/f:SI 118)) "lib/HAL/Src/stm32g4xx_hal_sram.c":559:18 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 119)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [24 pDstBuffer+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":560:13 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [24 pdestbuff+0 S4 A32])
+        (reg/f:SI 119)) "lib/HAL/Src/stm32g4xx_hal_sram.c":560:13 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":561:25 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:QI 121)
+        (mem/v:QI (plus:SI (reg/f:SI 120)
+                (const_int 81 [0x51])) [0 hsram_14(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":561:25 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8])
+        (reg:QI 121)) "lib/HAL/Src/stm32g4xx_hal_sram.c":561:25 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 122)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":564:6 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 122)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":564:6 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":564:6 -1
+     (nil)
+ -> 23)
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (set (reg:SI 123)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":564:39 discrim 1 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 123)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":564:39 discrim 1 -1
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 78)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":564:39 discrim 1 -1
+     (nil)
+ -> 78)
+(code_label 23 22 24 5 42 (nil) [1 uses])
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":567:5 -1
+     (nil))
+(insn 26 25 27 5 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 124)
+                    (const_int 80 [0x50])) [0 hsram_14(D)->Lock+0 S1 A32]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":567:5 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":567:5 -1
+     (nil))
+(jump_insn 28 27 29 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 33)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":567:5 -1
+     (nil)
+ -> 33)
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg:SI 116 [ _6 ])
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":567:5 discrim 1 -1
+     (nil))
+(jump_insn 31 30 32 6 (set (pc)
+        (label_ref 81)) "lib/HAL/Src/stm32g4xx_hal_sram.c":567:5 -1
+     (nil)
+ -> 81)
+(barrier 32 31 33)
+(code_label 33 32 34 7 44 (nil) [1 uses])
+(note 34 33 35 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 7 (set (reg/f:SI 125)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":567:5 discrim 2 -1
+     (nil))
+(insn 36 35 37 7 (set (reg:SI 126)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":567:5 discrim 2 -1
+     (nil))
+(insn 37 36 38 7 (set (reg:QI 127)
+        (subreg:QI (reg:SI 126) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":567:5 discrim 2 -1
+     (nil))
+(insn 38 37 39 7 (set (mem:QI (plus:SI (reg/f:SI 125)
+                (const_int 80 [0x50])) [0 hsram_14(D)->Lock+0 S1 A32])
+        (reg:QI 127)) "lib/HAL/Src/stm32g4xx_hal_sram.c":567:5 discrim 2 -1
+     (nil))
+(insn 39 38 40 7 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":570:18 -1
+     (nil))
+(insn 40 39 41 7 (set (reg:SI 129)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":570:18 -1
+     (nil))
+(insn 41 40 42 7 (set (reg:QI 130)
+        (subreg:QI (reg:SI 129) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":570:18 -1
+     (nil))
+(insn 42 41 43 7 (set (mem/v:QI (plus:SI (reg/f:SI 128)
+                (const_int 81 [0x51])) [0 hsram_14(D)->State+0 S1 A8])
+        (reg:QI 130)) "lib/HAL/Src/stm32g4xx_hal_sram.c":570:18 -1
+     (nil))
+(insn 43 42 44 7 (set (reg:SI 131)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":573:15 -1
+     (nil))
+(insn 44 43 45 7 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 131)) "lib/HAL/Src/stm32g4xx_hal_sram.c":573:15 -1
+     (nil))
+(jump_insn 45 44 46 7 (set (pc)
+        (label_ref 61)) "lib/HAL/Src/stm32g4xx_hal_sram.c":573:5 -1
+     (nil)
+ -> 61)
+(barrier 46 45 63)
+(code_label 63 46 47 8 47 (nil) [1 uses])
+(note 47 63 48 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 8 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":575:20 -1
+     (nil))
+(insn 49 48 50 8 (set (reg:SI 115 [ _2 ])
+        (mem/v:SI (reg/f:SI 132) [5 *psramaddress_4+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":575:20 -1
+     (nil))
+(insn 50 49 51 8 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [24 pdestbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":575:18 -1
+     (nil))
+(insn 51 50 52 8 (set (mem:SI (reg/f:SI 133) [5 *pdestbuff_5+0 S4 A32])
+        (reg:SI 115 [ _2 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":575:18 -1
+     (nil))
+(insn 52 51 53 8 (set (reg:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [24 pdestbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":576:16 -1
+     (nil))
+(insn 53 52 54 8 (set (reg:SI 134 [ pdestbuff_25 ])
+        (plus:SI (reg:SI 135)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":576:16 -1
+     (nil))
+(insn 54 53 55 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [24 pdestbuff+0 S4 A32])
+        (reg:SI 134 [ pdestbuff_25 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":576:16 -1
+     (nil))
+(insn 55 54 56 8 (set (reg:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":577:19 -1
+     (nil))
+(insn 56 55 57 8 (set (reg:SI 136 [ psramaddress_26 ])
+        (plus:SI (reg:SI 137)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":577:19 -1
+     (nil))
+(insn 57 56 58 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])
+        (reg:SI 136 [ psramaddress_26 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":577:19 -1
+     (nil))
+(insn 58 57 59 8 (set (reg:SI 139)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":573:45 discrim 3 -1
+     (nil))
+(insn 59 58 60 8 (set (reg:SI 138 [ size_27 ])
+        (plus:SI (reg:SI 139)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":573:45 discrim 3 -1
+     (nil))
+(insn 60 59 61 8 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 138 [ size_27 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":573:45 discrim 3 -1
+     (nil))
+(code_label 61 60 62 9 46 (nil) [1 uses])
+(note 62 61 64 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 64 62 65 9 (set (reg:SI 140)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":573:34 discrim 1 -1
+     (nil))
+(insn 65 64 66 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 140)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":573:34 discrim 1 -1
+     (nil))
+(jump_insn 66 65 67 9 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":573:34 discrim 1 -1
+     (nil)
+ -> 63)
+(note 67 66 68 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 68 67 69 10 (set (reg/f:SI 141)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":581:18 -1
+     (nil))
+(insn 69 68 70 10 (set (reg:QI 142)
+        (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -13 [0xfffffffffffffff3])) [0 state+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":581:18 -1
+     (nil))
+(insn 70 69 71 10 (set (mem/v:QI (plus:SI (reg/f:SI 141)
+                (const_int 81 [0x51])) [0 hsram_14(D)->State+0 S1 A8])
+        (reg:QI 142)) "lib/HAL/Src/stm32g4xx_hal_sram.c":581:18 -1
+     (nil))
+(insn 71 70 72 10 (set (reg/f:SI 143)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":584:5 -1
+     (nil))
+(insn 72 71 73 10 (set (reg:SI 144)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":584:5 -1
+     (nil))
+(insn 73 72 74 10 (set (reg:QI 145)
+        (subreg:QI (reg:SI 144) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":584:5 -1
+     (nil))
+(insn 74 73 75 10 (set (mem:QI (plus:SI (reg/f:SI 143)
+                (const_int 80 [0x50])) [0 hsram_14(D)->Lock+0 S1 A32])
+        (reg:QI 145)) "lib/HAL/Src/stm32g4xx_hal_sram.c":584:5 -1
+     (nil))
+(insn 75 74 76 10 (set (reg:SI 116 [ _6 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":591:10 -1
+     (nil))
+(jump_insn 76 75 77 10 (set (pc)
+        (label_ref 81)) "lib/HAL/Src/stm32g4xx_hal_sram.c":591:10 -1
+     (nil)
+ -> 81)
+(barrier 77 76 78)
+(code_label 78 77 79 11 43 (nil) [1 uses])
+(note 79 78 80 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 81 11 (set (reg:SI 116 [ _6 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":588:12 -1
+     (nil))
+(code_label 81 80 82 12 45 (nil) [2 uses])
+(note 82 81 83 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 83 82 87 12 (set (reg:SI 117 [ <retval> ])
+        (reg:SI 116 [ _6 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":592:1 -1
+     (nil))
+(insn 87 83 88 12 (set (reg/i:SI 0 r0)
+        (reg:SI 117 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":592:1 -1
+     (nil))
+(insn 88 87 0 12 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":592:1 -1
+     (nil))
+
+;; Function HAL_SRAM_Write_32b (HAL_SRAM_Write_32b, funcdef_no=372, decl_uid=11490, cgraph_uid=376, symbol_order=375)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 84.
+Merging block 13 into block 12...
+Merged blocks 12 and 13.
+Merged 12 and 13 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":605:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])
+        (reg:SI 1 r1 [ pAddress ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":605:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [24 pSrcBuffer+0 S4 A32])
+        (reg:SI 2 r2 [ pSrcBuffer ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":605:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])
+        (reg:SI 3 r3 [ BufferSize ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":605:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 119)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [24 pAddress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":607:18 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])
+        (reg/f:SI 119)) "lib/HAL/Src/stm32g4xx_hal_sram.c":607:18 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [24 pSrcBuffer+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":608:13 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [24 psrcbuff+0 S4 A32])
+        (reg/f:SI 120)) "lib/HAL/Src/stm32g4xx_hal_sram.c":608:13 -1
+     (nil))
+(insn 13 12 15 2 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":611:12 -1
+     (nil))
+(insn 15 13 16 2 (set (reg:QI 123)
+        (mem/v:QI (plus:SI (reg/f:SI 121)
+                (const_int 81 [0x51])) [0 hsram_15(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":611:12 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:QI 123))) "lib/HAL/Src/stm32g4xx_hal_sram.c":611:12 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":611:6 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 73)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":611:6 -1
+     (nil)
+ -> 73)
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":614:5 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 124)
+                    (const_int 80 [0x50])) [0 hsram_15(D)->Lock+0 S1 A32]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":614:5 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 115 [ _2 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":614:5 -1
+     (nil))
+(jump_insn 23 22 24 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":614:5 -1
+     (nil)
+ -> 28)
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (set (reg:SI 117 [ _7 ])
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":614:5 discrim 1 -1
+     (nil))
+(jump_insn 26 25 27 5 (set (pc)
+        (label_ref 81)) "lib/HAL/Src/stm32g4xx_hal_sram.c":614:5 -1
+     (nil)
+ -> 81)
+(barrier 27 26 28)
+(code_label 28 27 29 6 50 (nil) [1 uses])
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg/f:SI 125)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":614:5 discrim 2 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 126)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":614:5 discrim 2 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:QI 127)
+        (subreg:QI (reg:SI 126) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":614:5 discrim 2 -1
+     (nil))
+(insn 33 32 34 6 (set (mem:QI (plus:SI (reg/f:SI 125)
+                (const_int 80 [0x50])) [0 hsram_15(D)->Lock+0 S1 A32])
+        (reg:QI 127)) "lib/HAL/Src/stm32g4xx_hal_sram.c":614:5 discrim 2 -1
+     (nil))
+(insn 34 33 35 6 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":617:18 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:SI 129)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":617:18 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:QI 130)
+        (subreg:QI (reg:SI 129) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":617:18 -1
+     (nil))
+(insn 37 36 38 6 (set (mem/v:QI (plus:SI (reg/f:SI 128)
+                (const_int 81 [0x51])) [0 hsram_15(D)->State+0 S1 A8])
+        (reg:QI 130)) "lib/HAL/Src/stm32g4xx_hal_sram.c":617:18 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:SI 131)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [5 BufferSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":620:15 -1
+     (nil))
+(insn 39 38 40 6 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 131)) "lib/HAL/Src/stm32g4xx_hal_sram.c":620:15 -1
+     (nil))
+(jump_insn 40 39 41 6 (set (pc)
+        (label_ref 56)) "lib/HAL/Src/stm32g4xx_hal_sram.c":620:5 -1
+     (nil)
+ -> 56)
+(barrier 41 40 58)
+(code_label 58 41 42 7 53 (nil) [1 uses])
+(note 42 58 43 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 7 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [24 psrcbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":622:23 -1
+     (nil))
+(insn 44 43 45 7 (set (reg:SI 116 [ _3 ])
+        (mem:SI (reg/f:SI 132) [5 *psrcbuff_6+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":622:23 -1
+     (nil))
+(insn 45 44 46 7 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":622:21 -1
+     (nil))
+(insn 46 45 47 7 (set (mem/v:SI (reg/f:SI 133) [5 *psramaddress_5+0 S4 A32])
+        (reg:SI 116 [ _3 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":622:21 -1
+     (nil))
+(insn 47 46 48 7 (set (reg:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [24 psrcbuff+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":623:15 -1
+     (nil))
+(insn 48 47 49 7 (set (reg:SI 134 [ psrcbuff_25 ])
+        (plus:SI (reg:SI 135)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":623:15 -1
+     (nil))
+(insn 49 48 50 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [24 psrcbuff+0 S4 A32])
+        (reg:SI 134 [ psrcbuff_25 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":623:15 -1
+     (nil))
+(insn 50 49 51 7 (set (reg:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])) "lib/HAL/Src/stm32g4xx_hal_sram.c":624:19 -1
+     (nil))
+(insn 51 50 52 7 (set (reg:SI 136 [ psramaddress_26 ])
+        (plus:SI (reg:SI 137)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":624:19 -1
+     (nil))
+(insn 52 51 53 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [24 psramaddress+0 S4 A64])
+        (reg:SI 136 [ psramaddress_26 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":624:19 -1
+     (nil))
+(insn 53 52 54 7 (set (reg:SI 139)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":620:45 discrim 3 -1
+     (nil))
+(insn 54 53 55 7 (set (reg:SI 138 [ size_27 ])
+        (plus:SI (reg:SI 139)
+            (const_int -1 [0xffffffffffffffff]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":620:45 discrim 3 -1
+     (nil))
+(insn 55 54 56 7 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])
+        (reg:SI 138 [ size_27 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":620:45 discrim 3 -1
+     (nil))
+(code_label 56 55 57 8 52 (nil) [1 uses])
+(note 57 56 59 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 59 57 60 8 (set (reg:SI 140)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [5 size+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":620:34 discrim 1 -1
+     (nil))
+(insn 60 59 61 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 140)
+            (const_int 0 [0]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":620:34 discrim 1 -1
+     (nil))
+(jump_insn 61 60 62 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 58)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":620:34 discrim 1 -1
+     (nil)
+ -> 58)
+(note 62 61 63 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 9 (set (reg/f:SI 141)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":628:18 -1
+     (nil))
+(insn 64 63 65 9 (set (reg:SI 142)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":628:18 -1
+     (nil))
+(insn 65 64 66 9 (set (reg:QI 143)
+        (subreg:QI (reg:SI 142) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":628:18 -1
+     (nil))
+(insn 66 65 67 9 (set (mem/v:QI (plus:SI (reg/f:SI 141)
+                (const_int 81 [0x51])) [0 hsram_15(D)->State+0 S1 A8])
+        (reg:QI 143)) "lib/HAL/Src/stm32g4xx_hal_sram.c":628:18 -1
+     (nil))
+(insn 67 66 68 9 (set (reg/f:SI 144)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":631:5 -1
+     (nil))
+(insn 68 67 69 9 (set (reg:SI 145)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":631:5 -1
+     (nil))
+(insn 69 68 70 9 (set (reg:QI 146)
+        (subreg:QI (reg:SI 145) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":631:5 -1
+     (nil))
+(insn 70 69 71 9 (set (mem:QI (plus:SI (reg/f:SI 144)
+                (const_int 80 [0x50])) [0 hsram_15(D)->Lock+0 S1 A32])
+        (reg:QI 146)) "lib/HAL/Src/stm32g4xx_hal_sram.c":631:5 -1
+     (nil))
+(jump_insn 71 70 72 9 (set (pc)
+        (label_ref 78)) -1
+     (nil)
+ -> 78)
+(barrier 72 71 73)
+(code_label 73 72 74 10 49 (nil) [1 uses])
+(note 74 73 75 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 75 74 76 10 (set (reg:SI 117 [ _7 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":635:12 -1
+     (nil))
+(jump_insn 76 75 77 10 (set (pc)
+        (label_ref 81)) "lib/HAL/Src/stm32g4xx_hal_sram.c":635:12 -1
+     (nil)
+ -> 81)
+(barrier 77 76 78)
+(code_label 78 77 79 11 54 (nil) [1 uses])
+(note 79 78 80 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 81 11 (set (reg:SI 117 [ _7 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":638:10 -1
+     (nil))
+(code_label 81 80 82 12 51 (nil) [2 uses])
+(note 82 81 83 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 83 82 87 12 (set (reg:SI 118 [ <retval> ])
+        (reg:SI 117 [ _7 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":639:1 -1
+     (nil))
+(insn 87 83 88 12 (set (reg/i:SI 0 r0)
+        (reg:SI 118 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":639:1 -1
+     (nil))
+(insn 88 87 0 12 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":639:1 -1
+     (nil))
+
+;; Function HAL_SRAM_Read_DMA (HAL_SRAM_Read_DMA, funcdef_no=373, decl_uid=11495, cgraph_uid=377, symbol_order=376)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 90.
+Merging block 14 into block 13...
+Merged blocks 13 and 14.
+Merged 13 and 14 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":652:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [24 pAddress+0 S4 A32])
+        (reg:SI 1 r1 [ pAddress ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":652:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [24 pDstBuffer+0 S4 A32])
+        (reg:SI 2 r2 [ pDstBuffer ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":652:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [5 BufferSize+0 S4 A32])
+        (reg:SI 3 r3 [ BufferSize ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":652:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 123)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":654:25 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:QI 124)
+        (mem/v:QI (plus:SI (reg/f:SI 123)
+                (const_int 81 [0x51])) [0 hsram_14(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":654:25 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -2 [0xfffffffffffffffe])) [0 state+0 S1 A16])
+        (reg:QI 124)) "lib/HAL/Src/stm32g4xx_hal_sram.c":654:25 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 125)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -2 [0xfffffffffffffffe])) [0 state+0 S1 A16]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":657:6 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 125)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":657:6 -1
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 19)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":657:6 -1
+     (nil)
+ -> 19)
+(note 15 14 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg:SI 126)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -2 [0xfffffffffffffffe])) [0 state+0 S1 A16]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":657:39 discrim 1 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 126)
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":657:39 discrim 1 -1
+     (nil))
+(jump_insn 18 17 19 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 79)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":657:39 discrim 1 -1
+     (nil)
+ -> 79)
+(code_label 19 18 20 5 56 (nil) [1 uses])
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (set (reg/f:SI 127)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":660:5 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 127)
+                    (const_int 80 [0x50])) [0 hsram_14(D)->Lock+0 S1 A32]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":660:5 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":660:5 -1
+     (nil))
+(jump_insn 24 23 25 5 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 29)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":660:5 -1
+     (nil)
+ -> 29)
+(note 25 24 26 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 6 (set (reg:SI 121 [ _9 ])
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":660:5 discrim 1 -1
+     (nil))
+(jump_insn 27 26 28 6 (set (pc)
+        (label_ref 87)) "lib/HAL/Src/stm32g4xx_hal_sram.c":660:5 -1
+     (nil)
+ -> 87)
+(barrier 28 27 29)
+(code_label 29 28 30 7 58 (nil) [1 uses])
+(note 30 29 31 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 7 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":660:5 discrim 2 -1
+     (nil))
+(insn 32 31 33 7 (set (reg:SI 129)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":660:5 discrim 2 -1
+     (nil))
+(insn 33 32 34 7 (set (reg:QI 130)
+        (subreg:QI (reg:SI 129) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":660:5 discrim 2 -1
+     (nil))
+(insn 34 33 35 7 (set (mem:QI (plus:SI (reg/f:SI 128)
+                (const_int 80 [0x50])) [0 hsram_14(D)->Lock+0 S1 A32])
+        (reg:QI 130)) "lib/HAL/Src/stm32g4xx_hal_sram.c":660:5 discrim 2 -1
+     (nil))
+(insn 35 34 36 7 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":663:18 -1
+     (nil))
+(insn 36 35 37 7 (set (reg:SI 132)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":663:18 -1
+     (nil))
+(insn 37 36 38 7 (set (reg:QI 133)
+        (subreg:QI (reg:SI 132) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":663:18 -1
+     (nil))
+(insn 38 37 39 7 (set (mem/v:QI (plus:SI (reg/f:SI 131)
+                (const_int 81 [0x51])) [0 hsram_14(D)->State+0 S1 A8])
+        (reg:QI 133)) "lib/HAL/Src/stm32g4xx_hal_sram.c":663:18 -1
+     (nil))
+(insn 39 38 40 7 (set (reg:SI 134)
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -2 [0xfffffffffffffffe])) [0 state+0 S1 A16]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":666:8 -1
+     (nil))
+(insn 40 39 41 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 134)
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":666:8 -1
+     (nil))
+(jump_insn 41 40 42 7 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":666:8 -1
+     (nil)
+ -> 49)
+(note 42 41 43 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 8 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":668:12 -1
+     (nil))
+(insn 44 43 45 8 (set (reg/f:SI 115 [ _2 ])
+        (mem/f:SI (plus:SI (reg/f:SI 135)
+                (const_int 84 [0x54])) [6 hsram_14(D)->hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":668:12 -1
+     (nil))
+(insn 45 44 46 8 (set (reg/f:SI 136)
+        (symbol_ref:SI ("SRAM_DMACplt") [flags 0x3]  <function_decl 0x7fdbec1e1b00 SRAM_DMACplt>)) "lib/HAL/Src/stm32g4xx_hal_sram.c":668:37 -1
+     (nil))
+(insn 46 45 47 8 (set (mem/f:SI (plus:SI (reg/f:SI 115 [ _2 ])
+                (const_int 44 [0x2c])) [12 _2->XferCpltCallback+0 S4 A32])
+        (reg/f:SI 136)) "lib/HAL/Src/stm32g4xx_hal_sram.c":668:37 -1
+     (nil))
+(jump_insn 47 46 48 8 (set (pc)
+        (label_ref 55)) -1
+     (nil)
+ -> 55)
+(barrier 48 47 49)
+(code_label 49 48 50 9 60 (nil) [1 uses])
+(note 50 49 51 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 9 (set (reg/f:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":672:12 -1
+     (nil))
+(insn 52 51 53 9 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (plus:SI (reg/f:SI 137)
+                (const_int 84 [0x54])) [6 hsram_14(D)->hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":672:12 -1
+     (nil))
+(insn 53 52 54 9 (set (reg/f:SI 138)
+        (symbol_ref:SI ("SRAM_DMACpltProt") [flags 0x3]  <function_decl 0x7fdbec1e1c00 SRAM_DMACpltProt>)) "lib/HAL/Src/stm32g4xx_hal_sram.c":672:37 -1
+     (nil))
+(insn 54 53 55 9 (set (mem/f:SI (plus:SI (reg/f:SI 116 [ _3 ])
+                (const_int 44 [0x2c])) [12 _3->XferCpltCallback+0 S4 A32])
+        (reg/f:SI 138)) "lib/HAL/Src/stm32g4xx_hal_sram.c":672:37 -1
+     (nil))
+(code_label 55 54 56 10 61 (nil) [1 uses])
+(note 56 55 57 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 58 10 (set (reg/f:SI 139)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":674:10 -1
+     (nil))
+(insn 58 57 59 10 (set (reg/f:SI 117 [ _4 ])
+        (mem/f:SI (plus:SI (reg/f:SI 139)
+                (const_int 84 [0x54])) [6 hsram_14(D)->hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":674:10 -1
+     (nil))
+(insn 59 58 60 10 (set (reg/f:SI 140)
+        (symbol_ref:SI ("SRAM_DMAError") [flags 0x3]  <function_decl 0x7fdbec1e1d00 SRAM_DMAError>)) "lib/HAL/Src/stm32g4xx_hal_sram.c":674:36 -1
+     (nil))
+(insn 60 59 61 10 (set (mem/f:SI (plus:SI (reg/f:SI 117 [ _4 ])
+                (const_int 52 [0x34])) [12 _4->XferErrorCallback+0 S4 A32])
+        (reg/f:SI 140)) "lib/HAL/Src/stm32g4xx_hal_sram.c":674:36 -1
+     (nil))
+(insn 61 60 62 10 (set (reg/f:SI 141)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(insn 62 61 63 10 (set (reg/f:SI 118 [ _5 ])
+        (mem/f:SI (plus:SI (reg/f:SI 141)
+                (const_int 84 [0x54])) [6 hsram_14(D)->hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(insn 63 62 64 10 (set (reg:SI 119 [ pAddress.0_6 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [24 pAddress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(insn 64 63 65 10 (set (reg:SI 120 [ pDstBuffer.1_7 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [24 pDstBuffer+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(insn 65 64 66 10 (set (reg:SI 3 r3)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [5 BufferSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(insn 66 65 67 10 (set (reg:SI 2 r2)
+        (reg:SI 120 [ pDstBuffer.1_7 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(insn 67 66 68 10 (set (reg:SI 1 r1)
+        (reg:SI 119 [ pAddress.0_6 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(insn 68 67 69 10 (set (reg:SI 0 r0)
+        (reg/f:SI 118 [ _5 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(call_insn 69 68 70 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_DMA_Start_IT") [flags 0x41]  <function_decl 0x7fdbec42f000 HAL_DMA_Start_IT>) [0 HAL_DMA_Start_IT S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 70 69 71 10 (set (reg:SI 142)
+        (reg:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(insn 71 70 72 10 (set (reg:QI 143)
+        (subreg/s/v:QI (reg:SI 142) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(insn 72 71 73 10 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [0 status+0 S1 A8])
+        (reg:QI 143)) "lib/HAL/Src/stm32g4xx_hal_sram.c":677:14 -1
+     (nil))
+(insn 73 72 74 10 (set (reg/f:SI 144)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":680:5 -1
+     (nil))
+(insn 74 73 75 10 (set (reg:SI 145)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":680:5 -1
+     (nil))
+(insn 75 74 76 10 (set (reg:QI 146)
+        (subreg:QI (reg:SI 145) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":680:5 -1
+     (nil))
+(insn 76 75 77 10 (set (mem:QI (plus:SI (reg/f:SI 144)
+                (const_int 80 [0x50])) [0 hsram_14(D)->Lock+0 S1 A32])
+        (reg:QI 146)) "lib/HAL/Src/stm32g4xx_hal_sram.c":680:5 -1
+     (nil))
+(jump_insn 77 76 78 10 (set (pc)
+        (label_ref 84)) "lib/HAL/Src/stm32g4xx_hal_sram.c":680:5 -1
+     (nil)
+ -> 84)
+(barrier 78 77 79)
+(code_label 79 78 80 11 57 (nil) [1 uses])
+(note 80 79 81 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 81 80 82 11 (set (reg:SI 147)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":684:12 -1
+     (nil))
+(insn 82 81 83 11 (set (reg:QI 148)
+        (subreg:QI (reg:SI 147) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":684:12 -1
+     (nil))
+(insn 83 82 84 11 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [0 status+0 S1 A8])
+        (reg:QI 148)) "lib/HAL/Src/stm32g4xx_hal_sram.c":684:12 -1
+     (nil))
+(code_label 84 83 85 12 62 (nil) [1 uses])
+(note 85 84 86 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 86 85 87 12 (set (reg:SI 121 [ _9 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -1 [0xffffffffffffffff])) [0 status+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":687:10 -1
+     (nil))
+(code_label 87 86 88 13 59 (nil) [1 uses])
+(note 88 87 89 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 89 88 93 13 (set (reg:SI 122 [ <retval> ])
+        (reg:SI 121 [ _9 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":688:1 -1
+     (nil))
+(insn 93 89 94 13 (set (reg/i:SI 0 r0)
+        (reg:SI 122 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":688:1 -1
+     (nil))
+(insn 94 93 0 13 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":688:1 -1
+     (nil))
+
+;; Function HAL_SRAM_Write_DMA (HAL_SRAM_Write_DMA, funcdef_no=374, decl_uid=11500, cgraph_uid=378, symbol_order=377)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 71.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":701:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [24 pAddress+0 S4 A32])
+        (reg:SI 1 r1 [ pAddress ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":701:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [24 pSrcBuffer+0 S4 A32])
+        (reg:SI 2 r2 [ pSrcBuffer ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":701:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [5 BufferSize+0 S4 A32])
+        (reg:SI 3 r3 [ BufferSize ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":701:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 11 2 (set (reg/f:SI 123)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":705:12 -1
+     (nil))
+(insn 11 9 12 2 (set (reg:QI 125)
+        (mem/v:QI (plus:SI (reg/f:SI 123)
+                (const_int 81 [0x51])) [0 hsram_13(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":705:12 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:QI 125))) "lib/HAL/Src/stm32g4xx_hal_sram.c":705:12 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":705:6 -1
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 60)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":705:6 -1
+     (nil)
+ -> 60)
+(note 15 14 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":708:5 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 126)
+                    (const_int 80 [0x50])) [0 hsram_13(D)->Lock+0 S1 A32]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":708:5 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 115 [ _2 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":708:5 -1
+     (nil))
+(jump_insn 19 18 20 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":708:5 -1
+     (nil)
+ -> 24)
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (set (reg:SI 121 [ _9 ])
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":708:5 discrim 1 -1
+     (nil))
+(jump_insn 22 21 23 5 (set (pc)
+        (label_ref 68)) "lib/HAL/Src/stm32g4xx_hal_sram.c":708:5 -1
+     (nil)
+ -> 68)
+(barrier 23 22 24)
+(code_label 24 23 25 6 67 (nil) [1 uses])
+(note 25 24 26 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 6 (set (reg/f:SI 127)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":708:5 discrim 2 -1
+     (nil))
+(insn 27 26 28 6 (set (reg:SI 128)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":708:5 discrim 2 -1
+     (nil))
+(insn 28 27 29 6 (set (reg:QI 129)
+        (subreg:QI (reg:SI 128) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":708:5 discrim 2 -1
+     (nil))
+(insn 29 28 30 6 (set (mem:QI (plus:SI (reg/f:SI 127)
+                (const_int 80 [0x50])) [0 hsram_13(D)->Lock+0 S1 A32])
+        (reg:QI 129)) "lib/HAL/Src/stm32g4xx_hal_sram.c":708:5 discrim 2 -1
+     (nil))
+(insn 30 29 31 6 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":711:18 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 131)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":711:18 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:QI 132)
+        (subreg:QI (reg:SI 131) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":711:18 -1
+     (nil))
+(insn 33 32 34 6 (set (mem/v:QI (plus:SI (reg/f:SI 130)
+                (const_int 81 [0x51])) [0 hsram_13(D)->State+0 S1 A8])
+        (reg:QI 132)) "lib/HAL/Src/stm32g4xx_hal_sram.c":711:18 -1
+     (nil))
+(insn 34 33 35 6 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":714:10 -1
+     (nil))
+(insn 35 34 36 6 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (plus:SI (reg/f:SI 133)
+                (const_int 84 [0x54])) [6 hsram_13(D)->hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":714:10 -1
+     (nil))
+(insn 36 35 37 6 (set (reg/f:SI 134)
+        (symbol_ref:SI ("SRAM_DMACplt") [flags 0x3]  <function_decl 0x7fdbec1e1b00 SRAM_DMACplt>)) "lib/HAL/Src/stm32g4xx_hal_sram.c":714:35 -1
+     (nil))
+(insn 37 36 38 6 (set (mem/f:SI (plus:SI (reg/f:SI 116 [ _3 ])
+                (const_int 44 [0x2c])) [12 _3->XferCpltCallback+0 S4 A32])
+        (reg/f:SI 134)) "lib/HAL/Src/stm32g4xx_hal_sram.c":714:35 -1
+     (nil))
+(insn 38 37 39 6 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":715:10 -1
+     (nil))
+(insn 39 38 40 6 (set (reg/f:SI 117 [ _4 ])
+        (mem/f:SI (plus:SI (reg/f:SI 135)
+                (const_int 84 [0x54])) [6 hsram_13(D)->hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":715:10 -1
+     (nil))
+(insn 40 39 41 6 (set (reg/f:SI 136)
+        (symbol_ref:SI ("SRAM_DMAError") [flags 0x3]  <function_decl 0x7fdbec1e1d00 SRAM_DMAError>)) "lib/HAL/Src/stm32g4xx_hal_sram.c":715:36 -1
+     (nil))
+(insn 41 40 42 6 (set (mem/f:SI (plus:SI (reg/f:SI 117 [ _4 ])
+                (const_int 52 [0x34])) [12 _4->XferErrorCallback+0 S4 A32])
+        (reg/f:SI 136)) "lib/HAL/Src/stm32g4xx_hal_sram.c":715:36 -1
+     (nil))
+(insn 42 41 43 6 (set (reg/f:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(insn 43 42 44 6 (set (reg/f:SI 118 [ _5 ])
+        (mem/f:SI (plus:SI (reg/f:SI 137)
+                (const_int 84 [0x54])) [6 hsram_13(D)->hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(insn 44 43 45 6 (set (reg:SI 119 [ pSrcBuffer.2_6 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [24 pSrcBuffer+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(insn 45 44 46 6 (set (reg:SI 120 [ pAddress.3_7 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [24 pAddress+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(insn 46 45 47 6 (set (reg:SI 3 r3)
+        (mem/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [5 BufferSize+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(insn 47 46 48 6 (set (reg:SI 2 r2)
+        (reg:SI 120 [ pAddress.3_7 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(insn 48 47 49 6 (set (reg:SI 1 r1)
+        (reg:SI 119 [ pSrcBuffer.2_6 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(insn 49 48 50 6 (set (reg:SI 0 r0)
+        (reg/f:SI 118 [ _5 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(call_insn 50 49 51 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_DMA_Start_IT") [flags 0x41]  <function_decl 0x7fdbec42f000 HAL_DMA_Start_IT>) [0 HAL_DMA_Start_IT S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 51 50 52 6 (set (reg:SI 138)
+        (reg:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(insn 52 51 53 6 (set (reg:QI 139)
+        (subreg/s/v:QI (reg:SI 138) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(insn 53 52 54 6 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [0 status+0 S1 A8])
+        (reg:QI 139)) "lib/HAL/Src/stm32g4xx_hal_sram.c":718:14 -1
+     (nil))
+(insn 54 53 55 6 (set (reg/f:SI 140)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":721:5 -1
+     (nil))
+(insn 55 54 56 6 (set (reg:SI 141)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":721:5 -1
+     (nil))
+(insn 56 55 57 6 (set (reg:QI 142)
+        (subreg:QI (reg:SI 141) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":721:5 -1
+     (nil))
+(insn 57 56 58 6 (set (mem:QI (plus:SI (reg/f:SI 140)
+                (const_int 80 [0x50])) [0 hsram_13(D)->Lock+0 S1 A32])
+        (reg:QI 142)) "lib/HAL/Src/stm32g4xx_hal_sram.c":721:5 -1
+     (nil))
+(jump_insn 58 57 59 6 (set (pc)
+        (label_ref 65)) -1
+     (nil)
+ -> 65)
+(barrier 59 58 60)
+(code_label 60 59 61 7 66 (nil) [1 uses])
+(note 61 60 62 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 7 (set (reg:SI 143)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":725:12 -1
+     (nil))
+(insn 63 62 64 7 (set (reg:QI 144)
+        (subreg:QI (reg:SI 143) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":725:12 -1
+     (nil))
+(insn 64 63 65 7 (set (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -1 [0xffffffffffffffff])) [0 status+0 S1 A8])
+        (reg:QI 144)) "lib/HAL/Src/stm32g4xx_hal_sram.c":725:12 -1
+     (nil))
+(code_label 65 64 66 8 69 (nil) [1 uses])
+(note 66 65 67 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 68 8 (set (reg:SI 121 [ _9 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                    (const_int -1 [0xffffffffffffffff])) [0 status+0 S1 A8]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":728:10 -1
+     (nil))
+(code_label 68 67 69 9 68 (nil) [1 uses])
+(note 69 68 70 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 70 69 74 9 (set (reg:SI 122 [ <retval> ])
+        (reg:SI 121 [ _9 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":729:1 -1
+     (nil))
+(insn 74 70 75 9 (set (reg/i:SI 0 r0)
+        (reg:SI 122 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":729:1 -1
+     (nil))
+(insn 75 74 0 9 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":729:1 -1
+     (nil))
+
+;; Function HAL_SRAM_WriteOperation_Enable (HAL_SRAM_WriteOperation_Enable, funcdef_no=375, decl_uid=11506, cgraph_uid=379, symbol_order=378)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 59.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":935:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 8 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":937:12 -1
+     (nil))
+(insn 8 6 9 2 (set (reg:QI 122)
+        (mem/v:QI (plus:SI (reg/f:SI 120)
+                (const_int 81 [0x51])) [0 hsram_8(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":937:12 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:QI 122))) "lib/HAL/Src/stm32g4xx_hal_sram.c":937:12 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 4 [0x4]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":937:6 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 48)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":937:6 -1
+     (nil)
+ -> 48)
+(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 14 4 (set (reg/f:SI 123)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":940:5 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 123)
+                    (const_int 80 [0x50])) [0 hsram_8(D)->Lock+0 S1 A32]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":940:5 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 115 [ _2 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":940:5 -1
+     (nil))
+(jump_insn 16 15 17 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":940:5 -1
+     (nil)
+ -> 21)
+(note 17 16 18 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 5 (set (reg:SI 118 [ _5 ])
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":940:5 discrim 1 -1
+     (nil))
+(jump_insn 19 18 20 5 (set (pc)
+        (label_ref 56)) "lib/HAL/Src/stm32g4xx_hal_sram.c":940:5 -1
+     (nil)
+ -> 56)
+(barrier 20 19 21)
+(code_label 21 20 22 6 74 (nil) [1 uses])
+(note 22 21 23 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 6 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":940:5 discrim 2 -1
+     (nil))
+(insn 24 23 25 6 (set (reg:SI 125)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":940:5 discrim 2 -1
+     (nil))
+(insn 25 24 26 6 (set (reg:QI 126)
+        (subreg:QI (reg:SI 125) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":940:5 discrim 2 -1
+     (nil))
+(insn 26 25 27 6 (set (mem:QI (plus:SI (reg/f:SI 124)
+                (const_int 80 [0x50])) [0 hsram_8(D)->Lock+0 S1 A32])
+        (reg:QI 126)) "lib/HAL/Src/stm32g4xx_hal_sram.c":940:5 discrim 2 -1
+     (nil))
+(insn 27 26 28 6 (set (reg/f:SI 127)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":943:18 -1
+     (nil))
+(insn 28 27 29 6 (set (reg:SI 128)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":943:18 -1
+     (nil))
+(insn 29 28 30 6 (set (reg:QI 129)
+        (subreg:QI (reg:SI 128) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":943:18 -1
+     (nil))
+(insn 30 29 31 6 (set (mem/v:QI (plus:SI (reg/f:SI 127)
+                (const_int 81 [0x51])) [0 hsram_8(D)->State+0 S1 A8])
+        (reg:QI 129)) "lib/HAL/Src/stm32g4xx_hal_sram.c":943:18 -1
+     (nil))
+(insn 31 30 32 6 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":946:11 -1
+     (nil))
+(insn 32 31 33 6 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (reg/f:SI 130) [2 hsram_8(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":946:11 -1
+     (nil))
+(insn 33 32 34 6 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":946:11 -1
+     (nil))
+(insn 34 33 35 6 (set (reg:SI 117 [ _4 ])
+        (mem:SI (plus:SI (reg/f:SI 131)
+                (const_int 8 [0x8])) [5 hsram_8(D)->Init.NSBank+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":946:11 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:SI 1 r1)
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":946:11 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:SI 0 r0)
+        (reg/f:SI 116 [ _3 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":946:11 -1
+     (nil))
+(call_insn 37 36 38 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("FMC_NORSRAM_WriteOperation_Enable") [flags 0x41]  <function_decl 0x7fdbec377600 FMC_NORSRAM_WriteOperation_Enable>) [0 FMC_NORSRAM_WriteOperation_Enable S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":946:11 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 38 37 39 6 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":949:18 -1
+     (nil))
+(insn 39 38 40 6 (set (reg:SI 133)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":949:18 -1
+     (nil))
+(insn 40 39 41 6 (set (reg:QI 134)
+        (subreg:QI (reg:SI 133) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":949:18 -1
+     (nil))
+(insn 41 40 42 6 (set (mem/v:QI (plus:SI (reg/f:SI 132)
+                (const_int 81 [0x51])) [0 hsram_8(D)->State+0 S1 A8])
+        (reg:QI 134)) "lib/HAL/Src/stm32g4xx_hal_sram.c":949:18 -1
+     (nil))
+(insn 42 41 43 6 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":952:5 -1
+     (nil))
+(insn 43 42 44 6 (set (reg:SI 136)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":952:5 -1
+     (nil))
+(insn 44 43 45 6 (set (reg:QI 137)
+        (subreg:QI (reg:SI 136) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":952:5 -1
+     (nil))
+(insn 45 44 46 6 (set (mem:QI (plus:SI (reg/f:SI 135)
+                (const_int 80 [0x50])) [0 hsram_8(D)->Lock+0 S1 A32])
+        (reg:QI 137)) "lib/HAL/Src/stm32g4xx_hal_sram.c":952:5 -1
+     (nil))
+(jump_insn 46 45 47 6 (set (pc)
+        (label_ref 53)) -1
+     (nil)
+ -> 53)
+(barrier 47 46 48)
+(code_label 48 47 49 7 73 (nil) [1 uses])
+(note 49 48 50 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 7 (set (reg:SI 118 [ _5 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":956:12 -1
+     (nil))
+(jump_insn 51 50 52 7 (set (pc)
+        (label_ref 56)) "lib/HAL/Src/stm32g4xx_hal_sram.c":956:12 -1
+     (nil)
+ -> 56)
+(barrier 52 51 53)
+(code_label 53 52 54 8 76 (nil) [1 uses])
+(note 54 53 55 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 8 (set (reg:SI 118 [ _5 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":959:10 -1
+     (nil))
+(code_label 56 55 57 9 75 (nil) [2 uses])
+(note 57 56 58 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 58 57 62 9 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 118 [ _5 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":960:1 -1
+     (nil))
+(insn 62 58 63 9 (set (reg/i:SI 0 r0)
+        (reg:SI 119 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":960:1 -1
+     (nil))
+(insn 63 62 0 9 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":960:1 -1
+     (nil))
+
+;; Function HAL_SRAM_WriteOperation_Disable (HAL_SRAM_WriteOperation_Disable, funcdef_no=376, decl_uid=11508, cgraph_uid=380, symbol_order=379)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 59.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":969:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 8 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":971:12 -1
+     (nil))
+(insn 8 6 9 2 (set (reg:QI 122)
+        (mem/v:QI (plus:SI (reg/f:SI 120)
+                (const_int 81 [0x51])) [0 hsram_8(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":971:12 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 114 [ _1 ])
+        (zero_extend:SI (reg:QI 122))) "lib/HAL/Src/stm32g4xx_hal_sram.c":971:12 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 114 [ _1 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":971:6 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 48)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":971:6 -1
+     (nil)
+ -> 48)
+(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 14 4 (set (reg/f:SI 123)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":974:5 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:SI 115 [ _2 ])
+        (zero_extend:SI (mem:QI (plus:SI (reg/f:SI 123)
+                    (const_int 80 [0x50])) [0 hsram_8(D)->Lock+0 S1 A32]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":974:5 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 115 [ _2 ])
+            (const_int 1 [0x1]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":974:5 -1
+     (nil))
+(jump_insn 16 15 17 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "lib/HAL/Src/stm32g4xx_hal_sram.c":974:5 -1
+     (nil)
+ -> 21)
+(note 17 16 18 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 5 (set (reg:SI 118 [ _5 ])
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":974:5 discrim 1 -1
+     (nil))
+(jump_insn 19 18 20 5 (set (pc)
+        (label_ref 56)) "lib/HAL/Src/stm32g4xx_hal_sram.c":974:5 -1
+     (nil)
+ -> 56)
+(barrier 20 19 21)
+(code_label 21 20 22 6 79 (nil) [1 uses])
+(note 22 21 23 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 6 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":974:5 discrim 2 -1
+     (nil))
+(insn 24 23 25 6 (set (reg:SI 125)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":974:5 discrim 2 -1
+     (nil))
+(insn 25 24 26 6 (set (reg:QI 126)
+        (subreg:QI (reg:SI 125) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":974:5 discrim 2 -1
+     (nil))
+(insn 26 25 27 6 (set (mem:QI (plus:SI (reg/f:SI 124)
+                (const_int 80 [0x50])) [0 hsram_8(D)->Lock+0 S1 A32])
+        (reg:QI 126)) "lib/HAL/Src/stm32g4xx_hal_sram.c":974:5 discrim 2 -1
+     (nil))
+(insn 27 26 28 6 (set (reg/f:SI 127)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":977:18 -1
+     (nil))
+(insn 28 27 29 6 (set (reg:SI 128)
+        (const_int 2 [0x2])) "lib/HAL/Src/stm32g4xx_hal_sram.c":977:18 -1
+     (nil))
+(insn 29 28 30 6 (set (reg:QI 129)
+        (subreg:QI (reg:SI 128) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":977:18 -1
+     (nil))
+(insn 30 29 31 6 (set (mem/v:QI (plus:SI (reg/f:SI 127)
+                (const_int 81 [0x51])) [0 hsram_8(D)->State+0 S1 A8])
+        (reg:QI 129)) "lib/HAL/Src/stm32g4xx_hal_sram.c":977:18 -1
+     (nil))
+(insn 31 30 32 6 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":980:11 -1
+     (nil))
+(insn 32 31 33 6 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (reg/f:SI 130) [2 hsram_8(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":980:11 -1
+     (nil))
+(insn 33 32 34 6 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":980:11 -1
+     (nil))
+(insn 34 33 35 6 (set (reg:SI 117 [ _4 ])
+        (mem:SI (plus:SI (reg/f:SI 131)
+                (const_int 8 [0x8])) [5 hsram_8(D)->Init.NSBank+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":980:11 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:SI 1 r1)
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":980:11 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:SI 0 r0)
+        (reg/f:SI 116 [ _3 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":980:11 -1
+     (nil))
+(call_insn 37 36 38 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("FMC_NORSRAM_WriteOperation_Disable") [flags 0x41]  <function_decl 0x7fdbec377700 FMC_NORSRAM_WriteOperation_Disable>) [0 FMC_NORSRAM_WriteOperation_Disable S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":980:11 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 38 37 39 6 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":983:18 -1
+     (nil))
+(insn 39 38 40 6 (set (reg:SI 133)
+        (const_int 4 [0x4])) "lib/HAL/Src/stm32g4xx_hal_sram.c":983:18 -1
+     (nil))
+(insn 40 39 41 6 (set (reg:QI 134)
+        (subreg:QI (reg:SI 133) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":983:18 -1
+     (nil))
+(insn 41 40 42 6 (set (mem/v:QI (plus:SI (reg/f:SI 132)
+                (const_int 81 [0x51])) [0 hsram_8(D)->State+0 S1 A8])
+        (reg:QI 134)) "lib/HAL/Src/stm32g4xx_hal_sram.c":983:18 -1
+     (nil))
+(insn 42 41 43 6 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":986:5 -1
+     (nil))
+(insn 43 42 44 6 (set (reg:SI 136)
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":986:5 -1
+     (nil))
+(insn 44 43 45 6 (set (reg:QI 137)
+        (subreg:QI (reg:SI 136) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":986:5 -1
+     (nil))
+(insn 45 44 46 6 (set (mem:QI (plus:SI (reg/f:SI 135)
+                (const_int 80 [0x50])) [0 hsram_8(D)->Lock+0 S1 A32])
+        (reg:QI 137)) "lib/HAL/Src/stm32g4xx_hal_sram.c":986:5 -1
+     (nil))
+(jump_insn 46 45 47 6 (set (pc)
+        (label_ref 53)) -1
+     (nil)
+ -> 53)
+(barrier 47 46 48)
+(code_label 48 47 49 7 78 (nil) [1 uses])
+(note 49 48 50 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 7 (set (reg:SI 118 [ _5 ])
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":990:12 -1
+     (nil))
+(jump_insn 51 50 52 7 (set (pc)
+        (label_ref 56)) "lib/HAL/Src/stm32g4xx_hal_sram.c":990:12 -1
+     (nil)
+ -> 56)
+(barrier 52 51 53)
+(code_label 53 52 54 8 81 (nil) [1 uses])
+(note 54 53 55 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 8 (set (reg:SI 118 [ _5 ])
+        (const_int 0 [0])) "lib/HAL/Src/stm32g4xx_hal_sram.c":993:10 -1
+     (nil))
+(code_label 56 55 57 9 80 (nil) [2 uses])
+(note 57 56 58 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 58 57 62 9 (set (reg:SI 119 [ <retval> ])
+        (reg:SI 118 [ _5 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":994:1 -1
+     (nil))
+(insn 62 58 63 9 (set (reg/i:SI 0 r0)
+        (reg:SI 119 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":994:1 -1
+     (nil))
+(insn 63 62 0 9 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":994:1 -1
+     (nil))
+
+;; Function HAL_SRAM_GetState (HAL_SRAM_GetState, funcdef_no=377, decl_uid=11510, cgraph_uid=381, symbol_order=380)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 13.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])
+        (reg:SI 0 r0 [ hsram ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1022:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 8 2 (set (reg/f:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1023:15 -1
+     (nil))
+(insn 8 6 9 2 (set (reg:QI 118)
+        (mem/v:QI (plus:SI (reg/f:SI 116)
+                (const_int 81 [0x51])) [0 hsram_2(D)->State+0 S1 A8])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1023:15 -1
+     (nil))
+(insn 9 8 12 2 (set (reg:SI 114 [ _3 ])
+        (zero_extend:SI (reg:QI 118))) "lib/HAL/Src/stm32g4xx_hal_sram.c":1023:15 -1
+     (nil))
+(insn 12 9 16 2 (set (reg:SI 115 [ <retval> ])
+        (reg:SI 114 [ _3 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1023:15 discrim 1 -1
+     (nil))
+(insn 16 12 17 2 (set (reg/i:SI 0 r0)
+        (reg:SI 115 [ <retval> ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1024:1 -1
+     (nil))
+(insn 17 16 0 2 (use (reg/i:SI 0 r0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":1024:1 -1
+     (nil))
+
+;; Function SRAM_DMACplt (SRAM_DMACplt, funcdef_no=378, decl_uid=12610, cgraph_uid=382, symbol_order=381)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])
+        (reg:SI 0 r0 [ hdma ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1040:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1041:23 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 119)
+        (mem/f:SI (plus:SI (reg/f:SI 118)
+                (const_int 40 [0x28])) [8 hdma_6(D)->Parent+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1041:23 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])
+        (reg/f:SI 119)) "lib/HAL/Src/stm32g4xx_hal_sram.c":1041:23 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1044:3 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (reg/f:SI 120) [10 hdma_6(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1044:3 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 115 [ _2 ])
+        (mem/v:SI (reg/f:SI 114 [ _1 ]) [5 _1->CCR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1044:3 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1044:3 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (reg/f:SI 121) [10 hdma_6(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1044:3 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 117 [ _4 ])
+        (and:SI (reg:SI 115 [ _2 ])
+            (const_int -2 [0xfffffffffffffffe]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":1044:3 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/v:SI (reg/f:SI 116 [ _3 ]) [5 _3->CCR+0 S4 A32])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1044:3 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1047:16 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 123)
+        (const_int 1 [0x1])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1047:16 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:QI 124)
+        (subreg:QI (reg:SI 123) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":1047:16 -1
+     (nil))
+(insn 19 18 20 2 (set (mem/v:QI (plus:SI (reg/f:SI 122)
+                (const_int 81 [0x51])) [0 hsram_7->State+0 S1 A8])
+        (reg:QI 124)) "lib/HAL/Src/stm32g4xx_hal_sram.c":1047:16 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1052:3 -1
+     (nil))
+(call_insn 21 20 0 2 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_SRAM_DMA_XferCpltCallback") [flags 0x3]  <function_decl 0x7fdbec0eea00 HAL_SRAM_DMA_XferCpltCallback>) [0 HAL_SRAM_DMA_XferCpltCallback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":1052:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+
+;; Function SRAM_DMACpltProt (SRAM_DMACpltProt, funcdef_no=379, decl_uid=12612, cgraph_uid=383, symbol_order=382)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])
+        (reg:SI 0 r0 [ hdma ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1062:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1063:23 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 119)
+        (mem/f:SI (plus:SI (reg/f:SI 118)
+                (const_int 40 [0x28])) [8 hdma_6(D)->Parent+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1063:23 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])
+        (reg/f:SI 119)) "lib/HAL/Src/stm32g4xx_hal_sram.c":1063:23 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1066:3 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (reg/f:SI 120) [10 hdma_6(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1066:3 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 115 [ _2 ])
+        (mem/v:SI (reg/f:SI 114 [ _1 ]) [5 _1->CCR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1066:3 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1066:3 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (reg/f:SI 121) [10 hdma_6(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1066:3 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 117 [ _4 ])
+        (and:SI (reg:SI 115 [ _2 ])
+            (const_int -2 [0xfffffffffffffffe]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":1066:3 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/v:SI (reg/f:SI 116 [ _3 ]) [5 _3->CCR+0 S4 A32])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1066:3 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1069:16 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 123)
+        (const_int 4 [0x4])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1069:16 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:QI 124)
+        (subreg:QI (reg:SI 123) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":1069:16 -1
+     (nil))
+(insn 19 18 20 2 (set (mem/v:QI (plus:SI (reg/f:SI 122)
+                (const_int 81 [0x51])) [0 hsram_7->State+0 S1 A8])
+        (reg:QI 124)) "lib/HAL/Src/stm32g4xx_hal_sram.c":1069:16 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1074:3 -1
+     (nil))
+(call_insn 21 20 0 2 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_SRAM_DMA_XferCpltCallback") [flags 0x3]  <function_decl 0x7fdbec0eea00 HAL_SRAM_DMA_XferCpltCallback>) [0 HAL_SRAM_DMA_XferCpltCallback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":1074:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+
+;; Function SRAM_DMAError (SRAM_DMAError, funcdef_no=380, decl_uid=12614, cgraph_uid=384, symbol_order=383)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])
+        (reg:SI 0 r0 [ hdma ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1084:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1085:23 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 119)
+        (mem/f:SI (plus:SI (reg/f:SI 118)
+                (const_int 40 [0x28])) [8 hdma_6(D)->Parent+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1085:23 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])
+        (reg/f:SI 119)) "lib/HAL/Src/stm32g4xx_hal_sram.c":1085:23 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1088:3 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 114 [ _1 ])
+        (mem/f:SI (reg/f:SI 120) [10 hdma_6(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1088:3 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 115 [ _2 ])
+        (mem/v:SI (reg/f:SI 114 [ _1 ]) [5 _1->CCR+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1088:3 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1088:3 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 116 [ _3 ])
+        (mem/f:SI (reg/f:SI 121) [10 hdma_6(D)->Instance+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1088:3 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 117 [ _4 ])
+        (and:SI (reg:SI 115 [ _2 ])
+            (const_int -2 [0xfffffffffffffffe]))) "lib/HAL/Src/stm32g4xx_hal_sram.c":1088:3 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/v:SI (reg/f:SI 116 [ _3 ]) [5 _3->CCR+0 S4 A32])
+        (reg:SI 117 [ _4 ])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1088:3 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [19 hsram+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1091:16 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 123)
+        (const_int 3 [0x3])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1091:16 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:QI 124)
+        (subreg:QI (reg:SI 123) 0)) "lib/HAL/Src/stm32g4xx_hal_sram.c":1091:16 -1
+     (nil))
+(insn 19 18 20 2 (set (mem/v:QI (plus:SI (reg/f:SI 122)
+                (const_int 81 [0x51])) [0 hsram_7->State+0 S1 A8])
+        (reg:QI 124)) "lib/HAL/Src/stm32g4xx_hal_sram.c":1091:16 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 109 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 hdma+0 S4 A32])) "lib/HAL/Src/stm32g4xx_hal_sram.c":1096:3 -1
+     (nil))
+(call_insn 21 20 0 2 (parallel [
+            (call (mem:SI (symbol_ref/i:SI ("HAL_SRAM_DMA_XferErrorCallback") [flags 0x3]  <function_decl 0x7fdbec0eeb00 HAL_SRAM_DMA_XferErrorCallback>) [0 HAL_SRAM_DMA_XferErrorCallback S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "lib/HAL/Src/stm32g4xx_hal_sram.c":1096:3 -1
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))

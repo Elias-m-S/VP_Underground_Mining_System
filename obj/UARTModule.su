@@ -1,0 +1,4 @@
+src/HAL/UARTModule.c:42:9:uartInitialize	136	static
+src/HAL/UARTModule.c:111:9:uartSendData	24	static
+src/HAL/UARTModule.c:125:9:uartReceiveData	24	static
+src/HAL/UARTModule.c:139:9:uartHasData	24	static
