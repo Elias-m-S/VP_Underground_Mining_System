@@ -1,3 +1,0 @@
-src/HAL/TimerModule.c:44:9:timerInitialize	40	static
-src/HAL/TimerModule.c:95:6:HAL_TIM_Base_MspInit	24	static
-src/HAL/TimerModule.c:111:6:TIM3_IRQHandler	8	static

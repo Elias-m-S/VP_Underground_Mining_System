@@ -1,2 +1,0 @@
-src/HAL/ButtonModule.c:41:9:buttonInitialize	48	static
-src/HAL/ButtonModule.c:74:17:buttonGetButtonStatus	24	static

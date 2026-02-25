@@ -1,3 +1,0 @@
-src/HAL/LEDModule.c:42:9:ledInitialize	48	static
-src/HAL/LEDModule.c:90:6:ledToggleLED	16	static
-src/HAL/LEDModule.c:119:6:ledSetLED	16	static

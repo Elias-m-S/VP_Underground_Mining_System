@@ -1,4 +1,0 @@
-src/App/Application.c:82:9:sampleAppInitialize	16	static
-src/App/Application.c:91:9:sampleAppRun	16	static
-src/App/Application.c:97:9:sameplAppSendEvent	24	static
-src/App/Application.c:105:16:onStateRunning	16	static

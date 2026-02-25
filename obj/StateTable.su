@@ -1,4 +1,0 @@
-src/Util/StateTable/StateTable.c:39:9:stateTableInitialize	48	static
-src/Util/StateTable/StateTable.c:75:9:stateTableRunCyclic	40	static
-src/Util/StateTable/StateTable.c:157:9:stateTableSendEvent	16	static
-src/Util/StateTable/StateTable.c:190:13:stateTableFindState	40	static

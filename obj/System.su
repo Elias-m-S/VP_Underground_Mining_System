@@ -1,4 +1,0 @@
-src/System.c:89:6:SystemInit	4	static
-src/System.c:136:6:SystemCoreClockUpdate	32	static
-src/System.c:185:6:SystemClock_Config	88	static
-src/System.c:231:6:Error_Handler	4	static

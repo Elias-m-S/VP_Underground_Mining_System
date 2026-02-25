@@ -1,2 +1,0 @@
-src/OS/Scheduler.c:45:9:schedInitialize	16	static
-src/OS/Scheduler.c:52:9:schedCycle	16	static
