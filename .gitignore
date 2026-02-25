@@ -3,3 +3,25 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+
+# Build-Artefakte
+build/
+obj/
+bin/
+
+# Kompilierte Dateien
+*.o
+*.elf
+*.bin
+*.map
+*.su
+*.d
+
+# Eclipse-spezifische Dateien (optional, falls sie nicht ins Repo sollen)
+.settings/
+.project
+.cproject
+
+# Betriebssystem-Müll
+.DS_Store
+Thumbs.db
