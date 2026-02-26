@@ -110,6 +110,19 @@ SECTIONS
     _edata = .;        /* define a global symbol at data end */
   } >RAM AT> FLASH
 
+  /* Define a symbol for the load address of the .auth section */
+  _sloadauth = LOADADDR(.auth);
+
+  .auth :
+  {
+    . = ALIGN(4);
+    _sauth = .;
+    *(.auth)
+    *(.auth*)
+    . = ALIGN(4);
+    _eauth = .;
+  } >RAM AT> FLASH
+
   /* Uninitialized data section */
   . = ALIGN(4);
   .bss (NOLOAD):
