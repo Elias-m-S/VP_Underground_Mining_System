@@ -1,30 +1,3 @@
-/******************************************************************************
- * @file Authfunc.c
- *
- * @author Andreas Schmidt (a.v.schmidt81@googlemail.com)
- * @date   03.01.2026
- *
- * @copyright Copyright (c) 2026
- *
- ******************************************************************************
- *
- * @brief Implementation of the Authenticator state machine.
- *
- * State machine overview (switch-case approach, as per UMMS spec):
- *
- *   Bootup
- *     └─► PrepareApplication   (HW init OK)
- *           ├─► Failure         (timeout: 'A' not received within 15 s, or
- *           │                   key not fully received within 45 s)
- *           └─► StartApplication (key received completely)
- *                 └─► (no return – application is started)
- *
- * The .auth section contains auth_verify() which is copied from Flash to
- * RAM, optionally XOR-decrypted and then executed from RAM. auth_verify()
- * reads the UMMS application signature and, if correct, jumps into the
- * Application via a function pointer to StartApp_Handler.
- *
- *****************************************************************************/
 
 /***** INCLUDES **************************************************************/
 #include "Authfunc.h"
