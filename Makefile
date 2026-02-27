@@ -77,6 +77,8 @@ CFLAGS += -I$(SRC_DIR)/App
 CFLAGS += -I$(SRC_DIR)/HAL
 # Include files for OS
 CFLAGS += -I$(SRC_DIR)/OS
+# Include files for Auth  ##I dont know if this is needed, may ask later (oleaso dont forget to ask)
+CFLAGS += -I$(SRC_DIR)/Auth
 # Include files for Service
 CFLAGS += -I$(SRC_DIR)/Service
 # Include files for Utils
@@ -134,6 +136,7 @@ vpath %.c $(dir $(APP_SRC_C))
 ###############################################################################
 AUTH_SRC_C += $(SRC_DIR)/main_auth.c
 AUTH_SRC_C += $(SRC_DIR)/System.c
+AUTH_SRC_C += $(wildcard $(SRC_DIR)/Auth/*.c)
 AUTH_SRC_C += $(wildcard $(SRC_DIR)/HAL/*.c)
 AUTH_SRC_C += $(wildcard $(SRC_DIR)/OS/*.c)
 AUTH_SRC_C += $(wildcard $(SRC_DIR)/Service/*.c)

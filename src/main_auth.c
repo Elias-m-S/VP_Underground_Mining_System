@@ -1,5 +1,5 @@
 /******************************************************************************
- * @file main.c
+ * @file main_auth.c
  *
  * @author Andreas Schmidt (a.v.schmidt81@googlemail.com)
  * @date   03.01.2026
@@ -10,6 +10,17 @@
  *
  * @brief Main file for the VP Template Authenticator project
  *
+ * Implements the top-level entry point for the Authenticator binary.
+ *
+ * Responsibilities:
+ *   1. HAL initialisation (HAL_Init, SystemClock_Config)
+ *   2. Peripheral initialisation – only the peripherals needed by the
+ *      Authenticator (UART for key reception, LEDs for status indication)
+ *   3. One-time initialisation of the Authenticator state machine
+ *   4. Cyclic call to Authfunc_Update() from within the main loop
+ *
+ * The Authenticator does NOT use a scheduler. The state machine is driven
+ * directly by the main loop and uses HAL_GetTick() for timeout handling.
  *
  *****************************************************************************/
 
@@ -18,21 +29,13 @@
 #include "stm32g4xx_hal.h"
 #include "System.h"
 
-#include "HardwareConfig.h"
-
 #include "Util/Global.h"
-#include "Util/Log/printf.h"
 #include "Util/Log/LogOutput.h"
 
 #include "UARTModule.h"
-#include "ButtonModule.h"
 #include "LEDModule.h"
-#include "DisplayModule.h"
-#include "ADCModule.h"
-#include "TimerModule.h"
-#include "Scheduler.h"
 
-#include "GlobalObjects.h"
+#include "Authfunc.h"
 
 
 /***** PRIVATE CONSTANTS *****************************************************/
@@ -45,82 +48,79 @@
 
 
 /***** PRIVATE PROTOTYPES ****************************************************/
-static int32_t initializePeripherals();
+static int32_t initializePeripherals(void);
 
 
 /***** PRIVATE VARIABLES *****************************************************/
-static Scheduler gScheduler;            // Global Scheduler instance
 
 
 /***** PUBLIC FUNCTIONS ******************************************************/
 
-
 /**
- * @brief Main function of System
+ * @brief Main entry point of the Authenticator binary.
+ *
+ * Initialises hardware, then hands control to the Authenticator state
+ * machine which runs in a tight loop until the Application is started
+ * or a Failure state is entered.
  */
 int main(void)
 {
-    // Initialize the HAL
+    /* --- 1. HAL and clock initialisation --------------------------------- */
     HAL_Init();
-
     SystemClock_Config();
 
-    // Initialize Peripherals
-    initializePeripherals();
+    /* --- 2. Peripheral initialisation ------------------------------------ */
+    int32_t result = initializePeripherals();
+    if (result != ERROR_OK)
+    {
+        /* Peripheral init failed – cannot show anything useful, just hang */
+        Error_Handler();
+    }
 
-    // Initialize Scheduler
-    schedInitialize(&gScheduler);
+    outputLogf("[AUTH] Authenticator started\r\n");
 
+    /* --- 3. Authenticator state machine initialisation ------------------- */
+    Authfunc_Init();
+
+    /* --- 4. Main loop: drive the Authenticator state machine ------------- */
     while (1)
     {
-        // Toggle all LEDs to the their functionality (Toggle frequency depends on HAL_Delay at end of loop)
-        ledToggleLED(LED0);
-        HAL_Delay(100);
-        ledToggleLED(LED1);
-        HAL_Delay(100);
-        ledToggleLED(LED2);
-        HAL_Delay(100);
-        ledToggleLED(LED3);
-        HAL_Delay(100);
-        ledToggleLED(LED4);
-        HAL_Delay(100);
-
-        uint8_t buf[10];
-        uartReceiveData(buf, 2);
-        if (buf[0] == 'X' && buf[1] == '\r')
-        {
-            displayShowDigit(RIGHT_DISPLAY, DIGIT_DASH);
-        }
-        else
-        {
-            displayShowDigit(RIGHT_DISPLAY, DIGIT_OFF);
-        }
+        Authfunc_Update();
     }
 }
+
 
 /***** PRIVATE FUNCTIONS *****************************************************/
 
 /**
- * @brief Initializes the used peripherals like GPIO,
- * ADC, DMA and Timer Interrupts
+ * @brief Initialises the peripherals required by the Authenticator.
  *
- * @return Returns ERROR_OK if no error occurred
+ * The Authenticator only needs:
+ *   - UART  – to receive the 'A' trigger and the decryption key
+ *   - LEDs  – to indicate status / timeouts / failure
+ *
+ * Peripherals like ADC, Timer, Display, Buttons or the Scheduler are
+ * NOT initialised here – they belong to the Application binary.
+ *
+ * @return ERROR_OK if no error occurred, ERROR_GENERAL otherwise.
  */
-static int32_t initializePeripherals()
+static int32_t initializePeripherals(void)
 {
-    // Initialize UART used for Debug-Outputs
-    uartInitialize(115200);
+    int32_t result = ERROR_OK;
 
-    // Initialize GPIOs for LED and 7-Segment output
-	ledInitialize();
-    displayInitialize();
+    /* UART – 115200 baud, 8N1 */
+    result = uartInitialize(115200);
+    if (result != UART_ERR_OK)
+    {
+        return ERROR_GENERAL;
+    }
 
-    // Initialize GPIOs for Buttons
-    buttonInitialize();
-
-    // Initialize Timer, DMA and ADC for sensor measurements
-    timerInitialize();
-    adcInitialize();
+    /* LEDs – status output */
+    result = ledInitialize();
+    if (result != LED_ERR_OK)
+    {
+        return ERROR_GENERAL;
+    }
 
     return ERROR_OK;
 }
